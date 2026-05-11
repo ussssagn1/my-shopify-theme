@@ -11,15 +11,6 @@
   "sections": {
     "c_hero_new_VRGPQ4": {
       "type": "c-hero-new",
-      "blocks": {
-        "testimonial_BbJnCQ": {
-          "type": "testimonial",
-          "settings": {
-            "title": "Best cooler ever!",
-            "text": "\"Got it for my husband for Father's Day. The Monti will go everywhere with us!\""
-          }
-        }
-      },
       "block_order": [
         "testimonial_BbJnCQ"
       ],

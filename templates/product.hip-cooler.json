@@ -1,0 +1,340 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "Fishing. Festivals. Fun days.",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": ""
+          }
+        },
+        "collapsible_tab_LTYrWz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "return",
+            "content": "<p><strong>Monti Guarantee</strong>: If you're not happy with your cooler return it unused for a full refund in the first 30 days!<br/><br/><strong>Holiday Gift Return:</strong>Unused coolers received as gifts, purchased after November 1st, can be returned until January 25th.<br/><br/><strong>Christmas Shipping Deadline:</strong>Order's placed on or before December 18th to the continental United States will ship out in time to arrive for Christmas.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KnpR8K": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "<p>Ripstop Nylon <br/>Water Resistant Liner to prevent sweating. Note: Liner is NOT intended to be leakproof or hold ice. Ice packs, or already cold drinks are recommended. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "buy_buttons",
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "description",
+        "share",
+        "collapsible_tab_LTYrWz",
+        "collapsible_tab_KnpR8K"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "image_banner_p4R6K9": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Backpack_Straps_in_Action.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "c77d524c-6002-4363-9e06-976c27105628": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Monti_Travel_Cooler.gif",
+            "title": "Truly Portable",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3902_f37418ae-4be5-4f86-91d6-519a9b5fa9c1.jpg",
+            "title": "Free Shipping",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Navy-Shasta-Bighorns-2-Optimized.jpg",
+            "title": "Hassle-Free Exchanges",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "c77d524c-6002-4363-9e06-976c27105628",
+        "column-0",
+        "column-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4b312db2-e1ba-4834-bd14-25d828b6759a": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14473424175203__4b312db2-e1ba-4834-bd14-25d828b6759a-1686688521eea3af17-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sized for the Occasion",
+            "heading_size": "h2"
+          }
+        },
+        "template--14473424175203__4b312db2-e1ba-4834-bd14-25d828b6759a-1686688521eea3af17-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Mayfly (left) holds about 15 cans, or 3 bottles of wine. <br/><br/>The Shasta (right) is big enough for a full day in the sun with a whopping 24 can capacity (about 5 bottles of wine)!</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14473424175203__4b312db2-e1ba-4834-bd14-25d828b6759a-1686688521eea3af17-0",
+        "template--14473424175203__4b312db2-e1ba-4834-bd14-25d828b6759a-1686688521eea3af17-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/IMG_0852.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "color_scheme": "accent-2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f3c4f997-2189-4a43-8828-1c0928b0c149": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14473424175203__f3c4f997-2189-4a43-8828-1c0928b0c149-1686688521eea3af17-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "A cooler you'll actually want to carry.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--14473424175203__f3c4f997-2189-4a43-8828-1c0928b0c149-1686688521eea3af17-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Monti_Shasta_Hiking_Cooler.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "bc60c4df-491d-48ad-87b4-1980244ea703": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-0",
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-1",
+        "template--14473424175203__bc60c4df-491d-48ad-87b4-1980244ea703-168668881685392f4e-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/IMG_6966.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_p4R6K9",
+    "multicolumn",
+    "4b312db2-e1ba-4834-bd14-25d828b6759a",
+    "f3c4f997-2189-4a43-8828-1c0928b0c149",
+    "bc60c4df-491d-48ad-87b4-1980244ea703",
+    "related-products",
+    "loox-product-reviews-app-section"
+  ]
+}

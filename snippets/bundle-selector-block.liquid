@@ -1,0 +1,643 @@
+{% if product.metafields.custom.show_bundle == true %}
+
+{% style %}
+  #{{ block.id }}.c-bundle-selector {
+    margin-bottom: 20px;
+  }
+
+  #{{ block.id }}.c-bundle-selector.hide {
+    display: none;
+  }
+
+  #{{ block.id }} .c-bundle-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #222;
+    margin: 0 0 12px 0;
+  }
+
+  #{{ block.id }} .c-bundle-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0;
+  }
+
+  #{{ block.id }} .c-bundle-option {
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 12px;
+    cursor: pointer;
+    position: relative;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  #{{ block.id }} .c-bundle-option.active {
+    background: rgba(120, 196, 245, 0.1);
+    border-color: #78C4F5;
+  }
+
+  #{{ block.id }} .c-bundle-option.rounded-full {
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  #{{ block.id }} .c-bundle-option.rounded-full-desk:not(.active) {
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  #{{ block.id }} .c-bundle-option.rounded-full.active {
+    border-bottom: 1px solid #78C4F5;
+  }
+
+  #{{ block.id }} .c-bundle-option-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 12px 0;
+    text-transform: capitalize;
+  }
+
+  #{{ block.id }} .c-bundle-prices {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1.1;
+  }
+
+  #{{ block.id }} .c-bundle-price-compare {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: line-through;
+  }
+
+  #{{ block.id }} .c-bundle-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  #{{ block.id }} .c-bundle-badge {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: #78C4F5;
+    color: #FFFFFF;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.48px;
+    text-transform: capitalize;
+  }
+
+  #{{ block.id }} .c-bundle-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #000;
+  }
+
+  #{{ block.id }} .c-what-you-get {
+    background: rgba(120, 196, 245, 0.1);
+    border: 1px solid #78C4F5;
+    border-radius: 0 0 10px 10px;
+    padding: 23px 66px 16px;
+    position: relative;
+    min-height: 226px;
+    transition: all 0.3s ease;
+  }
+
+  #{{ block.id }} .c-what-you-get.hidden {
+    display: none;
+  }
+
+  #{{ block.id }} .c-what-you-get-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #000;
+    text-align: center;
+    margin: 0 0 38px 0;
+  }
+
+  #{{ block.id }} .c-what-you-get-items {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #{{ block.id }} .c-what-you-get-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+  }
+
+  #{{ block.id }} .c-what-you-get-image {
+    width: 105px;
+    height: 103px;
+    border: 1px dashed #78C4F5;
+    border-radius: 8px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 17px;
+  }
+
+  #{{ block.id }} .c-what-you-get-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ block.id }} .c-what-you-get-label {
+    background: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  #{{ block.id }} .c-what-you-get-check {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #78C4F5;
+    border: 1px solid #78C4F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  #{{ block.id }} .c-what-you-get-check svg {
+    width: 12px;
+    height: 12px;
+    fill: #FFFFFF;
+  }
+
+  #{{ block.id }} .c-what-you-get-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.52px;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: capitalize;
+  }
+
+  #{{ block.id }} .c-what-you-get-plus {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    margin-top: -32px;
+  }
+
+  #{{ block.id }} .c-what-you-get-item:last-child .c-what-you-get-plus {
+    display: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    #{{ block.id }} .c-bundle-options {
+      gap: 8px;
+    }
+
+    #{{ block.id }} .c-bundle-option {
+      padding: 9px 10px;
+    }
+
+    #{{ block.id }} .c-bundle-option-title {
+      font-size: 12px;
+      letter-spacing: -0.48px;
+      margin: 0 0 6px 0;
+    }
+
+    #{{ block.id }} .c-bundle-prices {
+      gap: 6px;
+      line-height: 1.29;
+    }
+
+    #{{ block.id }} .c-bundle-price-compare {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    #{{ block.id }} .c-bundle-price {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    #{{ block.id }} .c-bundle-badge {
+      top: 6px;
+      right: 10px;
+      padding: 3px 2px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: -0.36px;
+      min-width: 64px;
+      text-align: center;
+    }
+
+    #{{ block.id }} .c-bundle-note {
+      font-size: 11px;
+    }
+
+    #{{ block.id }} .c-what-you-get {
+      padding: 20px 13px;
+      min-height: 195px;
+    }
+
+    #{{ block.id }} .c-what-you-get-heading {
+      margin: 0 0 22px 0;
+    }
+
+    #{{ block.id }} .c-what-you-get-items {
+      gap: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #{{ block.id }} .c-what-you-get-image {
+      width: 85px;
+      height: 83px;
+      padding: 14px 17px;
+    }
+
+    #{{ block.id }} .c-what-you-get-name {
+      font-size: 11px;
+      letter-spacing: -0.44px;
+    }
+
+    #{{ block.id }} .c-what-you-get-plus {
+      margin-top: 0;
+      top: 34px;
+      right: -16px;
+    }
+  }
+{% endstyle %}
+
+{% assign addon_product = all_products[block.settings.addon_product] %}
+{% assign shipping_cost = 799 %}
+
+{% assign addon_variant = null %}
+{% if addon_product != blank %}
+  {% for variant in addon_product.variants %}
+    {% if variant.sku == "MNTPATCH001RUBBER" %}
+      {% assign addon_variant = variant %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div id="{{ block.id }}" class="c-bundle-selector hide" data-block-id="{{ block.id }}">
+  <p class="c-bundle-heading">{{ block.settings.heading }}</p>
+  
+  <div class="c-bundle-options">
+    {% if addon_variant != blank %}
+      <div class="c-bundle-option rounded-full-desk active" data-option="bundle">
+        <p class="c-bundle-option-title">{{ block.settings.bundle_title }}</p>
+        <div class="c-bundle-prices">
+          {% assign bundle_compare = product.price | plus: addon_variant.price | plus: shipping_cost %}
+          <span class="c-bundle-price-compare" data-base-price="{{ bundle_compare }}">{{ bundle_compare | money }}</span>
+          
+          {% assign bundle_price = product.price | plus: addon_variant.price %}
+          <span class="c-bundle-price">{{ bundle_price | money }}</span>
+        </div>
+        {% if block.settings.show_free_shipping %}
+          <span class="c-bundle-badge">{{ block.settings.shipping_badge_text }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="c-bundle-option {% if addon_variant == blank %}active rounded-full{% endif %}" data-option="single">
+      <p class="c-bundle-option-title">{{ block.settings.single_title }}</p>
+      <div class="c-bundle-prices">
+        {% assign single_price = product.price | plus: shipping_cost %}
+        <span class="c-bundle-price" data-base-price="{{ single_price }}">{{ single_price | money }}</span>
+        <span class="c-bundle-note">{{ block.settings.single_note }}</span>
+      </div>
+    </div>
+  </div>
+
+  {% if block.settings.show_what_you_get %}
+    <div class="c-what-you-get {% if addon_variant == blank %}hidden{% endif %}">
+      <h3 class="c-what-you-get-heading">{{ block.settings.what_you_get_heading }}</h3>
+      
+      <div class="c-what-you-get-items">
+        <div class="c-what-you-get-item">
+          <div class="c-what-you-get-image">
+            {% if product.featured_image %}
+              {{ product.featured_image | image_url: width: 150 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="c-what-you-get-label">
+            <div class="c-what-you-get-check">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
+            <span class="c-what-you-get-name">
+              {% if block.settings.main_product_custom_title != blank %}
+                {{ block.settings.main_product_custom_title }}
+              {% else %}
+                {{ product.title }}
+              {% endif %}
+            </span>
+          </div>
+          <svg class="c-what-you-get-plus" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 3.33334V12.6667M3.33333 8H12.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        {% if addon_variant != blank %}
+          <div class="c-what-you-get-item">
+            <div class="c-what-you-get-image">
+              {% if addon_variant.image %}
+                {{ addon_variant.image | image_url: width: 150 | image_tag }}
+              {% elsif addon_product.featured_image %}
+                {{ addon_product.featured_image | image_url: width: 150 | image_tag }}
+              {% endif %}
+            </div>
+            <div class="c-what-you-get-label">
+              <div class="c-what-you-get-check">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+              </div>
+              <span class="c-what-you-get-name">
+                {% if block.settings.addon_product_custom_title != blank %}
+                  {{ block.settings.addon_product_custom_title }}
+                {% else %}
+                  {{ addon_product.title }}
+                {% endif %}
+              </span>
+            </div>
+            <svg class="c-what-you-get-plus" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 3.33334V12.6667M3.33333 8H12.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        {% endif %}
+
+        <div class="c-what-you-get-item">
+          <div class="c-what-you-get-image">
+            {% if block.settings.shipping_icon %}
+              {{ block.settings.shipping_icon | image_url: width: 150 | image_tag }}
+            {% endif %}
+          </div>
+          <div class="c-what-you-get-label">
+            <div class="c-what-you-get-check">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+              </svg>
+            </div>
+            <span class="c-what-you-get-name">{{ block.settings.shipping_badge_text }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  function initBundleProduct() {
+    const cBlockId = '{{ block.id }}';
+    const cContainer = document.querySelector(`#${cBlockId}.c-bundle-selector`);
+    if (!cContainer) return;
+
+    const cAddonProductId = {% if addon_variant != blank %}{{ addon_variant.id }}{% else %}null{% endif %};
+    const cBundleOption = cContainer.querySelector('[data-option="bundle"]');
+    const cSingleOption = cContainer.querySelector('[data-option="single"]');
+    const cWhatYouGet = cContainer.querySelector('.c-what-you-get');
+    
+    const cBaseShippingUsdCents = 799;
+    const cProductPriceUsdCents = {{ product.price }};
+    const cAddonPriceUsdCents = {{ addon_variant.price | default: 0 }};
+    
+    let cSelectedOption = cAddonProductId ? 'bundle' : 'single';
+
+    function updatePricesForCurrency() {
+      if (typeof Currency === 'undefined' || !Currency.currentCurrency) return;
+      
+      const cCurrentCurrency = Currency.currentCurrency;
+      
+      const cShippingInCurrentCurrency = Currency.convert(cBaseShippingUsdCents, 'USD', cCurrentCurrency);
+      
+      const cProductPriceConverted = Currency.convert(cProductPriceUsdCents, 'USD', cCurrentCurrency);
+      const cAddonPriceConverted = Currency.convert(cAddonPriceUsdCents, 'USD', cCurrentCurrency);
+
+      if (cBundleOption && cAddonProductId) {
+        const cBundleCompareSpan = cBundleOption.querySelector('.c-bundle-price-compare');
+        if (cBundleCompareSpan) {
+          const cBundleCompareTotal = Math.round(cProductPriceConverted + cAddonPriceConverted + cShippingInCurrentCurrency);
+          cBundleCompareSpan.textContent = Currency.formatMoney(cBundleCompareTotal, Currency.moneyFormats[cCurrentCurrency]);
+        }
+
+      }
+
+      if (cSingleOption) {
+        const cSinglePriceSpan = cSingleOption.querySelector('.c-bundle-price');
+        if (cSinglePriceSpan) {
+          const cSingleTotal = Math.round(cProductPriceConverted + cShippingInCurrentCurrency);
+          cSinglePriceSpan.textContent = Currency.formatMoney(cSingleTotal, Currency.moneyFormats[cCurrentCurrency]);
+        }
+      }
+    }
+
+    function setOption(cOption) {
+      cSelectedOption = cOption;
+      
+      if (cBundleOption) {
+        cBundleOption.classList.toggle('active', cOption === 'bundle');
+      }
+      
+      if (cSingleOption) {
+        cSingleOption.classList.toggle('active', cOption === 'single');
+        cSingleOption.classList.toggle('rounded-full', cOption === 'single');
+      }
+
+      if (cWhatYouGet) {
+        if (cOption === 'single') {
+          cWhatYouGet.classList.add('hidden');
+        } else {
+          cWhatYouGet.classList.remove('hidden');
+        }
+      }
+    }
+
+    if (cBundleOption) {
+      cBundleOption.addEventListener('click', () => setOption('bundle'));
+    }
+    
+    if (cSingleOption) {
+      cSingleOption.addEventListener('click', () => setOption('single'));
+    }
+
+    function initFormIntercept() {
+      const cProductFormElement = document.querySelector('product-form[data-section-id="{{ section.id }}"]');
+      if (!cProductFormElement) return;
+
+      const cForm = cProductFormElement.querySelector('form[data-type="add-to-cart-form"]');
+      if (!cForm) return;
+
+      cForm.addEventListener('submit', function(e) {
+        if (!cContainer || cContainer.classList.contains('hide')) {
+          return;
+        }
+
+        if (cSelectedOption === 'bundle' && cAddonProductId) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const cFormData = new FormData(cForm);
+          const cQuantity = parseInt(cFormData.get('quantity') || 1);
+          const cMainVariantId = cFormData.get('id');
+          
+          const cSubmitButton = cForm.querySelector('[name="add"]');
+          if (cSubmitButton) {
+            cSubmitButton.setAttribute('disabled', true);
+            cSubmitButton.classList.add('loading');
+          }
+
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({
+              items: [
+                { id: cMainVariantId, quantity: cQuantity },
+                { id: cAddonProductId, quantity: cQuantity }
+              ]
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            return fetch('/cart?section_id=cart-drawer')
+              .then(response => response.text())
+              .then(html => {
+                const cartDrawer = document.querySelector('cart-drawer');
+                
+                if (cartDrawer) {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const newDrawerInner = doc.querySelector('.drawer__inner');
+                  
+                  if (newDrawerInner) {
+                    const currentDrawerInner = cartDrawer.querySelector('.drawer__inner');
+                    if (currentDrawerInner) {
+                      currentDrawerInner.innerHTML = newDrawerInner.innerHTML;
+                    }
+                  }
+                  
+                  const drawerInner = cartDrawer.querySelector('.drawer__inner');
+                  if (drawerInner && data.items && data.items.length > 0) {
+                    drawerInner.classList.remove('is-empty');
+                  }
+                  
+                  cartDrawer.open();
+                } else {
+                  window.location.href = '/cart';
+                }
+
+                return fetch('/cart?section_id=cart-icon-bubble')
+                  .then(r => r.text())
+                  .then(iconHtml => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(iconHtml, 'text/html');
+                    const newIcon = doc.querySelector('#cart-icon-bubble');
+                    const currentIcon = document.querySelector('#cart-icon-bubble');
+                    if (newIcon && currentIcon) {
+                      currentIcon.innerHTML = newIcon.innerHTML;
+                    }
+                  });
+              })
+              .then(() => {
+                if (typeof Shopify !== 'undefined' && Shopify.theme && Shopify.theme.cartUpdateCallbacks) {
+                  Shopify.theme.cartUpdateCallbacks.forEach(callback => callback(data));
+                }
+                
+                document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+                  bubbles: true,
+                  detail: data
+                }));
+
+                if (typeof publish === 'function' && typeof PUB_SUB_EVENTS !== 'undefined') {
+                  publish(PUB_SUB_EVENTS.cartUpdate, { 
+                    source: 'product-form', 
+                    cartData: data 
+                  });
+                }
+              });
+          })
+          .catch(error => {
+            console.error('Bundle add to cart error:', error);
+            const errorContainer = document.querySelector('.product-form__error-message-wrapper');
+            if (errorContainer) {
+              errorContainer.classList.remove('hidden');
+              const errorMessage = errorContainer.querySelector('.product-form__error-message');
+              if (errorMessage) {
+                errorMessage.textContent = 'Failed to add items to cart. Please try again.';
+              }
+            }
+          })
+          .finally(() => {
+            if (cSubmitButton) {
+              cSubmitButton.removeAttribute('disabled');
+              cSubmitButton.classList.remove('loading');
+            }
+          });
+
+          return false;
+        }
+      }, true); 
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initFormIntercept();
+        updatePricesForCurrency();
+      });
+    } else {
+      initFormIntercept();
+      updatePricesForCurrency();
+    }
+
+    document.addEventListener('currency:changed', updatePricesForCurrency);
+  }
+
+  document.addEventListener('DOMContentLoaded', initBundleProduct);
+  
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:unload', initBundleProduct);
+    document.addEventListener('shopify:section:load', initBundleProduct);
+  }
+</script>
+
+{% endif %}

@@ -1,0 +1,131 @@
+<style>
+  #{{ section.id }}.c-ticker {
+    width: 100%;
+    background: #ffc947;
+    overflow: hidden;
+    padding: 13px 0;
+    box-sizing: border-box;
+    margin: 56px 0;
+  }
+
+  #{{ section.id }} .c-ticker-track {
+    display: flex;
+    width: max-content;
+    animation: c-ticker-scroll 20s linear infinite;
+  }
+
+  #{{ section.id }} .c-ticker-track:hover {
+    animation-play-state: paused;
+  }
+
+  #{{ section.id }} .c-ticker-list {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  #{{ section.id }} .c-ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 30px;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-ticker-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  #{{ section.id }} .c-ticker-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  @keyframes c-ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media screen and (max-width: 1024px) {
+    #{{ section.id }}.c-ticker {
+      margin: 30px 0;
+    }
+  }
+</style>
+
+
+<section id="{{ section.id }}" class="c-ticker">
+  <div class="c-ticker-track">
+    <div class="c-ticker-list">
+      {% for block in section.blocks %}
+        <div class="c-ticker-item" {{ block.shopify_attributes }}>
+          <span class="c-ticker-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none" aria-hidden="true">
+              <path d="M6.65723 0L8.22882 4.83688H13.3146L9.20013 7.82624L10.7717 12.6631L6.65723 9.67376L2.54273 12.6631L4.11433 7.82624L-0.000169277 4.83688H5.08563L6.65723 0Z" fill="currentColor"/>
+            </svg>
+          </span>
+          {% if block.settings.text != blank %}
+            <p class="c-ticker-text">{{ block.settings.text }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="c-ticker-list" aria-hidden="true">
+      {% for block in section.blocks %}
+        <div class="c-ticker-item">
+          <span class="c-ticker-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none" aria-hidden="true">
+              <path d="M6.65723 0L8.22882 4.83688H13.3146L9.20013 7.82624L10.7717 12.6631L6.65723 9.67376L2.54273 12.6631L4.11433 7.82624L-0.000169277 4.83688H5.08563L6.65723 0Z" fill="currentColor"/>
+            </svg>
+          </span>
+          {% if block.settings.text != blank %}
+            <p class="c-ticker-text">{{ block.settings.text }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C SS Scrolling Text",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Up to 55-Hour Ice Retention"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C SS Scrolling Text",
+      "blocks": [
+        { "type": "item", "settings": { "text": "Up to 55-Hour Ice Retention" } },
+        { "type": "item", "settings": { "text": "Leak-Resistant Materials" } },
+        { "type": "item", "settings": { "text": "30-Day Money-Back Guarantee" } },
+        { "type": "item", "settings": { "text": "Ultralight - Packs Small" } },
+        { "type": "item", "settings": { "text": "90-Day Warranty" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

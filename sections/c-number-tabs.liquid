@@ -1,0 +1,380 @@
+<style>
+  #{{ section.id }} {
+    font-size: 16px;
+    padding-top: {{ section.settings.padding_top }}em;
+    padding-bottom: {{ section.settings.padding_bottom }}em;
+    background-color: {{ section.settings.bg_color }};
+  }
+
+  #{{ section.id }} div,
+  #{{ section.id }} h3 {
+    color: {{ section.settings.text_color }};
+  }
+
+  #{{ section.id }} .c-section-top {
+    align-items: {{ section.settings.section_top_alignment }};
+    text-align: {{ section.settings.section_top_text_alignment }};
+  }
+
+  #{{ section.id }} .c-nt-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 0rem;
+    display: grid;
+  }
+
+  #{{ section.id }} .c-nt-grid-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  #{{ section.id }} .c-nt-item {
+    display: none;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-nt-item.c-active {
+    display: flex;
+  }
+
+  #{{ section.id }} .c-nt-grid-left img,
+  #{{ section.id }} .c-nt-grid-left video {
+    width: 100%;
+    border: 2px solid {{ section.settings.accent_color }};
+    border-radius: 20px 0px 0px 20px;
+    aspect-ratio: 1.2 / 1;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #{{ section.id }} .c-nt-grid-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+
+  #{{ section.id }} .c-nt-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    border: 2px solid {{ section.settings.accent_color }};
+    border-left: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  #{{ section.id }} .c-nt-trigger:hover {
+    background-color: rgba(193,51,37, 0.25);
+  }
+
+  #{{ section.id }} .c-nt-trigger.c-active {
+    background-color: {{ section.settings.accent_color }};
+  }
+
+  #{{ section.id }} .c-nt-trigger.c-active > * {
+    color: #fff;
+  }
+
+  #{{ section.id }} .c-nt-grid-right .c-nt-trigger:nth-child(1) {
+    border-radius: 0px 20px 0px 0px;
+  }
+
+  #{{ section.id }} .c-nt-grid-right .c-nt-trigger:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  #{{ section.id }} .c-nt-grid-right .c-nt-trigger:nth-child(3) {
+    border-radius: 0px 0px 20px 0px;
+  }
+
+  @media (max-width: {{ settings.c_breakpoint3 }}px) {
+    #{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.75 }}em;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}em;
+    }
+
+    #{{ section.id }} .c-nt-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #{{ section.id }} .c-nt-grid-left img,
+    #{{ section.id }} .c-nt-grid-left video {
+      border: 2px solid {{ section.settings.accent_color }};
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    #{{ section.id }} .c-nt-trigger {
+      align-items: center;
+      text-align: center;
+      border-left: 2px solid {{ section.settings.accent_color }};
+    }
+
+    #{{ section.id }} .c-nt-grid-right .c-nt-trigger:nth-child(1) {
+      border-top: none;
+      border-radius: 0px 0px 0px 0px;
+    }
+
+    #{{ section.id }} .c-nt-grid-right .c-nt-trigger:nth-child(3) {
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    #{{ section.id }} .c-buttons-div {
+      align-items: center;
+    }
+  }
+</style>
+
+
+<section id="{{ section.id }}" class="c-section">
+  <div class="page-width">
+    <div class="c-section-top">
+      {%- if section.settings.section_top_subheading != empty -%}<p class="c-section-top-subheading">{{ section.settings.section_top_subheading }}</p>{%- endif -%}
+      {%- if section.settings.section_top_heading != empty -%}<h2>{{ section.settings.section_top_heading }}</h2>{%- endif -%}
+      {%- if section.settings.section_top_paragraph != empty -%}<div class="c-t-80">{{ section.settings.section_top_paragraph }}</div>{%- endif -%}
+    </div>
+    <div class="c-nt-grid">
+      <div class="c-nt-grid-left">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'Item' %}
+              <div class="c-nt-item {% if forloop.first %}c-active{% endif %}">
+                {% if block.settings.block_image %}
+                  {{ block.settings.block_image | image_url: width: 1500 | image_tag: loading: 'lazy', height: 'auto' }}
+                {% endif %}
+                {% if block.settings.video %}
+                  {% assign myPoster = block.settings.video.preview_image | image_url %}
+                  {{ block.settings.video | media_tag: autoplay: true, loop: true, muted: true, controls: false, poster: myPoster }}
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="c-nt-grid-right">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'Item' %}
+              <div class="c-nt-trigger {% if forloop.first %}c-active{% endif %}" {{ block.shopify_attributes }}>
+                <h2>{{ block.settings.block_heading }}</h2>
+                <div>{{ block.settings.block_paragraph }}</div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+    {%- if section.settings.button_text != empty -%}
+      <div class="c-buttons-div">
+        <a href="{{ section.settings.button_url }}" class="c-button {{ section.settings.button_style }}" >{{ section.settings.button_text }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+
+<script>
+  document.querySelectorAll("#{{ section.id }} .c-nt-trigger").forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll("#{{ section.id }} .c-nt-item").forEach((content) => {
+        content.classList.remove("c-active");
+      });
+      document.querySelectorAll("#{{ section.id }} .c-nt-trigger").forEach((tab) => {
+        tab.classList.remove("c-active");
+      });
+      
+      document.querySelectorAll("#{{ section.id }} .c-nt-item")[index].classList.add("c-active");
+      document.querySelectorAll("#{{ section.id }} .c-nt-trigger")[index].classList.add("c-active");
+    });
+  });
+</script>
+
+
+{% schema %}
+  {
+    "name": "C Number Tabs",
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "Item",
+        "limit": 50,
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_heading",
+            "label": "Heading",
+            "default": "Block Heading Here"
+          },
+          {
+            "type": "richtext",
+            "id": "block_paragraph",
+            "label": "Paragraph",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Image"
+          },
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video Upload"
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_style",
+        "label": "Button style",
+        "default": "c-b1"
+      },
+      {
+        "type": "header",
+        "content": "Section Colors"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color",
+        "default": "#C13325"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Section Top"
+      },
+      {
+        "type": "text",
+        "id": "section_top_subheading",
+        "label": "Subheading",
+        "default": "subheading"
+      },
+      {
+        "type": "text",
+        "id": "section_top_heading",
+        "label": "Heading",
+        "default": "Section Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "section_top_paragraph",
+        "label": "Paragraph",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>"
+      },
+      {
+        "type": "select",
+        "id": "section_top_alignment",
+        "label": "Section Top Alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "flex-start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "flex-end",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "section_top_text_alignment",
+        "label": "Text alignment",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 15,
+        "step": 1,
+        "default": 4,
+        "unit": "rem"
+      }
+    ],
+    "presets": [
+      {
+        "name": "C Number Tabs",
+        "blocks": [
+          {
+            "type": "Item"
+          },
+          {
+            "type": "Item"
+          },
+          {
+            "type": "Item"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

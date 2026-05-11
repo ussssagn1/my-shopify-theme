@@ -1,0 +1,96 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "c_footer_VfU9Ln": {
+      "type": "c-footer",
+      "blocks": {
+        "newsletter_XGGgb3": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Be first to know about sales, restocks & drops.",
+            "placeholder": "Enter your email",
+            "button_label": "Subscribe"
+          }
+        },
+        "logo_X3GGfw": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/monti-footer-logo.png"
+          }
+        },
+        "text_JTVAtF": {
+          "type": "text",
+          "settings": {
+            "text": "Monti Coolers makes durable, leakproof coolers and bags designed for life outdoors. Built to keep things cold wherever the adventure takes you."
+          }
+        },
+        "socials_3gwVjP": {
+          "type": "socials",
+          "settings": {
+            "facebook_url": "https://facebook.com/monticoolers",
+            "instagram_url": "http://instagram.com/monticoolers"
+          }
+        },
+        "menu_item_EUxqp9": {
+          "type": "menu_item",
+          "settings": {
+            "heading": "Product",
+            "menu": "footer-product-nav"
+          }
+        },
+        "menu_item_mRENhJ": {
+          "type": "menu_item",
+          "settings": {
+            "heading": "Company",
+            "menu": "footer-company-nav"
+          }
+        },
+        "menu_item_xA3Ux8": {
+          "type": "menu_item",
+          "settings": {
+            "heading": "Help",
+            "menu": "footer-help-nav"
+          }
+        },
+        "bottom_text_Ccnh3Q": {
+          "type": "bottom_text",
+          "settings": {
+            "copyright": "© 2026, Monti Coolers"
+          }
+        },
+        "payment_6CkREf": {
+          "type": "payment",
+          "settings": {
+            "show_payment": true
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_XGGgb3",
+        "logo_X3GGfw",
+        "text_JTVAtF",
+        "socials_3gwVjP",
+        "menu_item_EUxqp9",
+        "menu_item_mRENhJ",
+        "menu_item_xA3Ux8",
+        "bottom_text_Ccnh3Q",
+        "payment_6CkREf"
+      ],
+      "name": "С Footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "c_footer_VfU9Ln"
+  ]
+}

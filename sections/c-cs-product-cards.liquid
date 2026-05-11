@@ -1,0 +1,564 @@
+{% style %}
+  #{{ section.id }}.c-cs-product-cards {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #0E1120;
+  }
+
+  #{{ section.id }} .c-cs-product-cards-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-cs-pc-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-cs-product-card {
+    width: 100%;
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    gap: 32px;
+  }
+
+  #{{ section.id }} .c-cs-product-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    order: -1;
+    border-radius: 12px;
+  }
+
+  #{{ section.id }} .c-cs-product-card-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-cs-product-card-image-mobile {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    #{{ section.id }} .c-cs-product-card.has-mobile-img .c-cs-product-card-image-mobile {
+      display: block;
+    }
+    #{{ section.id }} .c-cs-product-card.has-mobile-img .c-cs-product-card-image-desktop {
+      display: none;
+    }
+
+    #{{ section.id }} .c-cs-pc-cards--slider-active {
+      display: none;
+    }
+
+    #{{ section.id }} .c-cs-pc-swiper {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #{{ section.id }}.has-mobile-slider .c-cs-product-card-heading {
+      font-size: 36px;
+    }
+
+    #{{ section.id }}.has-mobile-slider .c-cs-product-card-body {
+      font-size: 20px;
+    }
+
+    #{{ section.id }} .c-cs-pc-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    #{{ section.id }} .c-cs-pc-nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background: #78C4F5;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0;
+    }
+
+    #{{ section.id }} .c-cs-pc-nav-btn:hover {
+      opacity: 0.9;
+    }
+
+    #{{ section.id }} .c-cs-pc-nav-btn.swiper-button-disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} .c-cs-pc-slider-wrap {
+      display: none;
+    }
+  }
+
+  #{{ section.id }} .c-cs-product-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-cs-product-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #{{ section.id }} .c-cs-product-card-caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #C13325;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-cs-product-card-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #{{ section.id }} .c-cs-product-card-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    color: #0E1120;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-cs-product-card-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.29;
+    color: #000;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-cs-product-card-body p {
+    margin: 0 0 8px;
+  }
+
+  #{{ section.id }} .c-cs-product-card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  #{{ section.id }} .c-cs-product-card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  #{{ section.id }} .c-cs-product-card-btn:hover {
+    opacity: 0.9;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }}.c-cs-product-cards {
+      padding: 64px;
+    }
+
+    #{{ section.id }} .c-cs-product-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 640px;
+      padding: 0;
+      gap: 0;
+    }
+
+    #{{ section.id }} .c-cs-product-card-image {
+      flex: 1;
+      width: auto;
+      aspect-ratio: auto;
+      order: unset;
+      border-radius: 20px;
+    }
+
+    #{{ section.id }} .c-cs-product-card--img-left .c-cs-product-card-image {
+      order: 1;
+    }
+    #{{ section.id }} .c-cs-product-card--img-left .c-cs-product-card-content {
+      order: 2;
+    }
+
+    #{{ section.id }} .c-cs-product-card--img-right .c-cs-product-card-image {
+      order: 2;
+    }
+    #{{ section.id }} .c-cs-product-card--img-right .c-cs-product-card-content {
+      order: 1;
+    }
+
+    #{{ section.id }} .c-cs-product-card-content {
+      flex: 1;
+      padding: 20px;
+      gap: 32px;
+    }
+
+    #{{ section.id }} .c-cs-product-card-text-group {
+      gap: 24px;
+    }
+
+    #{{ section.id }} .c-cs-product-card-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .c-cs-product-card-body {
+      font-size: 20px;
+    }
+
+    #{{ section.id }} .c-cs-product-card-btn {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #{{ section.id }} .c-cs-product-card-content {
+      padding: 48px;
+    }
+  }
+{% endstyle %}
+
+{% if section.settings.mobile_slider %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+{% endif %}
+
+<section id="{{ section.id }}" class="c-cs-product-cards{% if section.settings.mobile_slider %} has-mobile-slider{% endif %}">
+  <div class="c-cs-product-cards-inner">
+
+    {% if section.settings.mobile_slider %}
+      <div class="c-cs-pc-slider-wrap">
+        <div class="swiper c-cs-pc-swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {%- assign img_pos = block.settings.image_position | default: 'right' -%}
+              <div class="swiper-slide">
+                <div
+                  class="c-cs-product-card c-cs-product-card--img-{{ img_pos }}{% if block.settings.mobile_image != blank %} has-mobile-img{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="c-cs-product-card-image">
+                    {% if block.settings.mobile_image != blank %}
+                      {{
+                        block.settings.mobile_image
+                        | image_url: width: 900
+                        | image_tag:
+                          class: 'c-cs-product-card-image-mobile',
+                          loading: 'lazy',
+                          alt: block.settings.heading
+                      }}
+                    {% endif %}
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 900
+                        | image_tag:
+                          class: 'c-cs-product-card-image-desktop',
+                          loading: 'lazy',
+                          alt: block.settings.heading
+                      }}
+                    {% endif %}
+                  </div>
+                  <div class="c-cs-product-card-content">
+                    <div class="c-cs-product-card-top">
+                      {% if block.settings.caption != blank %}
+                        <p class="c-cs-product-card-caption">{{ block.settings.caption }}</p>
+                      {% endif %}
+                      <div class="c-cs-product-card-text-group">
+                        {% if block.settings.heading != blank %}
+                          <h2 class="c-cs-product-card-heading">{{ block.settings.heading }}</h2>
+                        {% endif %}
+                        {% if block.settings.text != blank %}
+                          <div class="c-cs-product-card-body">{{ block.settings.text }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    {% if block.settings.button_text != blank %}
+                      <a href="{{ block.settings.button_url }}" class="c-cs-product-card-btn">
+                        {{ block.settings.button_text }}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="c-cs-pc-nav">
+          <button class="c-cs-pc-nav-btn c-cs-pc-prev" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_5923_10346)">
+                <path d="M19 12H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 18L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 6L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_5923_10346">
+                  <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button class="c-cs-pc-nav-btn c-cs-pc-next" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_5923_10352)">
+                <path d="M5 12H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 6L19 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 18L19 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_5923_10352">
+                  <rect width="24" height="24" fill="white" transform="matrix(1 0 0 -1 0 24)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="c-cs-pc-cards{% if section.settings.mobile_slider %} c-cs-pc-cards--slider-active{% endif %}">
+      {% for block in section.blocks %}
+        {%- assign img_pos = block.settings.image_position | default: 'right' -%}
+        <div
+          class="c-cs-product-card c-cs-product-card--img-{{ img_pos }}{% if block.settings.mobile_image != blank %} has-mobile-img{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+
+          <div class="c-cs-product-card-image">
+            {% if block.settings.mobile_image != blank %}
+              {{
+                block.settings.mobile_image
+                | image_url: width: 900
+                | image_tag:
+                  class: 'c-cs-product-card-image-mobile',
+                  loading: 'lazy',
+                  alt: block.settings.heading
+              }}
+            {% endif %}
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 1300
+                | image_tag:
+                  class: 'c-cs-product-card-image-desktop',
+                  loading: 'lazy',
+                  alt: block.settings.heading
+              }}
+            {% endif %}
+          </div>
+
+          <div class="c-cs-product-card-content">
+            <div class="c-cs-product-card-top">
+              {% if block.settings.caption != blank %}
+                <p class="c-cs-product-card-caption">{{ block.settings.caption }}</p>
+              {% endif %}
+              <div class="c-cs-product-card-text-group">
+                {% if block.settings.heading != blank %}
+                  <h2 class="c-cs-product-card-heading">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <div class="c-cs-product-card-body">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_url }}" class="c-cs-product-card-btn">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% if section.settings.mobile_slider %}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (function () {
+      function initCspcSlider_{{ section.id | replace: '-', '_' }}() {
+        const sectionEl = document.getElementById('{{ section.id }}');
+        if (!sectionEl) return;
+
+        const swiperEl = sectionEl.querySelector('.c-cs-pc-swiper');
+        if (!swiperEl) return;
+
+        if (window.innerWidth >= 768) return;
+
+        new Swiper(swiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: sectionEl.querySelector('.c-cs-pc-next'),
+            prevEl: sectionEl.querySelector('.c-cs-pc-prev'),
+          },
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', initCspcSlider_{{ section.id | replace: '-', '_' }});
+
+      if (Shopify.designMode) {
+        document.addEventListener('shopify:section:load', initCspcSlider_{{ section.id | replace: '-', '_' }});
+      }
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "CS Product Cards",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position (desktop)",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Image (mobile)",
+          "info": "If not set, desktop image is used on mobile"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption",
+          "default": "Carry"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Kid-Sized. Adult-Approved."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Built for school lunches, snack runs, and park days without the bulk of a full cooler.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Button (optional)"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "mobile_slider",
+      "label": "Mobile slider",
+      "info": "Show cards as a swipeable slider on mobile",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "C - CS Product Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "caption": "Carry",
+            "heading": "Kid-Sized. Adult-Approved."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "left",
+            "caption": "Wear",
+            "heading": "Strap It On, Go Hands-Free"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "caption": "Pack",
+            "heading": "Lightweight. Packs Flat."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

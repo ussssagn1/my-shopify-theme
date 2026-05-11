@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "c_hero_new_VRGPQ4": {
+      "type": "c-hero-new",
+      "blocks": {
+        "testimonial_BbJnCQ": {
+          "type": "testimonial",
+          "settings": {
+            "title": "Best cooler ever!",
+            "text": "\"Got it for my husband for Father's Day. The Monti will go everywhere with us!\""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_BbJnCQ"
+      ],
+      "name": "C Hero New",
+      "settings": {
+        "background_image": "shopify://shop_images/hero-desktop_ffc5a188-b2f4-488e-932e-58cd8111709c.png",
+        "background_image_mobile": "shopify://shop_images/hero-mobile_c651a63d-0e7f-4ddf-a121-78482f97a7f4.png",
+        "review_text": "Rated 4.8/5 by 2400+ Adventures",
+        "heading": "Break Free From Hard Coolers",
+        "description": "The Original Puffy Cooler™. Fold it into the built-in stuff-sack to fit in your carry-on, purse, or pack. Less Lugging, More Living.",
+        "button_text": "Buy Now",
+        "button_link": "shopify://products/the-shasta-23l-travel-cooler"
+      }
+    }
+  },
+  "order": [
+    "c_hero_new_VRGPQ4"
+  ]
+}

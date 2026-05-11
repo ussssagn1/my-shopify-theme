@@ -1,0 +1,473 @@
+{% style %}
+  #{{ section.id }}.c-promo-section {
+    padding: 30px 20px;
+  }
+
+  #{{ section.id }} .c-promo-wrap {
+    background: #192A3F;
+    border-radius: 25px;
+    max-width: 1384px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-promo-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.25;
+  }
+
+   #{{ section.id }} .c-promo-bg-circle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+   #{{ section.id }} .c-promo-bg-lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #{{ section.id }} .c-promo-bg-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #{{ section.id }} .c-promo-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #{{ section.id }} .c-promo-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #FFFFFF;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-promo-image img,
+  #{{ section.id }} .c-promo-image svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  #{{ section.id }} .c-promo-image svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #AFAFAF;
+  }
+
+  #{{ section.id }} .c-promo-image-badge {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    max-width: 100px;
+    width: 100%;
+    background-color: transparent !important;
+    height: fit-content !important;
+  }
+
+
+  #{{ section.id }} .c-promo-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 0;
+  }
+
+  #{{ section.id }} .c-promo-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #{{ section.id }} .c-promo-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    letter-spacing: -1.68px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-promo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-promo-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #{{ section.id }} .c-promo-feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 20px;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #{{ section.id }} .c-promo-feature-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-promo-feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ section.id }} .c-promo-feature-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-promo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #C13325;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.55;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 285px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-promo-button:hover {
+    opacity: 0.9;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} .c-promo-features {
+      gap: 12px;
+    }
+    #{{ section.id }} .c-promo-feature-text {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }}.c-promo-section {
+      padding: 56px 20px;
+    }
+
+    #{{ section.id }} .c-promo-wrap {
+      padding: 44px 48px;
+      min-height: 593px;
+    }
+
+    #{{ section.id }} .c-promo-body {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    #{{ section.id }} .c-promo-content {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    #{{ section.id }} .c-promo-image {
+      max-width: 478px;
+      height: 426px;
+      margin: 0;
+    }
+
+    #{{ section.id }} .c-promo-image img,
+    #{{ section.id }} .c-promo-image svg {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #{{ section.id }} .c-promo-image-badge {
+      top: 20px;
+      left: 20px;
+      max-width: 168px;
+    }
+
+    #{{ section.id }} .c-promo-body {
+      padding: 0;
+      justify-content: center;
+      max-width: 46.5%;
+    }
+
+    #{{ section.id }} .c-promo-heading {
+      font-size: 56px;
+      max-width: 439px;
+    }
+
+    #{{ section.id }} .c-promo-text {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-promo-badge {
+      top: 58px;
+      left: 69px;
+    }
+
+    #{{ section.id }} .c-promo-badge-text {
+      font-size: 24px;
+    }
+
+    #{{ section.id }} .c-promo-button {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 1224px) {
+    #{{ section.id }} .c-promo-image {
+      max-width: 558px;
+      height: 506px;
+    }
+
+    #{{ section.id }} .c-promo-content {
+      gap: 80px;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-promo-section">
+  <div class="c-promo-wrap">
+
+    <svg class="c-promo-bg-lines" xmlns="http://www.w3.org/2000/svg" width="193" height="119" viewBox="0 0 193 119" fill="none">
+        <path d="M203.308 -163.373C267.052 -146.293 304.882 -80.7759 287.811 -17.0315C276.461 16.6389 264.562 38.2063 252.13 51.3742C239.717 64.5232 226.767 69.3062 213.246 69.398C199.69 69.4899 185.529 64.8675 170.705 59.1162C155.909 53.376 140.449 46.5093 124.411 42.2118C92.3836 33.6301 64.3023 24.8754 46.3559 10.3195C37.3987 3.05442 30.9821 -5.6453 27.8579 -16.483C24.7323 -27.3259 24.8893 -40.3548 29.1611 -56.2973C37.6938 -88.1415 65.2698 -119.196 98.7491 -140.156C132.231 -161.117 171.487 -171.9 203.308 -163.373Z" stroke="#C13325"/>
+        <path d="M198.91 -146.953C262.654 -129.872 300.484 -64.3553 283.412 -0.610842C272.062 33.0596 260.163 54.6269 247.732 67.7949C235.319 80.9439 222.368 85.7268 208.848 85.8186C195.292 85.9106 181.131 81.2882 166.306 75.5369C151.511 69.7967 136.051 62.93 120.012 58.6324C87.9852 50.0508 59.9038 41.2961 41.9575 26.7401C33.0002 19.4751 26.5836 10.7754 23.4595 -0.0623322C20.3338 -10.9052 20.4909 -23.9341 24.7627 -39.8766C33.2953 -71.7209 60.8714 -102.776 94.3507 -123.735C127.833 -144.696 167.089 -155.479 198.91 -146.953Z" stroke="#C13325"/>
+        <path d="M194.509 -130.532C258.254 -113.451 296.083 -47.9344 279.012 15.8101C267.662 49.4805 255.763 71.0478 243.332 84.2158C230.918 97.3648 217.968 102.148 204.447 102.24C190.892 102.331 176.73 97.7091 161.906 91.9578C147.11 86.2176 131.651 79.3509 115.612 75.0533C83.5848 66.4717 55.5035 57.717 37.5571 43.161C28.5999 35.896 22.1833 27.1963 19.0591 16.3586C15.9334 5.5157 16.0905 -7.51322 20.3623 -23.4557C28.8949 -55.3 56.471 -86.3549 89.9503 -107.314C123.433 -128.275 162.689 -139.058 194.509 -130.532Z" stroke="#C13325"/>
+    </svg>
+    
+    {%- if section.settings.background_image -%}
+      <div class="c-promo-bg-image">
+        {{ section.settings.background_image | image_url: width: 2800 | image_tag: loading: 'lazy', widths: '1400, 2800' }}
+      </div>
+    {%- endif -%}
+
+    <div class="c-promo-content">
+      <div class="c-promo-image">        
+        {%- if section.settings.image -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 1200' }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag }}
+        {%- endif -%}
+
+        <svg class="c-promo-image-badge" xmlns="http://www.w3.org/2000/svg" width="162" height="162" viewBox="0 0 162 162" fill="none">
+        <g filter="url(#filter0_d_4768_1272)">
+        <path d="M62.7013 20.6764C63.3475 19.222 65.1706 18.7335 66.4575 19.67L81.5516 30.6562C82.671 31.471 84.1656 31.5493 85.364 30.856L101.524 21.5084C102.901 20.7114 104.663 21.3874 105.153 22.9016L110.907 40.6621C111.334 41.979 112.497 42.9204 113.874 43.0639L132.442 44.9998C134.025 45.1649 135.054 46.7476 134.561 48.2609L128.776 66.0104C128.347 67.3268 128.734 68.7731 129.764 69.6987L143.649 82.1778C144.832 83.2418 144.733 85.1267 143.445 86.0611L128.332 97.0218C127.211 97.8346 126.675 99.2314 126.964 100.585L130.861 118.843C131.193 120.4 130.006 121.866 128.414 121.865L109.746 121.849C108.361 121.848 107.106 122.663 106.544 123.928L98.965 140.99C98.3188 142.444 96.4957 142.933 95.2089 141.996L80.1148 131.01C78.9954 130.195 77.5007 130.117 76.3023 130.81L60.1427 140.158C58.7649 140.955 57.0035 140.279 56.5129 138.765L50.7592 121.004C50.3324 119.687 49.1692 118.746 47.7923 118.602L29.224 116.666C27.6409 116.501 26.6124 114.919 27.1056 113.405L32.8905 95.6559C33.3194 94.3395 32.9319 92.8932 31.9022 91.9676L18.0176 79.4886C16.8339 78.4245 16.9331 76.5397 18.2216 75.6052L33.3343 64.6445C34.455 63.8317 34.9916 62.4349 34.7028 61.081L30.8054 42.823C30.4732 41.2664 31.6606 39.8003 33.2523 39.8016L51.9207 39.8171C53.3052 39.8183 54.5605 39.0032 55.1225 37.7379L62.7013 20.6764Z" fill="#C13325" stroke="white"/>
+        <path d="M54.7249 68.7437C54.4811 68.0973 54.0602 67.6571 53.4623 67.4232C52.8643 67.1893 52.1373 67.1871 51.2811 67.4165C50.6994 67.5724 50.2302 67.7863 49.8737 68.0583C49.5157 68.3248 49.2679 68.6295 49.1304 68.9722C48.9983 69.3135 48.9808 69.6652 49.0778 70.0274C49.1477 70.3322 49.2814 70.5788 49.4789 70.767C49.6819 70.9538 49.9289 71.0964 50.22 71.1949C50.5096 71.2879 50.8325 71.3513 51.1887 71.3853C51.5434 71.4138 51.9156 71.42 52.3054 71.4038L53.9172 71.3601C54.6967 71.3277 55.4306 71.3663 56.1188 71.476C56.807 71.5858 57.4298 71.7806 57.9872 72.0607C58.5446 72.3407 59.0195 72.7194 59.4121 73.1965C59.8101 73.6722 60.106 74.2605 60.2997 74.9616C60.5707 75.9948 60.547 76.96 60.2285 77.8571C59.9141 78.7472 59.3243 79.5317 58.4592 80.2105C57.5981 80.8824 56.4815 81.4022 55.1094 81.7699C53.7484 82.1346 52.507 82.2437 51.3854 82.0971C50.2693 81.9491 49.3191 81.542 48.5347 80.8757C47.7543 80.2025 47.1879 79.2631 46.8354 78.0576L50.2848 77.1333C50.4747 77.6883 50.763 78.1169 51.1499 78.4191C51.5408 78.7144 52.0034 78.8934 52.5379 78.956C53.0763 79.0118 53.6529 78.9573 54.2675 78.7926C54.8713 78.6308 55.3718 78.4025 55.7693 78.1078C56.1723 77.8116 56.4554 77.474 56.6185 77.095C56.7817 76.716 56.8088 76.3234 56.7 75.9173C56.5985 75.5386 56.4007 75.2504 56.1066 75.0528C55.818 74.8537 55.4353 74.7209 54.9587 74.6545C54.4876 74.5866 53.9248 74.5609 53.2705 74.5775L51.3111 74.6083C49.797 74.6435 48.5298 74.4036 47.5096 73.8888C46.4893 73.3739 45.815 72.4929 45.4866 71.2456C45.2076 70.2262 45.2403 69.2616 45.5847 68.3517C45.9346 67.4403 46.5352 66.6412 47.3864 65.9543C48.2376 65.2674 49.2779 64.7592 50.5073 64.4298C51.7586 64.0945 52.9081 64.0159 53.9558 64.194C55.009 64.3706 55.8985 64.7705 56.6243 65.3936C57.3501 66.0168 57.8557 66.8284 58.1413 67.8283L54.7249 68.7437ZM67.0885 78.3042L63.2687 79.3277L64.5714 60.9084L69.165 59.6775L79.4946 74.98L75.6748 76.0035L67.9664 64.128L67.8347 64.1633L67.0885 78.3042ZM65.0741 71.7411L74.0967 69.3235L74.8423 72.1061L65.8197 74.5237L65.0741 71.7411ZM78.5264 57.1691L86.0337 68.8867L86.1901 68.8448L86.8411 54.9412L90.7926 53.8824L89.4981 72.2996L84.9045 73.5304L74.5667 58.2302L78.5264 57.1691ZM97.919 70.0432L93.4014 53.1834L104.762 50.1393L105.55 53.0783L97.7535 55.1672L98.8299 59.1846L106.041 57.2523L106.829 60.1912L99.6174 62.1235L100.696 66.1491L108.525 64.0514L109.313 66.9903L97.919 70.0432ZM62.3302 109.602L61.642 107.034L66.1544 99.8688C66.5324 99.2381 66.8414 98.6789 67.0813 98.1911C67.3266 97.7018 67.4891 97.2436 67.5688 96.8164C67.6469 96.3837 67.6265 95.945 67.5074 95.5005C67.375 95.0066 67.1485 94.6114 66.8279 94.3149C66.5059 94.013 66.1243 93.8182 65.6831 93.7305C65.2405 93.6373 64.7722 93.6569 64.2783 93.7893C63.7624 93.9275 63.3403 94.1524 63.012 94.4639C62.6837 94.7754 62.4675 95.1539 62.3634 95.5994C62.2592 96.045 62.2792 96.5367 62.4233 97.0745L59.0398 97.9811C58.7443 96.878 58.7374 95.8534 59.0192 94.9073C59.3009 93.9612 59.8323 93.1453 60.6133 92.4596C61.3942 91.7739 62.3719 91.2737 63.5464 90.959C64.7538 90.6355 65.8622 90.5679 66.8714 90.7563C67.8847 90.9377 68.7418 91.3374 69.4427 91.9555C70.1436 92.5736 70.6242 93.3683 70.8845 94.3397C71.0551 94.9763 71.0972 95.6386 71.011 96.3264C70.9302 97.0127 70.6729 97.8199 70.2392 98.7478C69.8041 99.6703 69.1486 100.814 68.273 102.178L66.4578 105.249L66.4887 105.364L73.5685 103.467L74.3494 106.382L62.3302 109.602ZM84.2216 104.133C82.8042 104.507 81.4924 104.485 80.2863 104.067C79.0857 103.648 78.0353 102.856 77.135 101.691C76.2402 100.525 75.5485 99.0193 75.0599 97.1738C74.5672 95.3352 74.419 93.6956 74.6153 92.2548C74.8171 90.8125 75.3352 89.6178 76.1696 88.6707C77.0081 87.7166 78.1326 87.0506 79.543 86.6727C80.9535 86.2948 82.2576 86.31 83.4552 86.7185C84.6584 87.1255 85.7079 87.9031 86.6038 89.0513C87.4982 90.194 88.189 91.6853 88.6761 93.5253C89.1717 95.3749 89.3208 97.029 89.1235 98.4877C88.9316 99.945 88.4206 101.155 87.5906 102.119C86.7606 103.083 85.6376 103.754 84.2216 104.133ZM83.4297 101.178C84.3957 100.919 85.0366 100.227 85.3526 99.1011C85.6686 97.9753 85.5635 96.4417 85.0374 94.5003C84.6948 93.2216 84.2778 92.1921 83.7864 91.4121C83.3005 90.6305 82.7615 90.0896 82.1693 89.7895C81.5826 89.4879 80.9682 89.4231 80.3261 89.5952C79.3657 89.8525 78.726 90.5386 78.4071 91.6535C78.0882 92.7683 78.1826 94.2842 78.6903 96.201C79.0374 97.4962 79.456 98.5429 79.9463 99.3409C80.4407 100.132 80.9846 100.68 81.5783 100.986C82.1705 101.286 82.7876 101.35 83.4297 101.178ZM102.433 95.4685L102.195 94.5794C102.014 93.9043 101.991 93.2459 102.125 92.6042C102.262 91.9554 102.56 91.3874 103.018 90.9001C103.48 90.4058 104.108 90.0521 104.904 89.8388C105.711 89.6227 106.434 89.6112 107.074 89.8044C107.72 89.9961 108.259 90.3399 108.692 90.8357C109.129 91.3245 109.438 91.9092 109.62 92.5897L109.859 93.4788C110.04 94.1538 110.064 94.815 109.931 95.4622C109.797 96.104 109.499 96.6693 109.036 97.1581C108.574 97.6523 107.945 98.0061 107.15 98.2193C106.343 98.4355 105.619 98.4442 104.977 98.2455C104.337 98.0523 103.799 97.7113 103.362 97.2225C102.924 96.7282 102.614 96.1435 102.433 95.4685ZM104.591 93.9375L104.829 94.8266C104.933 95.2162 105.125 95.5589 105.404 95.8547C105.689 96.149 106.081 96.2292 106.581 96.0954C107.08 95.9616 107.375 95.7003 107.465 95.3115C107.56 94.9212 107.554 94.5257 107.447 94.1251L107.208 93.236C107.101 92.8354 106.913 92.4857 106.645 92.187C106.377 91.8883 105.985 91.8081 105.469 91.9463C104.975 92.0787 104.678 92.3434 104.579 92.7407C104.479 93.1379 104.483 93.5368 104.591 93.9375ZM91.1958 88.1385L90.9575 87.2494C90.7752 86.5689 90.7537 85.907 90.8931 85.2638C91.031 84.6151 91.3288 84.047 91.7865 83.5597C92.2496 83.0709 92.8736 82.7214 93.6584 82.5111C94.4707 82.2934 95.1968 82.2812 95.8368 82.4744C96.4768 82.6677 97.0159 83.0114 97.4543 83.5057C97.8911 83.9945 98.2007 84.5792 98.3831 85.2598L98.6213 86.1488C98.8037 86.8294 98.8251 87.4913 98.6857 88.1345C98.5518 88.7762 98.2533 89.3415 97.7901 89.8303C97.331 90.3122 96.7008 90.6604 95.8995 90.8751C95.0983 91.0898 94.3749 91.1013 93.7294 90.9096C93.0879 90.7109 92.5495 90.3699 92.1141 89.8865C91.6828 89.3962 91.3766 88.8136 91.1958 88.1385ZM93.3696 86.6031L93.6078 87.4922C93.7152 87.8928 93.9077 88.2383 94.1855 88.5286C94.4688 88.8174 94.8519 88.8971 95.3348 88.7677C95.8398 88.6324 96.1372 88.3703 96.2271 87.9815C96.3226 87.5913 96.3166 87.1958 96.2092 86.7952L95.971 85.9061C95.8637 85.5054 95.6758 85.1558 95.4076 84.8571C95.1393 84.5584 94.7445 84.4789 94.2231 84.6186C93.7347 84.7494 93.4442 85.0155 93.3517 85.4168C93.2592 85.818 93.2652 86.2135 93.3696 86.6031ZM95.7147 100.657L102.788 80.6912L104.945 80.1133L97.8716 100.079L95.7147 100.657Z" fill="white"/>
+        </g>
+        <defs>
+        <filter id="filter0_d_4768_1272" x="12.6895" y="14.6907" width="136.287" height="132.285" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4768_1272"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4768_1272" result="shape"/>
+        </filter>
+        </defs>
+        </svg>
+      </div>
+
+      <div class="c-promo-body">
+        
+        <div class="c-promo-text-wrap">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="c-promo-heading">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.text != blank -%}
+            <p class="c-promo-text">{{ section.settings.text }}</p>
+          {%- endif -%}
+        </div>
+
+        {%- if section.blocks.size > 0 -%}
+          <div class="c-promo-features">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'feature' -%}
+                <div class="c-promo-feature glass-pill" {{ block.shopify_attributes }}>
+                  {%- if block.settings.icon -%}
+                    <div class="c-promo-feature-icon">
+                      {{ block.settings.icon | image_url: width: 36 | image_tag: loading: 'lazy' }}
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <span class="c-promo-feature-text">{{ block.settings.text }}</span>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+          <a href="{{ section.settings.button_link }}" class="c-promo-button">
+            {{ section.settings.button_text }}
+          </a>
+        {%- endif -%}
+
+      </div>
+    </div>
+
+    <svg class="c-promo-bg-circle" xmlns="http://www.w3.org/2000/svg" width="201" height="126" viewBox="0 0 201 126" fill="none">
+        <mask id="mask0_4768_1234" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="269" height="166">
+        <path d="M1 165.466H0V1.70508H1V165.466ZM10.6523 165.466H9.65234V1.70508H10.6523V165.466ZM21.9111 165.466H20.9111V1.70508H21.9111V165.466ZM33.1699 165.466H32.1699V1.70508H33.1699V165.466ZM42.8223 165.466H41.8223V1.70508H42.8223V165.466ZM54.0811 165.466H53.0811V1.70508H54.0811V165.466ZM62.124 165.466H61.124V1.70508H62.124V165.466ZM71.7725 165.466H70.7725V1.70508H71.7725V165.466ZM79.8154 165.466H78.8154V1.70508H79.8154V165.466ZM90.2705 165.466H89.2705V1.70508H90.2705V165.466ZM100.727 165.466H99.7266V1.70508H100.727V165.466ZM130.483 165.466H129.483V1.70508H130.483V165.466ZM139.332 165.466H138.332V1.70508H139.332V165.466ZM148.984 165.466H147.984V1.70508H148.984V165.466ZM160.243 165.466H159.243V1.70508H160.243V165.466ZM171.502 165.466H170.502V1.70508H171.502V165.466ZM181.154 165.466H180.154V1.70508H181.154V165.466ZM192.413 165.466H191.413V1.70508H192.413V165.466ZM200.456 165.466H199.456V1.70508H200.456V165.466ZM210.104 165.466H209.104V1.70508H210.104V165.466ZM218.147 165.466H217.147V1.70508H218.147V165.466ZM228.604 165.466H227.604V1.70508H228.604V165.466ZM239.059 165.466H238.059V1.70508H239.059V165.466ZM268.815 165.466H267.815V1.70508H268.815V165.466ZM111.183 164.613H110.183V0.852539H111.183V164.613ZM249.515 164.613H248.515V0.852539H249.515V164.613ZM119.932 163.761H118.932V0H119.932V163.761ZM258.264 163.761H257.264V0H258.264V163.761Z" fill="black"/>
+        </mask>
+        <g mask="url(#mask0_4768_1234)">
+        <circle cx="133.906" cy="81.8804" r="81.8804" fill="#C13325"/>
+        </g>
+    </svg>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Promo Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Optional decorative background (15% opacity)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Save 20% OFF On All Coolers"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Keep your drinks cold wherever you go. Shop now and enjoy exclusive savings on our packable, portable coolers, your adventures just got easier."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Feature"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Promo Banner",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Everyday Living"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Effortless to Use"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Sustainable"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Minimalist Aesthetic"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

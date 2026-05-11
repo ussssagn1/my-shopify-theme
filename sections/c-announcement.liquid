@@ -1,0 +1,107 @@
+{% style %}
+  #{{ section.id }}.c-announcement {
+    background-color: #192A3F;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 52px;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }}.c-announcement img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+  }
+
+  #{{ section.id }} .c-announcement__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+  }
+
+  #{{ section.id }} .c-announcement__close {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 1024px) {
+    #{{ section.id }}.c-announcement {
+      padding: 0 64px;
+    }
+  }
+{% endstyle %}
+
+<div id="{{ section.id }}" class="c-announcement">
+  {%- if section.settings.text != blank -%}
+    {{ section.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', height: 'auto' }}
+    {{ section.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', height: 'auto' }}
+    <p class="c-announcement__text">{{ section.settings.text }}</p>
+    {{ section.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', height: 'auto' }}
+    {{ section.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', height: 'auto' }}
+  {%- endif -%}
+</div>
+
+<script>
+(function () {
+  var sectionId = '{{ section.id }}';
+  var bar = document.getElementById(sectionId);
+  if (!bar) return;
+
+  var closeBtn = bar.querySelector('.c-announcement__close');
+  if (!closeBtn) return;
+
+  closeBtn.addEventListener('click', function () {
+    bar.style.display = 'none';
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "C Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "FREE SHIPPING over $160"
+    },
+    {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Announcement Bar"
+    }
+  ]
+}
+{% endschema %}

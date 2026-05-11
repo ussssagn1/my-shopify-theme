@@ -1,0 +1,177 @@
+{% style %}
+  #{{ section.id }}.c-footer-lite {
+    background-color: #0E1120;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 69px 91px;
+  }
+
+  #{{ section.id }} .c-footer-lite__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  #{{ section.id }} .c-footer-lite__logo {
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-footer-lite__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 141px;
+  }
+
+  #{{ section.id }} .c-footer-lite__logo-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: block;
+  }
+
+  #{{ section.id }} .c-footer-lite__copyright {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 22px;
+    color: #fff;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-footer-lite__menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-footer-lite__menu a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #fff;
+    letter-spacing: 0.6px;
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .c-footer-lite__menu a::after {
+    content: "|";
+    padding: 0px 4px;
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-footer-lite__menu a:last-child::after {
+    content: none;
+  }
+
+  @media screen and (min-width: 1024px) {
+    #{{ section.id }}.c-footer-lite {
+      padding: 69px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{{ section.id }} .c-footer-lite__copyright {
+      text-align: center;
+    }
+  }
+{% endstyle %}
+
+{%- assign logo_block      = section.blocks | where: 'type', 'logo'      | first -%}
+{%- assign copyright_block = section.blocks | where: 'type', 'copyright' | first -%}
+{%- assign menu_block      = section.blocks | where: 'type', 'menu'      | first -%}
+
+<footer id="{{ section.id }}" class="c-footer-lite">
+  <div class="c-footer-lite__inner">
+
+    {%- if logo_block != blank -%}
+      <a href="/" class="c-footer-lite__logo" {{ logo_block.shopify_attributes }}>
+        {%- if logo_block.settings.logo != blank -%}
+          {{ logo_block.settings.logo | image_url: width: 300 | image_tag: loading: 'lazy' }}
+        {%- else -%}
+          <span class="c-footer-lite__logo-text">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+    {%- endif -%}
+
+    {%- if copyright_block != blank -%}
+      <p class="c-footer-lite__copyright" {{ copyright_block.shopify_attributes }}>
+        {{ copyright_block.settings.text | default: '© 2026 Monti Coolers' }}
+      </p>
+    {%- endif -%}
+
+    {%- if menu_block != blank -%}
+      {%- assign nav = linklists[menu_block.settings.menu] -%}
+      {%- if nav.links.size > 0 -%}
+        <nav class="c-footer-lite__menu" {{ menu_block.shopify_attributes }}>
+          {%- for link in nav.links -%}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {%- endfor -%}
+        </nav>
+      {%- endif -%}
+    {%- endif -%}
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "C Footer Lite",
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        }
+      ]
+    },
+    {
+      "type": "copyright",
+      "name": "Copyright",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Copyright text",
+          "default": "© 2026 Monti Coolers"
+        }
+      ]
+    },
+    {
+      "type": "menu",
+      "name": "Menu",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Footer Listicle",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "copyright" },
+        { "type": "menu" }
+      ]
+    }
+  ]
+}
+{% endschema %}

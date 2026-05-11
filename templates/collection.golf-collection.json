@@ -1,0 +1,273 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "replo_golf_above_the_fold_jKLGL7": {
+      "type": "replo-golf-above-the-fold",
+      "name": "Golf Above The Fold",
+      "settings": {}
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1755300117b5a28771": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "fa531ea1-d460-4719-819e-306f14b2b1e3": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sizes for any adventure",
+            "heading_size": "h1"
+          }
+        },
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Casual picnic or do you need a gallon of wine? We have you covered!</p>",
+            "text_style": "body"
+          }
+        },
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-heading-1",
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-text-1",
+        "template--14489604915299__fa531ea1-d460-4719-819e-306f14b2b1e3-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Size_Comparison_W_Tesxt.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1644607483a6f0f3ac": {
+      "type": "featured-product",
+      "blocks": {
+        "164460748245c88f1f-0": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "164460748245c88f1f-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "164460748245c88f1f-2": {
+          "type": "text",
+          "settings": {
+            "text": "The World's Most Portable Cooler",
+            "text_style": "subtitle"
+          }
+        },
+        "164460748245c88f1f-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "164460748245c88f1f-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "164460748245c88f1f-5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "164460748245c88f1f-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "164460748245c88f1f-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "164460748245c88f1f-0",
+        "164460748245c88f1f-1",
+        "164460748245c88f1f-2",
+        "164460748245c88f1f-3",
+        "164460748245c88f1f-4",
+        "164460748245c88f1f-5",
+        "164460748245c88f1f-6",
+        "164460748245c88f1f-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "the-shasta-23l-cooler",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1644607462e5893e59": {
+      "type": "featured-product",
+      "blocks": {
+        "16446074627fa2d4dc-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "16446074627fa2d4dc-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "16446074627fa2d4dc-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "16446074627fa2d4dc-3": {
+          "type": "price",
+          "settings": {}
+        },
+        "16446074627fa2d4dc-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "16446074627fa2d4dc-5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "16446074627fa2d4dc-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "16446074627fa2d4dc-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "16446074627fa2d4dc-0",
+        "16446074627fa2d4dc-1",
+        "16446074627fa2d4dc-2",
+        "16446074627fa2d4dc-3",
+        "16446074627fa2d4dc-4",
+        "16446074627fa2d4dc-5",
+        "16446074627fa2d4dc-6",
+        "16446074627fa2d4dc-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "the-shashta",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "replo_golf_below_the_fold_wQDfDQ": {
+      "type": "replo-golf-below-the-fold",
+      "name": "Golf Below The Fold",
+      "settings": {}
+    }
+  },
+  "order": [
+    "replo_golf_above_the_fold_jKLGL7",
+    "banner",
+    "product-grid",
+    "1755300117b5a28771",
+    "fa531ea1-d460-4719-819e-306f14b2b1e3",
+    "1644607483a6f0f3ac",
+    "1644607462e5893e59",
+    "replo_golf_below_the_fold_wQDfDQ"
+  ]
+}

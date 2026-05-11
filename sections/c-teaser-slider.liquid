@@ -1,0 +1,805 @@
+{% style %}
+  #{{ section.id }}.c-teaser-slider {
+    width: 100%;
+    padding: 36px 0 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  #{{ section.id }} .c-teaser-slider-inner {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-teaser-slider-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    color: #0E1120;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: #000;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-input {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #222;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-input::placeholder {
+    color: #A6A6A6;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-btn {
+    height: 44px;
+    min-width: 110px;
+    background: #C13325;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 10px 24px;
+    transition: opacity 0.2s;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-teaser-slider-newsletter-btn:hover {
+    opacity: 0.9;
+  }
+
+  #{{ section.id }} .c-teaser-slider-slider {
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  #{{ section.id }} .c-teaser-slider-slider .swiper-wrapper {
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  #{{ section.id }} .c-teaser-slider-slide {
+    display: flex;
+    flex-direction: column;
+    background: #0D0E10;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 481px;
+    height: auto;
+  }
+
+  #{{ section.id }} .c-teaser-slider-image-wrap {
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;    
+    order: 2;
+    margin-top: -50px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: left;
+  }
+  
+  #{{ section.id }} .c-teaser-slider-image.c-teaser-slider-image--desktop {
+    display: none;
+  }
+  #{{ section.id }} .c-teaser-slider-image.c-teaser-slider-image--mobile {
+    display: block;
+  }
+
+  #{{ section.id }} .c-teaser-slider-content {
+    padding: 24px 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+  }
+
+  #{{ section.id }} .c-teaser-slider-title {
+    margin: 0;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-text {
+    margin-top: 24px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-text * {
+    margin: 0;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 129%;
+  }
+
+  #{{ section.id }} .c-teaser-slider-text strong {
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-teaser-slider-content-el {
+    margin-top: 6px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-content-el.featured {
+    border-top: 1px solid #2B2A2A;
+    width: fit-content;
+    max-width: 435px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-content-el-featured {
+    display: flex;
+    margin-top: 17px;
+    width: fit-content;
+  }
+
+  #{{ section.id }} .c-teaser-slider-content-el-featured .c-teaser-slider-el-link {
+    padding-right: 23px;
+    margin-right: 23px;
+    border-right: 1px solid #2B2A2A;
+  }
+
+  #{{ section.id }} .c-teaser-slider-el-image {
+    width: auto;
+    max-height: 95px;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-teaser-slider-el-link {
+    color: #F86706;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 133%; 
+    text-decoration: none;
+  }
+
+  #{{ section.id }} a.c-teaser-slider-el-link {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-teaser-slider-featured-in {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 48%;
+  }
+
+  #{{ section.id }} .c-teaser-slider-featured-in-label {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  #{{ section.id }} .c-teaser-slider-featured-in-logo {
+    max-height: 15px;
+    width: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  #{{ section.id }} .c-teaser-slider-featured-in-logos {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-pagination-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-pagination {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
+
+  #{{ section.id }} .c-teaser-slider-pagination .swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    background: rgba(235, 0, 27, 0.20);
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, width 0.25s ease, border-radius 0.25s ease;
+    flex-shrink: 0;
+    margin: 0 !important;
+  }
+
+  #{{ section.id }} .c-teaser-slider-pagination .swiper-pagination-bullet-active {
+    background: #E43C32;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }}.c-teaser-slider {
+      padding: 54px 0 54px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-inner {
+      padding: 0 32px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-heading {
+      font-size: 40px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-newsletter {
+      flex: 1;
+      max-width: 421px;
+      width: auto;
+    }
+
+    #{{ section.id }} .c-teaser-slider-slide {
+      flex-direction: column;
+    }
+
+    #{{ section.id }} .c-teaser-slider-image-wrap {
+      order: 2;
+      width: 100%;
+      flex-shrink: 0;
+      min-height: 360px;
+      margin-top: 0;
+    }
+
+    #{{ section.id }} .c-teaser-slider-image.c-teaser-slider-image--desktop {
+      display: block;
+    }
+    #{{ section.id }} .c-teaser-slider-image.c-teaser-slider-image--mobile {
+      display: none;
+    }
+
+    #{{ section.id }} .c-teaser-slider-content {
+      order: 1;
+      flex: 1;
+      padding: 45px 35px;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    #{{ section.id }} .c-teaser-slider-text * {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-pagination-wrap {
+      margin-top: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }}.c-teaser-slider {
+      padding: 54px 0 54px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-inner {
+      padding: 0 40px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-newsletter {
+      flex: none;
+      max-width: 421px;
+      width: 100%;
+    }
+
+    #{{ section.id }} .c-teaser-slider-image-wrap {
+      width: 62%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 85%;
+    }
+  
+
+    #{{ section.id }} .c-teaser-slider-content {
+      padding: 50px 40px;
+      gap: 20px;
+      max-width: 35%;
+    }
+
+    #{{ section.id }} .c-teaser-slider-content-top {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    #{{ section.id }} .c-teaser-slider-title {
+      font-size: 36px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-el-link {
+      font-size: 16px;
+      text-transform: none;
+    }
+
+    #{{ section.id }} .c-teaser-slider-content-el {
+      margin-top: 8px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-featured-in-logo {
+      max-height: 17px;
+    }
+
+    #{{ section.id }} .c-teaser-slider-pagination-wrap {
+      margin-top: 32px;
+    }
+  }
+
+  @media (min-width: 1224px) {
+    #{{ section.id }} .c-teaser-slider-image-wrap {
+      width: 60%;
+      min-height: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+    }
+  }
+{% endstyle %}
+
+{% style %}
+  {% for block in section.blocks %}
+    @media (min-width: 1024px) {
+      #teaser-slider-slide-{{ block.id }} .c-teaser-slider-image-wrap {
+        width: {{ block.settings.image_wrap_width }}%;
+      }
+    }
+  {% endfor %}
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-teaser-slider">
+  <div class="c-teaser-slider-inner">
+
+    <div class="c-teaser-slider-header">
+      {% if section.settings.heading != blank %}
+        <h2 class="c-teaser-slider-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="c-teaser-slider-newsletter">
+        {% if section.settings.newsletter_title != blank %}
+          <p class="c-teaser-slider-newsletter-title">{{ section.settings.newsletter_title }}</p>
+        {% endif %}
+        {%- form 'customer', id: 'ContactTeaserSlider-{{ section.id }}', class: 'c-teaser-slider-newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input
+            type="email"
+            name="contact[email]"
+            class="c-teaser-slider-newsletter-input"
+            placeholder="{{ section.settings.newsletter_placeholder | default: 'Enter your email' }}"
+            aria-label="{{ section.settings.newsletter_placeholder | default: 'Enter your email' }}"
+            required
+            autocorrect="off"
+            autocapitalize="off"
+          >
+          <button type="submit" class="c-teaser-slider-newsletter-btn">
+            {{ section.settings.newsletter_button_label | default: 'Notify Me' }}
+          </button>
+        {%- endform -%}
+      </div>
+    </div>
+
+    <div id="swiper-{{ section.id }}" class="c-teaser-slider-slider swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div id="teaser-slider-slide-{{ block.id }}" class="c-teaser-slider-slide swiper-slide" {{ block.shopify_attributes }}>
+
+            <div class="c-teaser-slider-image-wrap">
+              {% if block.settings.slide_image != blank %}
+                {% if block.settings.slide_image_mobile != blank %}
+                  {{
+                    block.settings.slide_image_mobile
+                    | image_url: width: 800
+                    | image_tag:
+                      class: 'c-teaser-slider-image c-teaser-slider-image--mobile',
+                      loading: 'lazy',
+                      alt: block.settings.title
+                  }}
+                  {{
+                    block.settings.slide_image
+                    | image_url: width: 1200
+                    | image_tag:
+                      class: 'c-teaser-slider-image c-teaser-slider-image--desktop',
+                      loading: 'lazy',
+                      alt: block.settings.title
+                  }}
+                {% else %}
+                  {{
+                    block.settings.slide_image
+                    | image_url: width: 1200
+                    | image_tag:
+                      class: 'c-teaser-slider-image',
+                      loading: 'lazy',
+                      alt: block.settings.title
+                  }}
+                {% endif %}
+            {% else %}
+                {{ 'image' | placeholder_svg_tag: 'c-teaser-slider-image'  }}
+              {% endif %}
+            </div>
+
+            <div class="c-teaser-slider-content">
+              <div class="c-teaser-slider-content-top">
+                {% if block.settings.title != blank %}
+                  <h3 class="c-teaser-slider-title">{{ block.settings.title }}</h3>
+                {% endif %}
+
+                {% if block.settings.text != blank %}
+                  <div class="c-teaser-slider-text">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+
+              {%- assign ctype = block.settings.content_type -%}
+
+              {% if ctype == 'image' %}
+                <div class="c-teaser-slider-content-el">
+                  {% if block.settings.content_image != blank  %}
+                    {{
+                      block.settings.content_image
+                      | image_url: width: 1000
+                      | image_tag:
+                        class: 'c-teaser-slider-el-image',
+                        loading: 'lazy',
+                        alt: block.settings.title
+                    }}
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'c-teaser-slider-el-image'  }}
+                  {% endif %}
+                </div>
+
+              {% elsif ctype == 'text_link' and block.settings.content_link_text != blank %}
+                <div class="c-teaser-slider-content-el">
+                  <{% if block.settings.content_link_url != blank %}a href="{{ block.settings.content_link_url }}"{% else %}div{% endif %} class="c-teaser-slider-el-link">
+                    {{ block.settings.content_link_text }}
+                  </{% if block.settings.content_link_url != blank %}a{% else %}div{% endif %}>
+                </div>
+
+              {% elsif ctype == 'featured_in' %}
+                <div class="c-teaser-slider-content-el">
+                  <div class="c-teaser-slider-content-el-featured">
+                    <{% if block.settings.content_link_url != blank %}a href="{{ block.settings.content_link_url }}"{% else %}div{% endif %} class="c-teaser-slider-el-link">
+                      {{ block.settings.content_link_text }}
+                    </{% if block.settings.content_link_url != blank %}a{% else %}div{% endif %}>
+                    
+                    <div class="c-teaser-slider-featured-in">
+                      {% if block.settings.featured_in_label != blank %}
+                        <span class="c-teaser-slider-featured-in-label">{{ block.settings.featured_in_label }}</span>
+                      {% endif %}
+                      <div class="c-teaser-slider-featured-in-logos">
+                        {% if block.settings.content_image != blank %}
+                          {{
+                            block.settings.content_image
+                            | image_url: width: 1000
+                            | image_tag:
+                              class: 'c-teaser-slider-featured-in-logo',
+                              alt: block.settings.featured_in_label
+                          }}
+                        {% endif %}
+                        {% if block.settings.content_image_second != blank %}
+                          {{
+                            block.settings.content_image_second
+                            | image_url: width: 1000
+                            | image_tag:
+                              class: 'c-teaser-slider-featured-in-logo',
+                              alt: block.settings.featured_in_label
+                          }}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+            </div>
+
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="c-teaser-slider-pagination-wrap">
+      <div id="teaser-slider-pagination-{{ section.id }}" class="c-teaser-slider-pagination swiper-pagination"></div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function initTeaserSlider_{{ section.id | replace: '-', '_' }}() {
+    new Swiper('#swiper-{{ section.id }}', {
+      speed: 400,
+      slidesPerView: 1,
+      spaceBetween: 28,
+      pagination: {
+        el: '#teaser-slider-pagination-{{ section.id }}',
+        clickable: true
+      },
+      breakpoints: {
+        1024: { slidesPerView: 1.075 }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initTeaserSlider_{{ section.id | replace: '-', '_' }});
+
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', initTeaserSlider_{{ section.id | replace: '-', '_' }});
+    document.addEventListener('shopify:section:unload', initTeaserSlider_{{ section.id | replace: '-', '_' }});
+  }
+</script>
+
+{% schema %}
+{
+  "name": "C Teaser Slider",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Slide Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Desktop Product image (768px+)"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image_mobile",
+          "label": "Mobile Product image (under 768px)"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pocket Cooler Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Describe the feature or benefit of this product here.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Content Element"
+        },
+        {
+          "type": "select",
+          "id": "content_type",
+          "label": "Content type",
+          "default": "text_link",
+          "options": [
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "text_link",
+              "label": "Text Link"
+            },
+            {
+              "value": "featured_in",
+              "label": "Featured In"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Image (for Image or Featured In type)"
+        },
+        {
+          "type": "image_picker",
+          "id": "content_image",
+          "label": "Image first"
+        },
+        {
+          "type": "image_picker",
+          "id": "content_image_second",
+          "label": "Image second"
+        },
+        {
+          "type": "header",
+          "content": "Text Link (for Text Link type)"
+        },
+        {
+          "type": "text",
+          "id": "content_link_text",
+          "label": "Link text",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "content_link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "header",
+          "content": "Featured In (for Featured In type)"
+        },
+        {
+          "type": "text",
+          "id": "featured_in_label",
+          "label": "Label text",
+          "default": "As Featured In"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Image Width"
+        },
+        {
+          "type": "range",
+          "id": "image_wrap_width",
+          "label": "Image wrap width (desktop only, %)",
+          "min": 20,
+          "max": 100,
+          "step": 1,
+          "default": 62,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Pocket Cooler"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter title",
+      "default": "Be the First to Know"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_placeholder",
+      "label": "Email placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_button_label",
+      "label": "Button label",
+      "default": "Notify Me"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Teaser Slider",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "The Ultimate Grab-and-Go Cooler.",
+            "text": "<p>The Pocket Cooler works as both a <strong>durable kid's lunchbox</strong> and <strong>an ultra-portable adult cooler</strong> for quick trips.</p>",
+            "content_type": "featured_in",
+            "content_link_text": "Trusted by 30,000+ travel partners",
+            "featured_in_label": "Featured in"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Leak-Proof. Mess-Free.",
+            "text": "<p>Built with a <strong>100% leak-proof insulated liner</strong> and a water-resistant diagonal zipper.</p><p>Keep the <strong>cold locked in</strong> and the condensation off your clothes.</p>",
+            "content_type": "text_link",
+            "content_link_text": "Proven Satisfaction"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Perfectly Sized for the Essentials.",
+            "text": "<p>Fits up to <strong>6 cans</strong> comfortably in a lightweight, everyday carry design.</p><p>Keep your <strong>drinks ice cold</strong> without the bulk of a traditional hard cooler.</p>",
+            "content_type": "text_link",
+            "content_link_text": "Dropping Soon"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "Built to Move With You.",
+            "text": "<p>Features an <strong>adjustable 14\" to 27\"</strong> webbing strap.</p><p>Wear it your way while the durable <strong>Ripstop Nylon exterior handles</strong> whatever the day throws at it.</p>",
+            "content_type": "image"
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+            "title": "The Monti 30-Day Guarantee.",
+            "text": "<p>Take it on your next trip <strong>completely risk-free</strong>.</p><p>If you aren't completely obsessed with your new cooler, <strong>return it unused within 30 days for a full refund</strong>.</p>",
+            "content_type": "text_link",
+            "content_link_text": "NOTIFY ME WHEN IT DROPS"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

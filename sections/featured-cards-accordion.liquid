@@ -1,0 +1,189 @@
+<style>
+  /* WRAPPER */
+  .feature-cards {
+    display: grid;
+    gap: 28px;
+  }
+
+  /* CARD */
+  .feature-card {
+    background: #f5f5f5;
+    border-radius: 16px;
+    margin: 0 12px 20px 12px;
+          overflow: hidden;
+  }
+
+  /* MOBILE HEADER */
+  .feature-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 18px 20px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .feature-subtitle {
+    color: #c13325;
+    font-size: 13px;
+    font-family: Inter, sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .feature-title {
+    font-size:16px;
+    font-weight: 700;
+    margin: 6px 0 0;
+  }
+
+  .chevron {
+    font-size: 18px;
+    transition: transform .3s ease;
+  }
+
+  .feature-toggle[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* CONTENT */
+  .feature-content {
+    display: none;
+    padding: 18px 20px 24px;
+  }
+
+  .feature-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .feature-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #c13325;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  /* DESKTOP LAYOUT */
+  @media (min-width: 768px) {
+    .feature-toggle {
+      display: none;
+    }
+
+    .feature-content {
+      display: flex !important;
+      gap: 28px;
+      align-items: center;
+      padding: 32px;
+    }
+
+    .feature-image,
+    .feature-text {
+      flex: 1;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+  }
+</style>
+
+
+<div class="feature-cards" id="accordian_animation">
+  {% for block in section.blocks %}
+    <div class="feature-card" id="card-{{ block.id }}">
+
+      <!-- MOBILE HEADER ONLY -->
+      <button class="feature-toggle" aria-expanded="false">
+        <div>
+          <span class="feature-subtitle">{{ block.settings.subheading }}</span>
+          <h3 class="feature-title">{{ block.settings.title }}</h3>
+        </div>
+        <span class="chevron">{% render 'c-icon-chevron' %}</span>
+      </button>
+
+      <!-- DESKTOP & MOBILE CONTENT -->
+      <div class="feature-content">
+        <div class="feature-image">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url: '700x' }}" alt="">
+          {% endif %}
+        </div>
+
+        <div class="feature-text">
+          <span class="feature-subtitle desktop-only">{{ block.settings.subheading }}</span>
+          <h3 class="feature-title desktop-only">{{ block.settings.title }}</h3>
+
+          <p>{{ block.settings.body }}</p>
+
+          {% if block.settings.button_label %}
+            <a href="{{ block.settings.button_link }}" class="feature-btn">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggles = document.querySelectorAll(".feature-toggle");
+
+  toggles.forEach(t => {
+    t.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      const isOpen = this.getAttribute("aria-expanded") === "true";
+
+      // close others
+      document.querySelectorAll(".feature-toggle").forEach(btn => {
+        if (btn !== this) {
+          btn.setAttribute("aria-expanded", "false");
+          btn.nextElementSibling.style.display = "none";
+        }
+      });
+
+      // toggle current
+      this.setAttribute("aria-expanded", !isOpen);
+      content.style.display = isOpen ? "none" : "block";
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Accordion Cards",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "text", "id": "subheading", "label": "Red Subheading" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "body", "label": "Body Text" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "button_label", "label": "Button Label" },
+        { "type": "url", "id": "button_link", "label": "Button Link" }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Accordion Cards"
+    }
+  ]
+}
+{% endschema %}

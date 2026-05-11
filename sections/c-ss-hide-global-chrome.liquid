@@ -1,0 +1,105 @@
+<style id="c-ss-hide-global-chrome-{{ section.id }}">
+  /* Fallback: most global header/footer sections are direct children of body */
+  body > [id^="shopify-section-sections--"] {
+    display: none !important;
+  }
+
+  /* Hide Klaviyo teaser/form UI on this LP template */
+  .klaviyo-form,
+  [id*="klaviyo"],
+  [class*="klaviyo"],
+  iframe[src*="klaviyo.com"],
+  iframe[src*="klaviyo"],
+  .sale_badge_wrapper,
+  [class*="sale_badge_wrapper"],
+  [class*="sale_badge-style-"],
+  [class*="sale_badge-position-"],
+  [class^="sale_badge-"],
+  [class*=" sale_badge-"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+</style>
+
+<script>
+  (function() {
+    var klaviyoSelectors = [
+      '.klaviyo-form',
+      '[id*="klaviyo"]',
+      '[class*="klaviyo"]',
+      'iframe[src*="klaviyo.com"]',
+      'iframe[src*="klaviyo"]',
+      '.sale_badge_wrapper',
+      '[class*="sale_badge_wrapper"]',
+      '[class*="sale_badge-style-"]',
+      '[class*="sale_badge-position-"]',
+      '[class^="sale_badge-"]',
+      '[class*=" sale_badge-"]'
+    ];
+
+    var hideKlaviyo = function() {
+      klaviyoSelectors.forEach(function(selector) {
+        document.querySelectorAll(selector).forEach(function(node) {
+          node.style.setProperty('display', 'none', 'important');
+          node.style.setProperty('visibility', 'hidden', 'important');
+          node.style.setProperty('opacity', '0', 'important');
+          node.style.setProperty('pointer-events', 'none', 'important');
+        });
+      });
+    };
+
+    var hideGlobalChrome = function() {
+      var main = document.getElementById('MainContent');
+      if (!main) return;
+
+      var cursor = main.previousElementSibling;
+      while (cursor) {
+        if (cursor.id && cursor.id.indexOf('shopify-section') === 0) {
+          cursor.style.setProperty('display', 'none', 'important');
+        }
+        cursor = cursor.previousElementSibling;
+      }
+
+      cursor = main.nextElementSibling;
+      while (cursor) {
+        if (cursor.id && cursor.id.indexOf('shopify-section') === 0) {
+          cursor.style.setProperty('display', 'none', 'important');
+        }
+        cursor = cursor.nextElementSibling;
+      }
+
+      hideKlaviyo();
+    };
+
+    hideGlobalChrome();
+    document.addEventListener('DOMContentLoaded', hideGlobalChrome);
+    document.addEventListener('shopify:section:load', hideGlobalChrome);
+    document.addEventListener('shopify:section:reorder', hideGlobalChrome);
+    document.addEventListener('shopify:section:select', hideGlobalChrome);
+
+    var observer = new MutationObserver(function() {
+      hideKlaviyo();
+    });
+
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "C SS Hide Global Chrome",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "C SS Hide Global Chrome"
+    }
+  ]
+}
+{% endschema %}

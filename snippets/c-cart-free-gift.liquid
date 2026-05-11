@@ -1,0 +1,295 @@
+<style>
+  #{{ section.id }}.c-cfg {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  #{{ section.id }} .c-cfg__trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #{{ section.id }} .c-cfg__icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #{{ section.id }} .c-cfg__text * {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #fff;
+  }
+  #{{ section.id }} .c-cfg__learn-more {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #fff;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+  #{{ section.id }} .c-cfg__learn-more:hover {
+    opacity: 0.85;
+  }
+
+  #c-cfg-modal-{{ section.id }} {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    max-width: 900px;   
+    width: 100%; 
+    min-height: 300px;
+    padding: 0;
+    background: #f7e5de;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-clip: content-box;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 10000;
+  }
+  #c-cfg-modal-{{ section.id }}::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+  }
+  #c-cfg-modal-{{ section.id }}[open] {
+    display: flex;
+  }
+
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__card {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+  }
+
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__image-wrap {
+    flex-shrink: 0;
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 32px 25px;
+    flex: 1;
+    min-width: 0;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__title {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__desc * {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+  }
+
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 26px;
+    max-width: 528px;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__feature {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+  }
+  
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #c13325;
+    padding: 2px;
+    flex-shrink: 0;
+    box-sizing: content-box;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__feature-text {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    color: #6e1b13;
+    letter-spacing: -0.72px;
+    white-space: nowrap;
+  }
+
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+  #c-cfg-modal-{{ section.id }} .c-cfg-modal__close:hover {
+    opacity: 0.7;
+  }
+
+  {% if block.settings.show_in_buttons %}
+    #{{ section.id }}.c-cfg {
+      justify-content: center;
+      padding: 12px 10px;
+    }
+  {% endif %}
+
+  @media (max-width: 749px) {
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__card {
+      flex-direction: column;
+    }
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__image-wrap {
+      width: 100%;
+      height: 200px;
+    }
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__title {
+      font-size: 22px;
+    }
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__desc {
+      font-size: 16px;
+    }
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__content {
+      gap: 20px;
+      padding: 20px 16px;
+    }
+    #c-cfg-modal-{{ section.id }} .c-cfg-modal__feature-text {
+      font-size: 14px;
+      white-space: normal;
+    }
+  }
+</style>
+
+{%- liquid
+  assign gift_product = all_products['apple-airpods-3']
+  
+  assign pdf_variant_id = gift_product.first_available_variant.id
+  assign trigger_text = block.settings.trigger_text | default: 'Free Shasta Adventure Guide included'
+  assign learn_more_text = block.settings.learn_more_text | default: 'Learn More'
+  assign modal_title = block.settings.modal_title | default: "The Pro's Guide to 55-Hour Cold"
+  assign modal_description = block.settings.modal_description
+-%}
+
+<div
+  id="{{ section.id }}"
+  class="c-cfg hidden"
+  data-product-id="{{ product.id }}"
+  data-pdf-variant-id="{{ pdf_variant_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="c-cfg__trigger">
+    <span class="c-cfg__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M18.4549 2.19527C14.9608 3.3422 10.5065 6.40957 6.39885 11.6641L3.97163 8.97015C3.59821 8.54339 2.90472 8.54339 2.5313 8.97015L0.744222 10.9706C0.397476 11.3707 0.424148 11.9575 0.797568 12.3042L6.29216 17.5855C6.7456 18.0122 7.49243 17.9055 7.81251 17.3454C10.7465 12.0375 13.8939 8.08995 19.2285 3.55558C19.8686 2.99545 19.2818 1.92854 18.4549 2.19527Z" fill="white"/>
+      </svg>
+    </span>
+    <div class="c-cfg__text">{{ trigger_text }}</div>
+    <button
+      class="c-cfg__learn-more"
+      type="button"
+      aria-haspopup="dialog"
+      onclick="document.getElementById('c-cfg-modal-{{ section.id }}').showModal()"
+    >
+      {{ learn_more_text }}
+    </button>
+  </div>
+</div>
+
+<dialog id="c-cfg-modal-{{ section.id }}" class="c-cfg-modal">
+  <div class="c-cfg-modal__card">
+
+    {%- if block.settings.modal_image != blank -%}
+      <div class="c-cfg-modal__image-wrap">
+        {{ block.settings.modal_image | image_url: width: 600 | image_tag: loading: 'lazy', alt: block.settings.modal_image.alt }}
+      </div>
+    {%- endif -%}
+
+    <div class="c-cfg-modal__content">
+      <div class="c-cfg-modal__title-group">
+        <h2 class="c-cfg-modal__title">{{ modal_title }}</h2>
+        {%- if modal_description != blank -%}
+          <div class="c-cfg-modal__desc">{{ modal_description }}</div>
+        {%- endif -%}
+      </div>
+
+      <div class="c-cfg-modal__features">
+        {%- for i in (1..4) -%}
+          {%- assign feature_key = 'feature_' | append: i | append: '_text' -%}
+          {%- assign feature_val = block.settings[feature_key] -%}
+          {%- if feature_val != blank -%}
+            <div class="c-cfg-modal__feature">
+              <span class="c-cfg-modal__feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <g clip-path="url(#c-cfg-clip-{{ section.id }}-{{ i }})">
+                    <path d="M13.592 1.07528C10.0554 4.1025 7.12417 8.43084 4.94686 13.1173C4.88866 13.2453 4.70819 13.2425 4.64997 13.1173C3.33719 10.2006 1.96619 8.05832 0.417634 6.93763C0.280835 6.8387 0.368156 6.62324 0.534074 6.64363C2.21653 6.85612 4.05615 7.94767 4.79843 9.06836C6.83308 5.52297 9.67404 2.88871 13.4057 0.810346C13.5774 0.714302 13.7404 0.947182 13.592 1.07528Z" fill="white"/>
+                  </g>
+                  <defs>
+                    <clipPath id="c-cfg-clip-{{ section.id }}-{{ i }}">
+                      <rect width="14" height="14" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p class="c-cfg-modal__feature-text">{{ feature_val }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <button
+      class="c-cfg-modal__close"
+      type="button"
+      aria-label="Close"
+      onclick="document.getElementById('c-cfg-modal-{{ section.id }}').close()"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M18 4.004L15.996 2L10 7.996L4.004 2L2 4.004L7.996 10L2 15.996L4.004 18L10 12.004L15.996 18L18 15.996L12.004 10L18 4.004Z" fill="#222222"/>
+      </svg>
+    </button>
+
+  </div>
+</dialog>
+
+<script src="{{ 'c-cart-free-gift.js' | asset_url }}" defer="defer"></script>

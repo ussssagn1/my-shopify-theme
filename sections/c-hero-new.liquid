@@ -1,0 +1,506 @@
+{% style %}
+  #shopify-section-{{ section.id }} .c-hero {
+    position: relative;
+    min-height: 690px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-background:after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, #192A3F 40%, transparent 100%);
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-bg-desktop {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-bg-mobile {
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-container {
+    position: relative;
+    z-index: 2;
+    padding: 46px 10px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    height: 100%;
+    flex: 1 1 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-review {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 10px;
+    border-radius: 29px;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-review::before {
+    content:"";
+    position:absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.02)
+    );
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-review-icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-review-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.92px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-button {
+    background: #C13325;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.29;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 63px;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-button:hover {
+    opacity: 0.9;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonials-wrapper {
+    position: absolute;
+    bottom: 13px;
+    left: 14px;    
+    z-index: 3;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonials {
+    width: 219px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.04) 100%), linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 7px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial-star {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-testimonial-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-arrow-mobile {
+    display: block;
+    position: absolute;
+    bottom: 183px;
+    left: 156px;
+  }
+
+  #shopify-section-{{ section.id }} .c-hero-arrow-desktop {
+    display: none;
+  }
+
+  @media (min-width: 576px) {
+    #shopify-section-{{ section.id }} .c-hero-testimonials-wrapper {
+      bottom: 30px;
+      left: 20%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .c-hero-background img {
+      object-position: 100% 65%;
+    }
+    #shopify-section-{{ section.id }} .c-hero-testimonials-wrapper {
+      bottom: 50px;
+      left: 25%;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-arrow-mobile {
+      bottom: 133px;
+      left: 236px;
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .c-hero {
+      min-height: 725px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-bg-desktop {
+      display: block;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-bg-mobile {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-container {
+      padding: 183px 60px 200px;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-content {
+      width: 503px;
+      gap: 22px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-heading {
+      font-size: 65px;
+      letter-spacing: -1.3px;
+      max-width: 503px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-description {
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 362px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-background:after {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-button {
+      font-size: 16px;
+      padding: 15px 40px;
+      height: auto;
+      width: 100%;
+      max-width: 362px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-testimonials-wrapper {
+      position: absolute;
+      bottom: auto;
+      top: 107px;
+      right: 52px;
+      left: auto;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-testimonials {     
+      max-width: 350px;
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-testimonial {
+      gap: 17px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-testimonial-header {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-background img {
+      object-position: center 20%;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-arrow-mobile {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .c-hero-arrow-desktop {
+      display: block;
+      position: absolute;
+      top: 152px;
+      right: 18px;
+    }
+  }
+{% endstyle %}
+
+<div class="c-hero">
+  {% if section.settings.background_image or section.settings.background_image_mobile %}
+    <div class="c-hero-background">
+      {% if section.settings.background_image_mobile %}
+        {{
+          section.settings.background_image_mobile
+          | image_url: width: 750
+          | image_tag:
+            loading: 'eager',
+            class: 'c-hero-bg-mobile',
+            alt: '',
+            sizes: '100vw',
+            widths: '375, 550, 750'
+        }}
+      {% endif %}
+      {% if section.settings.background_image %}
+        {{
+          section.settings.background_image
+          | image_url: width: 2880
+          | image_tag:
+            loading: 'eager',
+            class: 'c-hero-bg-desktop',
+            alt: '',
+            sizes: '100vw',
+            widths: '1024, 1440, 1920, 2880'
+        }}
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="c-hero-background" style="background: #192A3F;"></div>
+  {% endif %}
+
+  <div class="c-hero-container">
+    <div class="c-hero-content">
+      {% if section.settings.review_text != blank %}
+        <div class="c-hero-review">
+          <svg class="c-hero-review-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M6.74889 0.10663C6.82393 -0.0355997 7.02763 -0.0355992 7.10267 0.10663L9.17225 4.02922C9.20119 4.08407 9.25394 4.12239 9.31504 4.13296L13.6852 4.88911C13.8436 4.91652 13.9066 5.11025 13.7945 5.22557L10.7034 8.40601C10.6602 8.45048 10.6401 8.51248 10.6489 8.57387L11.2802 12.9638C11.3031 13.123 11.1383 13.2427 10.994 13.1717L7.01403 11.2148C6.95838 11.1874 6.89318 11.1874 6.83753 11.2148L2.85756 13.1717C2.71325 13.2427 2.54846 13.123 2.57135 12.9638L3.20266 8.57387C3.21149 8.51248 3.19134 8.45048 3.14812 8.40601L0.0570536 5.22557C-0.0550256 5.11025 0.00792056 4.91652 0.166378 4.88911L4.53652 4.13296C4.59762 4.12239 4.65037 4.08407 4.67931 4.02922L6.74889 0.10663Z" fill="#F5CF00"/>
+          </svg>
+          <p class="c-hero-review-text">{{ section.settings.review_text }}</p>
+        </div>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h1 class="c-hero-heading">{{ section.settings.heading }}</h1>
+      {% endif %}
+    </div>
+
+    {% if section.settings.description != blank %}
+      <p class="c-hero-description">{{ section.settings.description }}</p>
+    {% endif %}
+
+    {% if section.settings.button_text != blank %}
+      <a
+        href="{{ section.settings.button_link }}"
+        class="c-hero-button"
+      >
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="c-hero-testimonials-wrapper">
+        <div class="c-hero-testimonials-arrow">
+          <svg class="c-hero-arrow-desktop" xmlns="http://www.w3.org/2000/svg" width="51" height="149" viewBox="0 0 51 149" fill="none">
+            <path d="M9.62547 11.6497L12.4913 9.6405L12.4913 9.6405L9.62547 11.6497ZM13.0727 146.457C13.5988 148.317 15.5332 149.398 17.3932 148.872L47.7038 140.298C49.5638 139.772 50.6451 137.838 50.119 135.978C49.5928 134.118 47.6584 133.036 45.7984 133.562L18.8557 141.184L11.2342 114.241C10.708 112.381 8.77364 111.3 6.91363 111.826C5.05362 112.352 3.97232 114.287 4.49847 116.147L13.0727 146.457ZM2.86655 2.00925L0.000718486 4.01848L6.75964 13.659L9.62547 11.6497L12.4913 9.6405L5.73238 1.72339e-05L2.86655 2.00925ZM9.62547 11.6497L6.75964 13.659C33.7608 52.1717 36.3355 102.741 13.3854 143.797L16.4405 145.504L19.4956 147.212C43.7566 103.811 41.0349 50.3532 12.4913 9.6405L9.62547 11.6497Z" fill="white"/>
+          </svg>
+          <svg class="c-hero-arrow-mobile" xmlns="http://www.w3.org/2000/svg" width="62" height="36" viewBox="0 0 62 36" fill="none">
+            <path d="M4.47267 30.2251L5.60744 31.2061L5.60744 31.2061L4.47267 30.2251ZM60.7704 14.5012C61.4884 14.088 61.7355 13.171 61.3223 12.453L54.5889 0.752084C54.1757 0.0340591 53.2586 -0.213052 52.5406 0.200146C51.8226 0.613342 51.5755 1.53038 51.9887 2.2484L57.9739 12.6492L47.5731 18.6345C46.8551 19.0477 46.608 19.9647 47.0212 20.6827C47.4344 21.4008 48.3514 21.6479 49.0695 21.2347L60.7704 14.5012ZM1.1349 34.0863L2.26967 35.0672L5.60744 31.2061L4.47267 30.2251L3.33789 29.2442L0.000121745 33.1053L1.1349 34.0863ZM4.47267 30.2251L5.60744 31.2061C18.9457 15.7764 39.9386 9.34278 59.6319 14.6495L60.0222 13.2011L60.4125 11.7528C39.6074 6.1465 17.4292 12.9433 3.33789 29.2442L4.47267 30.2251Z" fill="white"/>
+          </svg>
+        </div>
+
+        <div class="c-hero-testimonials">
+          {% for block in section.blocks %}
+            <div class="c-hero-testimonial" {{ block.shopify_attributes }}>
+              <div class="c-hero-testimonial-header">
+                <div class="c-hero-testimonial-stars">
+                  {% for i in (1..5) %}
+                    <svg class="c-hero-testimonial-star" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                      <path d="M7.95432 0.138145C8.01419 -0.0461174 8.27487 -0.0461176 8.33474 0.138145L10.1203 5.63339C10.147 5.71579 10.2238 5.77158 10.3105 5.77158H16.0885C16.2822 5.77158 16.3628 6.01951 16.2061 6.13339L11.5315 9.52963C11.4614 9.58056 11.4321 9.67083 11.4589 9.75324L13.2444 15.2485C13.3043 15.4327 13.0934 15.586 12.9366 15.4721L8.26209 12.0758C8.19199 12.0249 8.09707 12.0249 8.02697 12.0758L3.35244 15.4721C3.1957 15.586 2.9848 15.4327 3.04468 15.2485L4.83019 9.75324C4.85696 9.67083 4.82763 9.58056 4.75753 9.52963L0.0830026 6.13339C-0.0737401 6.01951 0.00681502 5.77158 0.20056 5.77158H5.9786C6.06524 5.77158 6.14203 5.71579 6.16881 5.63339L7.95432 0.138145Z" fill="#F5CF00"/>
+                    </svg>
+                  {% endfor %}
+                </div>
+
+                {% if block.settings.title != blank %}
+                  <p class="c-hero-testimonial-title">{{ block.settings.title }}</p>
+                {% endif %}
+              </div>
+
+              {% if block.settings.text != blank %}
+                <p class="c-hero-testimonial-text">{{ block.settings.text }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "C Hero New",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image (desktop)",
+      "info": "Recommended: 2880×1450px"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background image (mobile)",
+      "info": "Recommended: 750×1550px"
+    },
+    {
+      "type": "text",
+      "id": "review_text",
+      "label": "Review badge text",
+      "default": "Rated 4.8/5 by 2400+ Adventures"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Break Free From Hard Coolers"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The Original Puffy Cooler™. Fold it into the built-in stuff-sack to fit in your carry-on, purse, or pack. Less Lugging, More Living."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Best cooler ever!"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "\"Got it for my husband for Father's Day. The Monti will go everywhere with us!\""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Hero New",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "title": "Best cooler ever!",
+            "text": "\"Got it for my husband for Father's Day. The Monti will go everywhere with us!\""
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

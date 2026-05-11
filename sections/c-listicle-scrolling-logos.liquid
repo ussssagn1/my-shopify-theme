@@ -1,0 +1,193 @@
+{% style %}
+  #{{ section.id }}.c-lm {
+    background: #192A3F;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56px;
+  }
+
+  #{{ section.id }} .c-lm-wrap {
+    max-width: 1322px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    position: relative;
+    overflow: hidden;
+    
+    background: linear-gradient(180deg, #0D1B2E 0%, #111D30 60%, #0D1B2E 100%);
+  }
+
+  #{{ section.id }} .c-lm-wrap::before,
+  #{{ section.id }} .c-lm-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.06) 70%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  #{{ section.id }} .c-lm-wrap::before { top: 0; }
+  #{{ section.id }} .c-lm-wrap::after  { bottom: 0; }
+
+  #{{ section.id }} .c-lm-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  #{{ section.id }} .c-lm-label {
+    color: #FFF;
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 129%;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+  }
+
+  #{{ section.id }} .c-lm-track {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  }
+
+  #{{ section.id }} .c-lm-marquee {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    width: max-content;
+    animation: c-lm-scroll-{{ section.id | replace: '-', '_' }} {{ section.settings.speed }}s linear infinite;
+    padding: 4px 0;
+  }
+
+  #{{ section.id }} .c-lm-item {
+    flex-shrink: 0;
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+  #{{ section.id }} .c-lm-item img {
+    height: 100%;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.75;
+    display: block;
+  }
+
+  @keyframes c-lm-scroll-{{ section.id | replace: '-', '_' }} {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }} .c-lm-wrap {
+      padding: 32px 64px 64px;
+      border-radius: 12px;
+
+            
+      background:
+        radial-gradient(ellipse 480px 200px at 0% 0%,   rgba(180, 30, 50, 0.38) 0%, transparent 70%),
+        radial-gradient(ellipse 480px 200px at 100% 100%, rgba(180, 30, 50, 0.38) 0%, transparent 70%),
+        linear-gradient(180deg, #0D1B2E 0%, #111D30 60%, #0D1B2E 100%);
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-lm">
+  <div class="c-lm-wrap">
+    <div class="c-lm-inner">
+      {% if section.settings.label != blank %}
+        <p class="c-lm-label">{{ section.settings.label }}</p>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+        <div class="c-lm-track">
+          <div class="c-lm-marquee">
+            {% for block in section.blocks %}
+              <div class="c-lm-item" {{ block.shopify_attributes }}>
+                {% if block.settings.logo != blank %}
+                  {{
+                    block.settings.logo
+                    | image_url: width: 300
+                    | image_tag: loading: 'lazy', alt: block.settings.logo_alt
+                  }}
+                {% endif %}
+              </div>
+            {% endfor %}
+            {% for block in section.blocks %}
+              <div class="c-lm-item" aria-hidden="true">
+                {% if block.settings.logo != blank %}
+                  {{
+                    block.settings.logo
+                    | image_url: width: 300
+                    | image_tag: loading: 'lazy', alt: ''
+                  }}
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Listicle Logos",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image"
+        },
+        {
+          "type": "text",
+          "id": "logo_alt",
+          "label": "Alt text"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Featured In"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 25,
+      "unit": "s"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Listicle Logos",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,412 @@
+{% style %}
+  #{{ section.id }}.c-iwt {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #F8F8F8;
+  }
+
+  #{{ section.id }} .c-iwt-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-iwt-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  #{{ section.id }} .c-iwt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #{{ section.id }} .c-iwt-section-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #{{ section.id }} .c-iwt-caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #C13325;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-iwt-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.1;
+    color: #000;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-iwt-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #{{ section.id }} .c-iwt-tab {
+    border-left: 1px solid rgba(193, 51, 37, 0.5);
+    padding: 20px 0 20px 24px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: opacity 0.25s ease, background 0.25s ease;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-iwt-tab.is-active {
+    background: #fff;
+    border-left: 2px solid #C13325;
+    padding: 16px 0 16px 24px;
+    opacity: 1;
+    cursor: default;
+  }
+
+  #{{ section.id }} .c-iwt-tab-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    color: #000;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-iwt-tab-body-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  #{{ section.id }} .c-iwt-tab.is-active .c-iwt-tab-body-wrap {
+    grid-template-rows: 1fr;
+  }
+
+  #{{ section.id }} .c-iwt-tab-body-inner {
+    overflow: hidden;
+    padding-top: 0;
+    transition: padding-top 0.3s ease;
+  }
+
+  #{{ section.id }} .c-iwt-tab.is-active .c-iwt-tab-body-inner {
+    padding-top: 8px;
+  }
+
+  #{{ section.id }} .c-iwt-tab-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #000;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-iwt-tab-body p {
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-iwt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  #{{ section.id }} .c-iwt-btn:hover {
+    opacity: 0.9;
+  }
+
+  #{{ section.id }} .c-iwt-image-wrap {
+    width: 100%;
+    aspect-ratio: 1/1;
+    min-height: 390px;
+    border: 2px solid #C13325;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #{{ section.id }} .c-iwt-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  #{{ section.id }} .c-iwt-img.is-visible {
+    opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }}.c-iwt {
+      padding: 64px;
+    }
+
+    #{{ section.id }} .c-iwt-layout {
+      flex-direction: row;
+      align-items: center;
+      gap: 80px;
+    }
+
+    #{{ section.id }} .c-iwt-content {
+      flex: 1;
+      min-width: 0;
+      gap: 32px;
+    }
+
+    #{{ section.id }} .c-iwt-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .c-iwt-tab-title {
+      font-size: 28px;
+    }
+
+    #{{ section.id }} .c-iwt-tab {
+      padding: 24px 0 24px 24px;
+    }
+
+    #{{ section.id }} .c-iwt-tab.is-active {
+      padding: 16px 0 16px 24px;
+    }
+
+    #{{ section.id }} .c-iwt-tab-body {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-iwt-btn {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-iwt-image-wrap {
+      flex: 1;
+      max-width: 600px;
+      width: 100%;
+      aspect-ratio: unset;
+      min-height: 600px;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-iwt">
+  <div class="c-iwt-inner">
+    <div class="c-iwt-layout">
+
+      <div class="c-iwt-content">
+        <div class="c-iwt-section-title">
+          {% if section.settings.caption != blank %}
+            <p class="c-iwt-caption">{{ section.settings.caption }}</p>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="c-iwt-heading">{{ section.settings.heading }}</h2>
+          {% endif %}
+        </div>
+
+        <div class="c-iwt-tabs">
+          {% for block in section.blocks %}
+            <div
+              class="c-iwt-tab{% if forloop.first %} is-active{% endif %}"
+              data-tab="{{ block.id }}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.tab_title != blank %}
+                <h3 class="c-iwt-tab-title">{{ block.settings.tab_title }}</h3>
+              {% endif %}
+              {% if block.settings.tab_text != blank %}
+                <div class="c-iwt-tab-body-wrap">
+                  <div class="c-iwt-tab-body-inner">
+                    <div class="c-iwt-tab-body">{{ block.settings.tab_text }}</div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if section.settings.button_text != blank %}
+          <a href="{{ section.settings.button_url }}" class="c-iwt-btn">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="c-iwt-image-wrap">
+        {% for block in section.blocks %}
+          {% if block.settings.image != blank %}
+            {{
+              block.settings.image
+              | image_url: width: 1200
+              | image_tag:
+                class: 'c-iwt-img',
+                loading: 'lazy',
+                alt: block.settings.tab_title,
+                data-block-id: block.id
+            }}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function initImageWithTabs_{{ section.id | replace: '-', '_' }}() {
+    const section = document.getElementById('{{ section.id }}');
+    if (!section) return;
+
+    const tabs = section.querySelectorAll('.c-iwt-tab');
+    const images = section.querySelectorAll('.c-iwt-img');
+
+    function activateTab(tab) {
+      if (tab.classList.contains('is-active')) return;
+
+      tabs.forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      const blockId = tab.dataset.tab;
+
+      images.forEach(img => {
+        if (img.dataset.blockId === blockId) {
+          img.classList.add('is-visible');
+        } else {
+          img.classList.remove('is-visible');
+        }
+      });
+    }
+
+    // Set first image visible on init
+    if (images.length > 0) {
+      const firstTab = section.querySelector('.c-iwt-tab.is-active');
+      if (firstTab) {
+        const firstBlockId = firstTab.dataset.tab;
+        images.forEach(img => {
+          img.classList.toggle('is-visible', img.dataset.blockId === firstBlockId);
+        });
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => activateTab(tab));
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initImageWithTabs_{{ section.id | replace: '-', '_' }});
+
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', initImageWithTabs_{{ section.id | replace: '-', '_' }});
+    document.addEventListener('shopify:section:unload', initImageWithTabs_{{ section.id | replace: '-', '_' }});
+  }
+</script>
+
+{% schema %}
+{
+  "name": "C Image With Tabs",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Tab",
+      "type": "tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab title",
+          "default": "Tab Title"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_text",
+          "label": "Tab text",
+          "default": "<p>Describe this feature here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "See the Shasta in Action"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why It's Worth It"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Image With Tabs",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "36 cans Capacity",
+            "tab_text": "<p>More capacity than any other Monti. Enough for the whole crew, a full day, or a week's worth of grocery runs.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "24L Spacious interior",
+            "tab_text": "<p>Spacious interior with a sleek exterior. Expands from 4.5\" to 14\" wide — loads big, packs small.</p>"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "2-in-1 Magic",
+            "tab_text": "<p>The only Monti that converts from tote to backpack. One cooler, two carry modes, zero compromises.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

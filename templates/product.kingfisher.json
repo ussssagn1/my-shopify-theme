@@ -1,0 +1,786 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "c-kingfisher-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "The Ultimate Packable Cooler Tote",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Details",
+            "icon": "none",
+            "content": "<p><strong>Capacity<br/></strong>It can comfortably store up to 36 cans</p><p><strong>Dimensions<br/></strong>Cooler Open: 12.5\"H x 4.5\"W x 15\"L<br/>Stuff Sack: 9\"H x 3\"W x 10\"L<br/>24 liter capacity<br/><br/><strong>Materials</strong><br/>Ripstop Nylon<br/>Hydrophobic Synthetic Insulation<br/>Waterproof YKK Zippers<br/><br/><br/>Use the roll-top for peak performance and comfort. We also find the product performs best with ice packs rather than ice in higher humidity environments if you are concerned about condensation. <br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_AfcRb8": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "content": "<p><strong>Monti Guarantee</strong>: If you're not happy with your cooler return it unused for a full refund in the first 30 days! <br/><br/><strong>Holiday Gift Return: </strong>Unused coolers received as gifts, purchased after November 1st, can be returned until January 25th. <br/><br/><strong>Christmas Shipping Deadline: </strong>Order's placed on or before December 18th to the continental United States will ship out in time to arrive for Christmas. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PfTtMU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "none",
+            "content": "<p>Easily turn inside out to clean and dry. Hand wash with cold water. </p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "caption",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "vendor",
+        "description",
+        "collapsible-row-0",
+        "collapsible_tab_AfcRb8",
+        "collapsible_tab_PfTtMU",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 64
+      }
+    },
+    "c_logos_aXWyyH": {
+      "type": "c-logos",
+      "blocks": {
+        "item_TCTUKj": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_cig4Vb": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_PKJBWc": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_J8XLB6": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_FhxUag": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_fL6R6Y": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_H6V4z3": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_KftqAc": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_QMeJNY": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_TCTUKj",
+        "item_cig4Vb",
+        "item_PKJBWc",
+        "item_J8XLB6",
+        "item_FhxUag",
+        "item_fL6R6Y",
+        "item_H6V4z3",
+        "item_KftqAc",
+        "item_QMeJNY"
+      ],
+      "disabled": true,
+      "name": "C Logos",
+      "settings": {
+        "show_middle": false,
+        "heading": "AS SEEN ON:",
+        "image_height": 1.9,
+        "image_gap": 6,
+        "image_gap_mobile": 4,
+        "container_width": 10,
+        "marquee_speed": 60,
+        "marquee_padding_top": 2,
+        "marquee_padding_bottom": 2,
+        "direction": "-100%",
+        "toggle_pause_on_hover": false,
+        "full_width": true,
+        "grayscale_logo_colors": false,
+        "invert_logo_colors": false,
+        "bg_middle_color": "#ffffff",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "Featured In",
+        "section_top_heading": "",
+        "section_top_paragraph": "",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "177762895688c776e2": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "c_cs_product_cards_XLGHzB": {
+      "type": "c-cs-product-cards",
+      "blocks": {
+        "card_EkEcWE": {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify://shop_images/kingfisher-card-1.png",
+            "mobile_image": "shopify://shop_images/kingfisher-card-1.png",
+            "caption": "Carry",
+            "heading": "A Cooler That Doubles as a Tote",
+            "text": "<p>Structured handles sit upright on any surface. <strong>Grab it like a grocery bag</strong>, set it on a boat seat, or hang it off a stroller.<br/><br/>No floppy soft cooler energy the Kingfisher holds its shape when loaded.</p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "card_kLQnaE": {
+          "type": "card",
+          "settings": {
+            "image_position": "left",
+            "image": "shopify://shop_images/kingfisher-card-2.png",
+            "mobile_image": "shopify://shop_images/kingfisher-card-2.png",
+            "caption": "Wear",
+            "heading": "Strap It On, Go Hands-Free",
+            "text": "<p><strong>Adjustable straps click</strong> in when you need them. <br/><br/>Transition from tote <strong>to backpack in seconds</strong>, perfect for hikes, airports, or long walks from the parking lot to the beach.</p>",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "card_rCc9c8": {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify://shop_images/kingfisher-card-3.png",
+            "mobile_image": "shopify://shop_images/kingfisher-card-3.png",
+            "caption": "Pack",
+            "heading": "Folds Flat When the Day's Done",
+            "text": "<p>The Kingfisher compresses into its <strong>built-in 10\"×3\"×9\" stuff sack</strong>. Slide it into a suitcase, toss it in the trunk, or clip it to a bag.<br/><br/>You'd never know you're carrying a 36-can cooler.</p>",
+            "button_text": "Shop Now",
+            "button_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "card_EkEcWE",
+        "card_kLQnaE",
+        "card_rCc9c8"
+      ],
+      "name": "C - CS Product Cards",
+      "settings": {
+        "mobile_slider": true
+      }
+    },
+    "c_image_with_tabs_fMJHmj": {
+      "type": "c-image-with-tabs",
+      "blocks": {
+        "tab_4ri8TR": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "36 cans Capacity",
+            "tab_text": "<p>More capacity than any other Monti. Enough for the whole crew, a full day, or a week's worth of grocery runs.</p>",
+            "image": "shopify://shop_images/kingfisher-card-3.png"
+          }
+        },
+        "tab_HqJFnK": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "24L Spacious interior",
+            "tab_text": "<p>Spacious interior with a sleek exterior. Expands from 4.5\" to 14\" wide — loads big, packs small.</p>",
+            "image": "shopify://shop_images/listicle-second-1.png"
+          }
+        },
+        "tab_XgkWMz": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "2-in-1 Magic",
+            "tab_text": "<p>The only Monti that converts from tote to backpack. One cooler, two carry modes, zero compromises.</p>",
+            "image": "shopify://shop_images/kf-product-card-2.png"
+          }
+        }
+      },
+      "block_order": [
+        "tab_4ri8TR",
+        "tab_HqJFnK",
+        "tab_XgkWMz"
+      ],
+      "name": "C Image With Tabs",
+      "settings": {
+        "caption": "See the Shasta in Action",
+        "heading": "Why It's Worth It",
+        "button_text": "Shop Now",
+        "button_url": ""
+      }
+    },
+    "c_faq_without_tabs_r3Gxhw": {
+      "type": "c-faq-without-tabs",
+      "blocks": {
+        "item_UtRinn": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "How does the tote-to-backpack switch work?",
+            "faq_answer": "<p>Adjustable straps are built in. Tuck them away for tote mode, pull them out and clip in for backpack mode. Takes about 5 seconds.</p>"
+          }
+        },
+        "item_CGjzMT": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "How does it compare to the Shasta?",
+            "faq_answer": "<p>The Kingfisher is a tote-first cooler with more capacity (36 cans vs 24). The Shasta is a backpack-first cooler that's lighter and more compact. Choose the Kingfisher if you want max capacity and carry versatility.</p>"
+          }
+        },
+        "item_8qQEpJ": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "Does it fit in a carry-on?",
+            "faq_answer": "<p>Yes. When folded into its stuff sack (10\"×3\"×9\") it fits in any standard carry-on, tote, or under-seat bag.</p>"
+          }
+        },
+        "item_NJe6UD": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "Is it leak-proof?",
+            "faq_answer": "<p>Yes. Waterproof liner + waterproof YKK zippers. Roll the top tight for a full seal, like a dry bag.</p>"
+          }
+        },
+        "item_DWBXdt": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "What if my cooler arrives damaged?",
+            "faq_answer": "<p>Reach out to <a href=\"mailto:team@monticoolers.com\">team@monticoolers.com</a> and they'll replace it. 90-day warranty on defects.</p>"
+          }
+        },
+        "item_MfjCfn": {
+          "type": "Item",
+          "settings": {
+            "faq_heading": "Can I wash it?",
+            "faq_answer": "<p>Yes. Turn inside out, hand wash with cold water, or toss it in the machine on cold.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_UtRinn",
+        "item_CGjzMT",
+        "item_8qQEpJ",
+        "item_NJe6UD",
+        "item_DWBXdt",
+        "item_MfjCfn"
+      ],
+      "name": "C FAQs (without Tabs)",
+      "settings": {
+        "use_grid": false,
+        "side": false,
+        "heading": "<p>Frequently Asked Questions</p>",
+        "paragraph": "<p>Have you got questions? We've got answers!</p>",
+        "button_text": "",
+        "button_url": "",
+        "button_style": "",
+        "card_bg": "#ffffff",
+        "faq_text_border": "#000000",
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "section_top_subheading": "FAQs",
+        "section_top_heading": "Frequently Asked Questions",
+        "section_top_paragraph": "",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "c_logos_h3w6FT": {
+      "type": "c-logos",
+      "blocks": {
+        "item_pGAgBd": {
+          "type": "Item",
+          "settings": {
+            "text": "Machine Washable + Stain Resistant"
+          }
+        },
+        "item_QFKpPL": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_4Wiy8L": {
+          "type": "Item",
+          "settings": {
+            "text": "Small American Business"
+          }
+        },
+        "item_c7Cmcj": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_gYgcc6": {
+          "type": "Item",
+          "settings": {
+            "text": "55-Hour Ice Retention"
+          }
+        },
+        "item_NJQCD4": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_TxfiHi": {
+          "type": "Item",
+          "settings": {
+            "text": "Quilted, PFAS-Free Nylon Shell"
+          }
+        },
+        "item_9YDKWy": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_c8RQtp": {
+          "type": "Item",
+          "settings": {
+            "text": "30-Day Refund Guarantee"
+          }
+        },
+        "item_4FtKey": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_CXqUHj": {
+          "type": "Item",
+          "settings": {
+            "text": "90-Day Warranty"
+          }
+        },
+        "item_d3TWrL": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_pGAgBd",
+        "item_QFKpPL",
+        "item_4Wiy8L",
+        "item_c7Cmcj",
+        "item_gYgcc6",
+        "item_NJQCD4",
+        "item_TxfiHi",
+        "item_9YDKWy",
+        "item_c8RQtp",
+        "item_4FtKey",
+        "item_CXqUHj",
+        "item_d3TWrL"
+      ],
+      "name": "C Logos",
+      "settings": {
+        "show_middle": false,
+        "heading": "",
+        "image_height": 1,
+        "image_gap": 3.5,
+        "image_gap_mobile": 2,
+        "container_width": 10,
+        "marquee_speed": 60,
+        "marquee_padding_top": 0,
+        "marquee_padding_bottom": 0,
+        "direction": "-100%",
+        "toggle_pause_on_hover": false,
+        "full_width": true,
+        "grayscale_logo_colors": false,
+        "invert_logo_colors": false,
+        "bg_middle_color": "#ffffff",
+        "bg_color": "#0f4c81",
+        "text_color": "#ffffff",
+        "section_top_subheading": "",
+        "section_top_heading": "",
+        "section_top_paragraph": "",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 1.5
+      }
+    },
+    "c_kingfisher_video_testimonials_C6HHA3": {
+      "type": "c-kingfisher-video-testimonials",
+      "blocks": {
+        "item_gGMeTi": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Busy professional</p>"
+          }
+        },
+        "item_GMycWt": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Weekend Warrior</p>"
+          }
+        },
+        "item_MythDh": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Lake Day Host</p>"
+          }
+        },
+        "item_jYXFxG": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Parent Mode</p>"
+          }
+        },
+        "item_CyzXi4": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Beach Lover</p>"
+          }
+        },
+        "item_FNq68q": {
+          "type": "Item",
+          "settings": {
+            "block_paragraph": "<p>Trail Runner</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_gGMeTi",
+        "item_GMycWt",
+        "item_MythDh",
+        "item_jYXFxG",
+        "item_CyzXi4",
+        "item_FNq68q"
+      ],
+      "name": "C KF - Video Testimonials",
+      "settings": {
+        "use_slider": true,
+        "container_width": 100,
+        "container_alignment": "center",
+        "autoplay": true,
+        "loop": true,
+        "muted": true,
+        "controls": true,
+        "columns": 4,
+        "mobile_columns": 2,
+        "bg_color": "#0e1120",
+        "text_color": "#ffffff",
+        "section_top_subheading": "Real Customers. Real experiences.",
+        "section_top_heading": "Loved by People Who Live On the Go",
+        "section_top_paragraph": "",
+        "section_top_alignment": "center",
+        "section_top_text_alignment": "center",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "c_use_cases_cards_CChtXd": {
+      "type": "c-use-cases-cards",
+      "blocks": {
+        "card_mfwYHA": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/use-case-1.png",
+            "title": "TOTE IT",
+            "subtitle_line_1": "Easy access",
+            "subtitle_line_2": "Built for everyday",
+            "feature_1": "Grocery runs",
+            "feature_2": "Farmer's markets",
+            "feature_3": "Boat days",
+            "feature_4": "Wine nights"
+          }
+        },
+        "card_mEDTyw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/use-case-2.png",
+            "title": "PACK IT",
+            "subtitle_line_1": "Hands free",
+            "subtitle_line_2": "Adventure Approved",
+            "feature_1": "Hiking",
+            "feature_2": "Airports",
+            "feature_3": "Beach walks",
+            "feature_4": "Long carries"
+          }
+        },
+        "card_4UNAaC": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/use-case-3.png",
+            "title": "LIVE IT",
+            "subtitle_line_1": "Your sidekick for",
+            "subtitle_line_2": "every kind of day",
+            "feature_1": "Brunch & coffee runs",
+            "feature_2": "Wine nights out",
+            "feature_3": "Weekend errands",
+            "feature_4": "After-work plans"
+          }
+        }
+      },
+      "block_order": [
+        "card_mfwYHA",
+        "card_mEDTyw",
+        "card_4UNAaC"
+      ],
+      "name": "C Use Cases Cards",
+      "settings": {
+        "caption": "Built For The Moment",
+        "heading": "How Will You Use It?"
+      }
+    },
+    "c_logos_APazDP": {
+      "type": "c-logos",
+      "blocks": {
+        "item_Ji7gzD": {
+          "type": "Item",
+          "settings": {
+            "text": "Machine Washable + Stain Resistant"
+          }
+        },
+        "item_g4V9qD": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_DKJLRy": {
+          "type": "Item",
+          "settings": {
+            "text": "Small American Business"
+          }
+        },
+        "item_FC9mdM": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_DpxD9W": {
+          "type": "Item",
+          "settings": {
+            "text": "55-Hour Ice Retention"
+          }
+        },
+        "item_cDRHxH": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_TibqEi": {
+          "type": "Item",
+          "settings": {
+            "text": "Quilted, PFAS-Free Nylon Shell"
+          }
+        },
+        "item_jDxU4L": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_QLjHy8": {
+          "type": "Item",
+          "settings": {
+            "text": "30-Day Refund Guarantee"
+          }
+        },
+        "item_663VgV": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        },
+        "item_erJ6LE": {
+          "type": "Item",
+          "settings": {
+            "text": "90-Day Warranty"
+          }
+        },
+        "item_xeXRxD": {
+          "type": "Item",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_Ji7gzD",
+        "item_g4V9qD",
+        "item_DKJLRy",
+        "item_FC9mdM",
+        "item_DpxD9W",
+        "item_cDRHxH",
+        "item_TibqEi",
+        "item_jDxU4L",
+        "item_QLjHy8",
+        "item_663VgV",
+        "item_erJ6LE",
+        "item_xeXRxD"
+      ],
+      "name": "C Logos",
+      "settings": {
+        "show_middle": false,
+        "heading": "",
+        "image_height": 1,
+        "image_gap": 3.5,
+        "image_gap_mobile": 2,
+        "container_width": 10,
+        "marquee_speed": 60,
+        "marquee_padding_top": 0,
+        "marquee_padding_bottom": 0,
+        "direction": "-100%",
+        "toggle_pause_on_hover": false,
+        "full_width": true,
+        "grayscale_logo_colors": false,
+        "invert_logo_colors": false,
+        "bg_middle_color": "#ffffff",
+        "bg_color": "#0f4c81",
+        "text_color": "#ffffff",
+        "section_top_subheading": "",
+        "section_top_heading": "",
+        "section_top_paragraph": "",
+        "section_top_alignment": "center",
+        "text_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 1.5
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c_logos_aXWyyH",
+    "177762895688c776e2",
+    "c_cs_product_cards_XLGHzB",
+    "c_image_with_tabs_fMJHmj",
+    "c_faq_without_tabs_r3Gxhw",
+    "c_logos_h3w6FT",
+    "c_kingfisher_video_testimonials_C6HHA3",
+    "c_use_cases_cards_CChtXd",
+    "c_logos_APazDP",
+    "related-products"
+  ]
+}

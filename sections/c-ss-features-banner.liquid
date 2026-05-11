@@ -1,0 +1,503 @@
+{% style %}
+  #{{ section.id }}.c-ss-features-banner {
+    padding: 30px 20px;
+  }
+
+  #{{ section.id }} .c-features-wrap {
+    background: #B5D5C5;
+    border-radius: 25px;
+    max-width: 1384px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-features-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #FFFFFF;
+    position: relative;
+    z-index: 2;
+    margin: auto 0;
+    max-width: 400px;
+  }
+
+  #{{ section.id }} .c-features-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  #{{ section.id }} .c-features-image svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #AFAFAF;
+  }
+
+  #{{ section.id }} .c-features-image-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 220px;
+    background-color: transparent !important;
+    height: auto !important;
+  }
+
+  #{{ section.id }} .c-features-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    justify-content: end;
+    z-index: 2;
+  }
+
+  #{{ section.id }} .c-features-heading {
+    color: #111111;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 30px 0;
+  }
+
+  #{{ section.id }} .c-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  #{{ section.id }} .c-features-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  #{{ section.id }} .c-features-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-features-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  #{{ section.id }} .c-features-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  #{{ section.id }} .c-features-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.29;
+    color: #111111;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-features-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: rgba(17, 17, 17, 0.78);
+    letter-spacing: 0.6px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-features-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: #F1F1F1;
+    color: #111111;
+    border-radius: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    transition: opacity 0.2s;
+    width: 100%;
+    max-width: 285px;
+    margin: 37px auto 0;
+  }
+
+  #{{ section.id }} .c-features-button:hover {
+    background: #FAFAFA;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-features-button:focus,
+  #{{ section.id }} .c-features-button:focus-visible,
+  #{{ section.id }} .c-features-button:active {
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-features-bottom-flowers {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 420px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-features-right-flower {
+    position: absolute;
+    right: 8px;
+    bottom: 14px;
+    width: 170px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-features-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.25;
+  }
+
+  #{{ section.id }} .c-features-bg-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} .c-features-item {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }}.c-ss-features-banner {
+      padding: 56px 20px;
+    }
+    
+    #{{ section.id }} .c-features-wrap {
+      flex-direction: row;
+      gap: 40px;
+      padding: 44px 48px;
+      min-height: 593px;
+    }
+
+    #{{ section.id }} .c-features-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .c-features-button {
+      margin: 37px 0 0;
+    }
+
+    #{{ section.id }} .c-features-image {
+      max-width: 440px;
+    }
+
+    #{{ section.id }} .c-features-image img,
+    #{{ section.id }} .c-features-image svg {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #{{ section.id }} .c-features-body {
+      padding: 0;
+    }
+
+    #{{ section.id }} .c-features-grid {
+      padding: 30px 0 0;
+      border-top: 1px solid rgba(17, 17, 17, 0.16);
+    }
+
+    #{{ section.id }} .c-features-bottom-flowers {
+      width: 560px;
+      bottom: 0px;
+      z-index: 3;
+    }
+
+    #{{ section.id }} .c-features-right-flower {
+      width: 220px;
+      right: 14px;
+      bottom: 10px;
+    }
+  }
+
+  @media (min-width: 1224px) {
+    #{{ section.id }} .c-features-image {
+      max-width: 558px;
+      height: 506px;
+    }
+
+    #{{ section.id }} .c-features-wrap {
+      gap: 80px;
+    }
+
+    #{{ section.id }} .c-features-heading {
+      margin: 0 0 40px 0;
+    }
+
+    #{{ section.id }} .c-features-grid {
+      gap: 54px 51px;
+      padding: 40px 0;
+    }
+
+    #{{ section.id }} .c-features-title {
+      font-size: 20px;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-ss-features-banner">
+  <div class="c-features-wrap">
+    
+    <div class="c-features-image">
+
+      <svg class="c-features-image-badge" xmlns="http://www.w3.org/2000/svg" width="223" height="187" viewBox="0 0 223 187" fill="none">
+        <rect x="-84.2967" y="142.667" width="331.782" height="52.3997" transform="rotate(-39.0372 -84.2967 142.667)" fill="#FFC947" stroke="white" stroke-dasharray="2 2"/>
+        <path d="M43.3583 67.4568C42.8277 66.9287 42.2023 66.6897 41.4821 66.7397C40.7663 66.7861 40.0443 67.1046 39.3161 67.695C38.8042 68.1101 38.4277 68.5434 38.1866 68.9949C37.9456 69.4464 37.8353 69.8833 37.8558 70.3055C37.8764 70.7278 38.0222 71.1106 38.2933 71.454C38.5224 71.7365 38.785 71.9295 39.0811 72.0332C39.3817 72.1332 39.7036 72.1648 40.0468 72.128C40.3864 72.0867 40.7323 72.0036 41.0847 71.8789C41.437 71.7541 41.7791 71.6121 42.1108 71.4528L43.6395 70.74C44.248 70.444 44.8707 70.2061 45.5076 70.0262C46.1488 69.8427 46.7823 69.7534 47.4079 69.7581C48.0379 69.7593 48.6404 69.8889 49.2154 70.1469C49.7903 70.4048 50.3157 70.8273 50.7917 71.4143C51.4358 72.2087 51.8 73.0728 51.8843 74.0066C51.9649 74.9361 51.7591 75.882 51.2667 76.8445C50.7752 77.799 49.9866 78.7164 48.9009 79.5968C47.8461 80.452 46.798 81.0313 45.7564 81.3345C44.7193 81.6342 43.7282 81.6478 42.7831 81.3754C41.8425 81.0994 40.9895 80.5256 40.2241 79.6539L42.6404 77.6947C43.0586 78.1382 43.5227 78.4129 44.0328 78.5187C44.5428 78.6245 45.0657 78.5882 45.6014 78.4099C46.1415 78.228 46.6675 77.9295 47.1794 77.5143C47.7135 77.0813 48.1168 76.6226 48.3896 76.1381C48.6632 75.6455 48.7985 75.1628 48.7954 74.6899C48.7887 74.2125 48.6301 73.7778 48.3196 73.3859C48.0289 73.0364 47.689 72.8292 47.2999 72.7644C46.9072 72.6951 46.4651 72.7317 45.9736 72.8742C45.4828 73.0088 44.9447 73.2111 44.359 73.4812L42.4945 74.3347C41.1453 74.9532 39.9102 75.2342 38.7891 75.1777C37.6688 75.1132 36.715 74.5955 35.9277 73.6246C35.28 72.8258 34.929 71.9509 34.8749 71C34.8251 70.0455 35.0411 69.0986 35.523 68.1593C36.0013 67.2155 36.7149 66.3589 37.6637 65.5895C38.6258 64.8094 39.6047 64.2936 40.6005 64.0421C41.5971 63.7827 42.5426 63.7804 43.4369 64.0354C44.3277 64.286 45.0893 64.7877 45.7216 65.5405L43.3583 67.4568ZM58.0563 71.8328L55.4349 73.9585L49.2145 56.5307L52.2465 54.0722L68.0193 63.7543L65.3978 65.8799L53.0379 58.0389L52.932 58.1248L58.0563 71.8328ZM53.832 66.4473L60.9816 60.65L62.5812 62.6228L55.4317 68.42L53.832 66.4473ZM70.2711 61.9284L59.2778 48.3708L61.7338 46.3793L71.0577 57.8782L77.0289 53.0364L78.6983 55.0952L70.2711 61.9284ZM81.2959 52.9888L70.3026 39.4312L79.1204 32.2813L80.7898 34.3401L74.428 39.4986L77.4125 43.1793L83.3175 38.3912L84.9869 40.45L79.0819 45.2381L82.0825 48.9386L88.4972 43.7372L90.1666 45.796L81.2959 52.9888Z" fill="#111111"/>
+      </svg>
+      
+      {%- if section.settings.image -%}
+        {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 1200' }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag }}
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.background_image -%}
+      <div class="c-features-bg-image">
+        {{ section.settings.background_image | image_url: width: 2800 | image_tag: loading: 'lazy', widths: '1400, 2800' }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.bottom_left_flowers_image != blank -%}
+      {{ section.settings.bottom_left_flowers_image | image_url: width: 1600 | image_tag: class: 'c-features-bottom-flowers', loading: 'lazy', widths: '400, 736, 1100, 1600', alt: '' }}
+    {%- else -%}
+      <svg class="c-features-bottom-flowers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 263" fill="none" aria-hidden="true">
+        <g>
+          <path d="M39 262C59 201 84 190 117 233" stroke="#2E646D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M72 262C79 222 103 196 132 214" stroke="#2E646D" stroke-width="3.8" stroke-linecap="round"/>
+          <ellipse cx="40" cy="36" rx="39.5" ry="38.5" transform="matrix(-1 0 0 1 120 172)" fill="#F7B8C8"/>
+          <ellipse cx="40.5" cy="38" rx="40.5" ry="38" transform="matrix(-1 0 0 1 156 171)" fill="#F8C3D0"/>
+          <ellipse cx="40.5" cy="38" rx="40.5" ry="38" transform="matrix(-1 0 0 1 135 143)" fill="#F4A6BC"/>
+          <ellipse cx="39.5" cy="37" rx="39.5" ry="37" transform="matrix(-1 0 0 1 132 201)" fill="#F7B7C9"/>
+          <ellipse cx="16.5" cy="15.5" rx="16.5" ry="15.5" transform="matrix(-1 0 0 1 110 177)" fill="#FFE6BF"/>
+          <path d="M74 173C86 150 111 150 123 173" stroke="#FCE4EE" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M86 156C98 138 117 138 126 157" stroke="#FCE4EE" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M255 262C264 246 277 238 294 247" stroke="#74A63D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="255" cy="249" r="4.5" fill="#FEB100"/>
+          <circle cx="270" cy="242" r="3.8" fill="#FEB100"/>
+          <circle cx="285" cy="246" r="4" fill="#FEB100"/>
+          <path d="M296 262C314 230 341 224 373 253" stroke="#5E8843" stroke-width="4.8" stroke-linecap="round"/>
+          <ellipse cx="33" cy="31" rx="33" ry="31" transform="matrix(-1 0 0 1 430 167)" fill="#FEB100"/>
+          <ellipse cx="34" cy="31" rx="34" ry="31" transform="matrix(-1 0 0 1 470 170)" fill="#E88F00"/>
+          <ellipse cx="34" cy="32" rx="34" ry="32" transform="matrix(-1 0 0 1 451 137)" fill="#FEE136"/>
+          <ellipse cx="34" cy="31" rx="34" ry="31" transform="matrix(-1 0 0 1 448 199)" fill="#F4A000"/>
+          <ellipse cx="14" cy="13.5" rx="14" ry="13.5" transform="matrix(-1 0 0 1 430 171)" fill="#FCEB86"/>
+          <path d="M401 164C412 149 428 149 437 164" stroke="#F0B241" stroke-width="2" stroke-linecap="round"/>
+          <path d="M412 150C421 139 435 139 442 151" stroke="#F0B241" stroke-width="2" stroke-linecap="round"/>
+          <path d="M603 262V203" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M603 230C618 230 629 239 629 262" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M603 229C585 229 575 240 575 262" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <ellipse cx="606.5" cy="194.5" rx="12.5" ry="12.5" fill="#FFFFFF"/>
+          <ellipse cx="591" cy="197" rx="11" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="621" cy="197" rx="11" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="606" cy="208" rx="10.5" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="606" cy="197" rx="4.5" ry="4" fill="#F4C24B"/>
+        </g>
+      </svg>
+    {%- endif -%}
+
+    {%- if section.settings.right_flower_image != blank -%}
+      {{ section.settings.right_flower_image | image_url: width: 600 | image_tag: class: 'c-features-right-flower', loading: 'lazy', widths: '180, 260, 400, 600', alt: '' }}
+    {%- else -%}
+      <svg class="c-features-right-flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+        <path d="M25 112C74 74 136 74 195 112" stroke="#5D7A2B" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M98 104C101 92 111 84 121 84" stroke="#7CB13C" stroke-width="2.8" stroke-linecap="round"/>
+        <ellipse cx="140" cy="46" rx="18" ry="10" fill="#DCE7C2" transform="rotate(-22 140 46)"/>
+        <ellipse cx="157" cy="39" rx="18" ry="10" fill="#CEE1AA" transform="rotate(18 157 39)"/>
+        <ellipse cx="129" cy="61" rx="18" ry="10" fill="#E5EDCF" transform="rotate(-48 129 61)"/>
+        <ellipse cx="148" cy="57" rx="16" ry="9.5" fill="#F9FAF1" transform="rotate(-6 148 57)"/>
+        <ellipse cx="162" cy="60" rx="14" ry="9" fill="#FFFFFF" transform="rotate(28 162 60)"/>
+        <ellipse cx="167" cy="44" rx="12" ry="8" fill="#FFFFFF" transform="rotate(-10 167 44)"/>
+        <circle cx="152" cy="54" r="3" fill="#E9C77A"/>
+      </svg>
+    {%- endif -%}
+
+    <div class="c-features-body">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="c-features-heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      
+      {%- if section.blocks.size > 0 -%}
+        <div class="c-features-grid">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'feature' -%}
+              <div class="c-features-item" {{ block.shopify_attributes }}>
+                {%- if block.settings.icon -%}
+                  <div class="c-features-icon">
+                    {{ block.settings.icon | image_url: width: 64 | image_tag: loading: 'lazy' }}
+                  </div>
+                {%- endif -%}
+                <div class="c-features-text-wrap">
+                  {%- if block.settings.title != blank -%}
+                    <h3 class="c-features-title">{{ block.settings.title }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <p class="c-features-desc">{{ block.settings.text }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+        <a href="{{ section.settings.button_link }}" class="c-features-button">
+          {{ section.settings.button_text }}
+        </a>
+      {%- endif -%}
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C SS Features Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Optional decorative background (15% opacity)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_left_flowers_image",
+      "label": "Bottom left flowers image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_flower_image",
+      "label": "Right flower image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A Soft Cooler That Actually Works"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description",
+          "default": "Feature description."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C SS Features Banner",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Long-Lasting Cold",
+            "text": "Cold for 55 hours."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Ultra-Light & Packable",
+            "text": "6x lighter than alternatives."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Durable & Leak-Resistant",
+            "text": "Keeps your gear dry."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Adventure Ready",
+            "text": "Ready for every journey."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

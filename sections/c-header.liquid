@@ -1,0 +1,1437 @@
+{% style %}
+  #{{ section.id }}.c-header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: #fff;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.05);
+  }
+
+  #{{ section.id }} .c-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 70px;
+    height: 80px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-header__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-header__logo img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+  }
+
+  #{{ section.id }} .c-header__logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #C13325;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  #{{ section.id }} .c-header__nav {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  #{{ section.id }} .c-header__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C13325;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 9px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-right: 24px;
+    transition: opacity 0.2s, background-color 0.2s;
+  }
+
+  #{{ section.id }} .c-header__badge:hover {
+    opacity: 0.88;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-header__nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: capitalize;
+    transition: text-decoration 0.15s, color 0.15s;
+  }
+
+  #{{ section.id }} .c-header__nav-link:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+
+  #{{ section.id }} .c-header__mega {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #{{ section.id }} .c-header__mega-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000;
+    white-space: nowrap;
+    text-transform: capitalize;
+    text-decoration: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: font-weight 0.15s;
+  }
+
+  #{{ section.id }} .c-header__mega-trigger svg {
+    width: 10px;
+    height: 6px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+
+  #{{ section.id }} .c-header__mega:hover .c-header__mega-trigger,
+  #{{ section.id }} .c-header__mega.is-open .c-header__mega-trigger {
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .c-header__mega:hover .c-header__mega-trigger svg,
+  #{{ section.id }} .c-header__mega.is-open .c-header__mega-trigger svg {
+    transform: rotate(180deg);
+  }
+
+  #{{ section.id }} .c-header__dropdown {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    z-index: 10;
+    box-sizing: border-box;
+    min-width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  }
+
+  #{{ section.id }} .c-header__mega:hover .c-header__dropdown,
+  #{{ section.id }} .c-header__mega.is-open .c-header__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  #{{ section.id }} .c-header__product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 230px;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  #{{ section.id }} .c-header__product-card:hover {
+    opacity: 0.85;
+  }
+
+  #{{ section.id }} .c-header__product-img-wrap {
+    position: relative;
+    width: 230px;
+    height: 198px;
+    border: 1px solid rgba(193, 51, 37, 0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px 31px;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  #{{ section.id }} .c-header__product-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+  }
+
+  #{{ section.id }} .c-header__best-seller {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    background: #C13325;
+    border: 1px solid rgba(193, 51, 37, 0.5);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-clip: padding-box;
+  }
+
+  #{{ section.id }} .c-header__product-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-header__links-col {
+    min-width: 230px;
+    height: fit-content;
+    background-color: rgba(193, 51, 37, 0.05);
+    border: 1px solid rgba(193, 51, 37, 0.15);
+    border-radius: 4px;
+    padding: 30.5px 26px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  #{{ section.id }} .c-header__links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #{{ section.id }} .c-header__links-list a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+  }
+
+  #{{ section.id }} .c-header__links-list a:hover {
+    text-decoration: underline;
+  }
+
+  #{{ section.id }} .c-header__view-all {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: fit-content;
+    transition: opacity 0.2s;
+  }
+
+  #{{ section.id }} .c-header__view-all:hover {
+    opacity: 0.88;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #{{ section.id }} .c-header__icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  #{{ section.id }} .c-header__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #000;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+    position: relative;
+  }
+
+  #{{ section.id }} .c-header__icon-btn:hover {
+    opacity: 0.6;
+  }
+
+  #{{ section.id }} .c-header__icon-btn svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  #{{ section.id }} .c-header__burger {
+    display: none;
+  }
+
+  #{{ section.id }} .c-header__mobile-left {
+    display: none;
+  }
+
+  #{{ section.id }} .c-header__icon-btn--mobile-only {
+    display: none;
+  }
+
+  .c-header-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 390px;
+    height: 100%;
+    background: #fff;
+    z-index: 300;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .c-header-drawer.is-open {
+    transform: translateX(0);
+  }
+  
+  .c-header-drawer__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+
+  .c-header-drawer__head img {
+    max-height: 43px;
+    width: auto;
+    display: block;
+  }
+
+  .c-header-drawer__close {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .c-header-drawer__close svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .c-header-drawer__divider {
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    border: none;
+    margin: 0;
+  }
+
+  .c-header-drawer__body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 73px);
+    overflow-y: auto;
+  }
+
+  .c-header-drawer__badge-wrap {
+    padding: 16px 20px;
+  }
+
+  .c-header-drawer__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 9px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: capitalize;
+  }
+
+  .c-header-drawer__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-header-drawer__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-header-drawer__item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 31px;
+    min-height: 64px;
+    box-sizing: border-box;
+  }
+
+  .c-header-drawer__item-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .c-header-drawer__item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #000;
+    text-transform: capitalize;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .c-header-drawer__item-btn svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #000;
+  }
+
+  .c-header-drawer__card {
+    margin: 24px 20px 32px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 274px;
+    flex-shrink: 0;
+    display: block;
+    text-decoration: none;
+  }
+
+  .c-header-drawer__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .c-header-drawer__card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(179.69deg, rgba(0,0,0,0) 0.49%, rgba(0,0,0,0.4) 99.8%);
+    pointer-events: none;
+  }
+
+  .c-header-drawer__card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .c-header-drawer__card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #fff;
+    margin: 0;
+  }
+
+  .c-header-drawer__card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.29;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .c-header-drawer__card-btn:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.88;
+  }
+
+  .c-header-sub {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .c-header-sub.is-open {
+    transform: translateX(0);
+  }
+
+  .c-header-sub__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    flex-shrink: 0;
+  }
+
+  .c-header-sub__back {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .c-header-sub__back svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .c-header-sub__title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #000;
+    text-align: center;
+    flex: 1;
+  }
+
+  .c-header-sub__close {
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .c-header-sub__close svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .c-header-sub__body {
+    padding: 25px 18px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .c-header-sub__product-full {
+    position: relative;
+    border: 1px solid rgba(193, 51, 37, 0.15);
+    border-radius: 6px;
+    height: 253px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 9px 4px;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .c-header-sub__product-full img {
+    max-height: 209px;
+    max-width: 208px;
+    object-fit: contain;
+    display: block;
+    flex: 1;
+  }
+
+  .c-header-sub__product-full .c-header-sub__product-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.29;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 11px;
+    left: 9px;
+    margin: 0;
+  }
+
+  .c-header-sub__badge {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    background: #C13325;
+    border: 1px solid rgba(193, 51, 37, 0.5);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    padding: 7px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-clip: padding-box;
+  }
+
+  .c-header-sub__row {
+    display: flex;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .c-header-sub__product-half {
+    position: relative;
+    border: 1px solid rgba(193, 51, 37, 0.15);
+    border-radius: 6px;
+    flex: 1;
+    min-width: 0;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 9px 11px;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow: hidden;
+    gap: 4px;
+  }
+
+  .c-header-sub__product-half .c-header-sub__product-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.29;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .c-header-sub__product-half img {
+    width: 90px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+    flex: 1;
+  }
+
+  .c-header-sub__links-col {
+    background: rgba(193, 51, 37, 0.05);
+    border: 1px solid rgba(193, 51, 37, 0.15);
+    border-radius: 4px;
+    flex: 1;
+    min-width: 0;
+    min-height: 155px;
+    padding: 16px 11px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .c-header-sub__links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .c-header-sub__links-list a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #222;
+    text-decoration: none;
+  }
+
+  .c-header-sub__links-list a:hover {
+    text-decoration: underline;
+  }
+
+  .c-header-sub__view-all {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #C13325;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.29;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .c-header-sub__view-all:hover {
+    opacity: 0.88;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  details[open] .modal-overlay:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+
+  .c-header-overlay {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 299;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+  }
+
+  .c-header-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .cart-count-bubble {
+    bottom: 1.2rem !important;
+    left: 1.3rem !important;
+  }
+
+  .c-header-drawer__item-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1 1 0;
+  }
+
+  .c-header-drawer__item-arrow svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #000;
+  }
+
+  @media screen and (max-width: 1225px) {
+    #{{ section.id }} .c-header__mega-trigger,
+    #{{ section.id }} .c-header__nav-link {
+      padding: 10px 11px;
+    }
+
+    #{{ section.id }} .c-header__badge {
+      margin-right: 11px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    #{{ section.id }} .c-header__inner {
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #{{ section.id }} .c-header__logo {
+      transform: translateX(-18%);
+    }
+
+    #{{ section.id }} .c-header__logo img {
+      max-height: 43px;
+    }
+
+
+    #{{ section.id }} .c-header__nav {
+      display: none;
+    }
+
+    #{{ section.id }} .c-header__mobile-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }    
+
+    #{{ section.id }} .c-header__icon-btn--mobile-only,
+    #{{ section.id }} .c-header__icon-btn--mobile-only .c-header__icon-btn--search {
+      display: flex !important;
+    }
+
+    #{{ section.id }} .c-header__icon-btn--search,
+    #{{ section.id }} .c-header__icon-btn--account {
+      display: none;
+    }
+
+    #{{ section.id }} .c-header__burger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      transition: opacity 0.2s;
+    }
+
+    #{{ section.id }} .c-header__burger:hover {
+      opacity: 0.6;
+    }
+
+    #{{ section.id }} .c-header__burger svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+{% endstyle %}
+
+<header id="{{ section.id }}" class="c-header">
+  <div class="c-header__inner">
+
+    <div class="c-header__mobile-left">
+      <button type="button" class="c-header__burger" id="c-header-burger-{{ section.id }}" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M4 6H20M4 12H20M4 18H20" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="c-header__icon-btn--mobile-only">
+        {% render 'c-header-search', input_id: 'Search-In-Modal-1' %}
+      </div>
+    </div>
+
+    <a class="c-header__logo" href="/">
+      {%- if settings.logo != blank -%}
+        {{ settings.logo | image_url: width: 300 | image_tag: loading: 'eager', class: 'c-header__logo-img' }}
+      {%- else -%}
+        <span class="c-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+
+    <nav class="c-header__nav">
+      {%- if section.settings.badge_text != blank -%}
+        <a class="c-header__badge" href="{{ section.settings.badge_url | default: '#' }}">
+          {{ section.settings.badge_text }}
+        </a>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- assign has_submenu = false -%}
+        {%- if block.settings.products != blank or block.settings.menu != blank or block.settings.view_all_url != blank -%}
+          {%- assign has_submenu = true -%}
+        {%- endif -%}
+
+        {%- if has_submenu -%}
+          <div class="c-header__mega" {{ block.shopify_attributes }}>
+            <a class="c-header__mega-trigger" href="{{ block.settings.url | default: '#' }}">
+              {{ block.settings.label }}
+              <svg viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+            <div class="c-header__dropdown" role="region">
+              {%- if block.settings.products != blank -%}
+                {%- assign prod_index = 0 -%}
+                {%- for prod in block.settings.products -%}
+                  {%- if prod_index < 4 -%}
+                    <a class="c-header__product-card" href="{{ prod.url }}">
+                      <div class="c-header__product-img-wrap">
+                        {%- if prod.featured_image != blank -%}
+                          {{ prod.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+                        {%- endif -%}
+                        {%- if prod_index == 0 and block.settings.first_product_badge -%}
+                          <span class="c-header__best-seller">Best Seller</span>
+                        {%- endif -%}
+                      </div>
+                      <p class="c-header__product-name">{{ prod.title }}</p>
+                    </a>
+                  {%- endif -%}
+                  {%- assign prod_index = prod_index | plus: 1 -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+              {%- assign nav_menu = linklists[block.settings.menu] -%}
+              {%- if nav_menu.links.size > 0 or block.settings.view_all_url != blank -%}
+                <div class="c-header__links-col">
+                  {%- if nav_menu.links.size > 0 -%}
+                    <ul class="c-header__links-list">
+                      {%- for link in nav_menu.links -%}
+                        <li><a href="{{ link.url }}">- {{ link.title }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                  {%- if block.settings.view_all_url != blank -%}
+                    <a class="c-header__view-all" href="{{ block.settings.view_all_url }}">
+                      {{ block.settings.view_all_text | default: 'View All' }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+
+        {%- else -%}
+          <a class="c-header__nav-link" href="{{ block.settings.url | default: '#' }}" {{ block.shopify_attributes }}>
+            {{ block.settings.label }}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+
+    <div class="c-header__icons">
+      {% render 'c-header-search', input_id: 'Search-In-Modal-1' %}
+      <a class="c-header__icon-btn c-header__icon-btn--account" href="/account">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a href="{{ routes.cart_url }}" class="c-header__icon-btn c-header__icon-btn--cart link focus-inset" id="cart-icon-bubble">
+        {% if cart == empty %}
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_3976_450)">
+            <path d="M8.5 22.5625C9.22487 22.5625 9.8125 21.9749 9.8125 21.25C9.8125 20.5251 9.22487 19.9375 8.5 19.9375C7.77513 19.9375 7.1875 20.5251 7.1875 21.25C7.1875 21.9749 7.77513 22.5625 8.5 22.5625Z" fill="#192A3F"/>
+            <path d="M18.25 22.5625C18.9749 22.5625 19.5625 21.9749 19.5625 21.25C19.5625 20.5251 18.9749 19.9375 18.25 19.9375C17.5251 19.9375 16.9375 20.5251 16.9375 21.25C16.9375 21.9749 17.5251 22.5625 18.25 22.5625Z" fill="#192A3F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.1875 4C1.1875 3.68934 1.43934 3.4375 1.75 3.4375H3.32713C3.61235 3.4375 3.88981 3.53041 4.11751 3.70217C4.34522 3.87393 4.51078 4.11518 4.58913 4.38943L5.38858 7.1875H21.7857C21.9622 7.1875 22.1285 7.27035 22.2348 7.41126C22.3411 7.55218 22.3751 7.73481 22.3266 7.90453L19.8517 16.5666C19.7286 16.9976 19.4684 17.3767 19.1106 17.6466C18.7528 17.9165 18.3168 18.0625 17.8685 18.0625H8.88145C8.43325 18.0625 7.99724 17.9165 7.63942 17.6466C7.2816 17.3767 7.02144 16.9976 6.89831 16.5666L4.42695 7.91687C4.42448 7.9089 4.42218 7.90085 4.42006 7.89273L3.50742 4.69849C3.49622 4.65931 3.47257 4.62485 3.44004 4.60031C3.40751 4.57577 3.36788 4.5625 3.32713 4.5625H1.75C1.43934 4.5625 1.1875 4.31066 1.1875 4ZM5.71001 8.3125L7.98002 16.2576C8.03599 16.4534 8.15425 16.6258 8.31689 16.7485C8.47954 16.8711 8.67772 16.9375 8.88145 16.9375H17.8685C18.0723 16.9375 18.2705 16.8711 18.4331 16.7485C18.5958 16.6258 18.714 16.4534 18.77 16.2576L21.04 8.3125H5.71001Z" fill="#192A3F" stroke="#192A3F" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_3976_450">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+        </defs>
+        </svg></span>
+        {% else %}
+          <span>    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_3976_450)">
+            <path d="M8.5 22.5625C9.22487 22.5625 9.8125 21.9749 9.8125 21.25C9.8125 20.5251 9.22487 19.9375 8.5 19.9375C7.77513 19.9375 7.1875 20.5251 7.1875 21.25C7.1875 21.9749 7.77513 22.5625 8.5 22.5625Z" fill="#192A3F"/>
+            <path d="M18.25 22.5625C18.9749 22.5625 19.5625 21.9749 19.5625 21.25C19.5625 20.5251 18.9749 19.9375 18.25 19.9375C17.5251 19.9375 16.9375 20.5251 16.9375 21.25C16.9375 21.9749 17.5251 22.5625 18.25 22.5625Z" fill="#192A3F"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.1875 4C1.1875 3.68934 1.43934 3.4375 1.75 3.4375H3.32713C3.61235 3.4375 3.88981 3.53041 4.11751 3.70217C4.34522 3.87393 4.51078 4.11518 4.58913 4.38943L5.38858 7.1875H21.7857C21.9622 7.1875 22.1285 7.27035 22.2348 7.41126C22.3411 7.55218 22.3751 7.73481 22.3266 7.90453L19.8517 16.5666C19.7286 16.9976 19.4684 17.3767 19.1106 17.6466C18.7528 17.9165 18.3168 18.0625 17.8685 18.0625H8.88145C8.43325 18.0625 7.99724 17.9165 7.63942 17.6466C7.2816 17.3767 7.02144 16.9976 6.89831 16.5666L4.42695 7.91687C4.42448 7.9089 4.42218 7.90085 4.42006 7.89273L3.50742 4.69849C3.49622 4.65931 3.47257 4.62485 3.44004 4.60031C3.40751 4.57577 3.36788 4.5625 3.32713 4.5625H1.75C1.43934 4.5625 1.1875 4.31066 1.1875 4ZM5.71001 8.3125L7.98002 16.2576C8.03599 16.4534 8.15425 16.6258 8.31689 16.7485C8.47954 16.8711 8.67772 16.9375 8.88145 16.9375H17.8685C18.0723 16.9375 18.2705 16.8711 18.4331 16.7485C18.5958 16.6258 18.714 16.4534 18.77 16.2576L21.04 8.3125H5.71001Z" fill="#192A3F" stroke="#192A3F" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_3976_450">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+        </defs>
+        </svg></span>
+        {% endif %}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<div class="c-header-overlay" id="c-header-overlay-{{ section.id }}"></div>
+
+<div class="c-header-drawer" id="c-header-drawer-{{ section.id }}" aria-hidden="true" role="dialog" aria-label="Navigation">
+  <div class="c-header-drawer__head">
+    <a href="/" class="c-header__logo">
+      {%- if settings.logo != blank -%}
+        {{ settings.logo | image_url: width: 200 | image_tag: loading: 'lazy' }}
+      {%- else -%}
+        <span class="c-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+    <button type="button" class="c-header-drawer__close" aria-label="Close menu">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 7L7 21M7 7l14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  <hr class="c-header-drawer__divider">
+
+  <div class="c-header-drawer__body">
+    {%- if section.settings.badge_text != blank -%}
+      <div class="c-header-drawer__badge-wrap">
+        <a class="c-header-drawer__badge" href="{{ section.settings.badge_url | default: '#' }}">
+          {{ section.settings.badge_text }}
+        </a>
+      </div>
+    {%- endif -%}
+    <hr class="c-header-drawer__divider">
+
+    <nav class="c-header-drawer__nav">
+      {%- for block in section.blocks -%}
+        {%- assign has_submenu_mob = false -%}
+        {%- if block.settings.products != blank or block.settings.menu != blank or block.settings.view_all_url != blank -%}
+          {%- assign has_submenu_mob = true -%}
+        {%- endif -%}
+
+        <div class="c-header-drawer__item">
+          <div class="c-header-drawer__item-row">
+            {%- if has_submenu_mob -%}
+              <a class="c-header-drawer__item-label" href="{{ block.settings.url | default: '#' }}">{{ block.settings.label }}</a>
+              <button
+                type="button"
+                class="c-header-drawer__item-arrow"
+                data-sub-target="c-header-sub-{{ block.id }}"
+                aria-expanded="false"
+                aria-label="Open submenu"
+              >
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            {%- else -%}
+              <a class="c-header-drawer__item-label" href="{{ block.settings.url | default: '#' }}">{{ block.settings.label }}</a>
+            {%- endif -%}
+          </div>
+          <hr class="c-header-drawer__divider">
+        </div>
+      {%- endfor -%}
+    </nav>
+
+    {%- if section.settings.mobile_card_image != blank -%}
+      <a class="c-header-drawer__card" href="{{ section.settings.mobile_card_url | default: '#' }}">
+        {{ section.settings.mobile_card_image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+        <div class="c-header-drawer__card-overlay"></div>
+        <div class="c-header-drawer__card-content">
+          {%- if section.settings.mobile_card_title != blank -%}
+            <p class="c-header-drawer__card-title">{{ section.settings.mobile_card_title }}</p>
+          {%- endif -%}
+          <span class="c-header-drawer__card-btn">
+            {{ section.settings.mobile_card_btn | default: 'Buy Now' }}
+          </span>
+        </div>
+      </a>
+    {%- endif -%}
+  </div>
+
+  {%- for block in section.blocks -%}
+    {%- assign has_sub_panel = false -%}
+    {%- if block.settings.products != blank or block.settings.menu != blank or block.settings.view_all_url != blank -%}
+      {%- assign has_sub_panel = true -%}
+    {%- endif -%}
+    {%- if has_sub_panel -%}
+      <div class="c-header-sub" id="c-header-sub-{{ block.id }}" aria-hidden="true" {{ block.shopify_attributes }}>
+        <div class="c-header-sub__head">
+          <button type="button" class="c-header-sub__back" aria-label="Back">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L10 14l8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <span class="c-header-sub__title">{{ block.settings.label }}</span>
+          <button type="button" class="c-header-sub__close" aria-label="Close menu">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 7L7 21M7 7l14 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <hr class="c-header-drawer__divider">
+
+        <div class="c-header-sub__body">
+          {%- assign mob_products = block.settings.products -%}
+
+          {%- if mob_products != blank and mob_products.size > 0 -%}
+            {%- assign first_mob = mob_products | first -%}
+            <a class="c-header-sub__product-full" href="{{ first_mob.url }}">
+              <p class="c-header-sub__product-name">{{ first_mob.title }}</p>
+              {%- if first_mob.featured_image != blank -%}
+                {{ first_mob.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+              {%- endif -%}
+              {%- if block.settings.first_product_badge -%}
+                <span class="c-header-sub__badge">Best Seller</span>
+              {%- endif -%}
+            </a>
+          {%- endif -%}
+
+          {%- assign nav_menu_mob = linklists[block.settings.menu] -%}
+          {%- assign has_second_row = false -%}
+          {%- if mob_products.size > 1 or nav_menu_mob.links.size > 0 or block.settings.view_all_url != blank -%}
+            {%- assign has_second_row = true -%}
+          {%- endif -%}
+
+          {%- if has_second_row -%}
+            <div class="c-header-sub__row">
+              {%- for prod in mob_products -%}
+                {%- if forloop.index > 1 and forloop.index <= 4 -%}
+                  <a class="c-header-sub__product-half" href="{{ prod.url }}">
+                    <p class="c-header-sub__product-name">{{ prod.title }}</p>
+                    {%- if prod.featured_image != blank -%}
+                      {{ prod.featured_image | image_url: width: 200 | image_tag: loading: 'lazy' }}
+                    {%- endif -%}
+                  </a>
+                {%- endif -%}
+              {%- endfor -%}
+
+              {%- if nav_menu_mob.links.size > 0 or block.settings.view_all_url != blank -%}
+                <div class="c-header-sub__links-col">
+                  {%- if nav_menu_mob.links.size > 0 -%}
+                    <ul class="c-header-sub__links-list">
+                      {%- for link in nav_menu_mob.links -%}
+                        <li><a href="{{ link.url }}">- {{ link.title }}</a></li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                  {%- if block.settings.view_all_url != blank -%}
+                    <a class="c-header-sub__view-all" href="{{ block.settings.view_all_url }}">
+                      {{ block.settings.view_all_text | default: 'View All' }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+<script>
+(function () {
+  var sectionId = '{{ section.id }}';
+  var header = document.getElementById(sectionId);
+  var burger = document.getElementById('c-header-burger-' + sectionId);
+  var drawer = document.getElementById('c-header-drawer-' + sectionId);
+  var overlay = document.getElementById('c-header-overlay-' + sectionId);
+
+  if (!header || !drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    if (overlay) overlay.classList.add('is-open');
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    if (overlay) overlay.classList.remove('is-open');
+    closeAllSubs();
+  }
+
+  function closeAllSubs() {
+    drawer.querySelectorAll('.c-header-sub.is-open').forEach(function (sub) {
+      sub.classList.remove('is-open');
+      sub.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  if (burger) burger.addEventListener('click', openDrawer);
+  if (overlay) overlay.addEventListener('click', closeDrawer);
+
+  drawer.querySelectorAll('.c-header-drawer__close, .c-header-sub__close').forEach(function (btn) {
+    btn.addEventListener('click', closeDrawer);
+  });
+
+  drawer.querySelectorAll('[data-sub-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var targetId = this.getAttribute('data-sub-target');
+      var sub = document.getElementById(targetId);
+      if (sub) {
+        sub.classList.add('is-open');
+        sub.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+  drawer.querySelectorAll('.c-header-sub__back').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var sub = btn.closest('.c-header-sub');
+      if (sub) {
+        sub.classList.remove('is-open');
+        sub.setAttribute('aria-hidden', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+  });
+
+  document.addEventListener('shopify:section:unload', function (e) {
+    if (e.detail && e.detail.sectionId === sectionId) closeDrawer();
+  });
+
+  var lastScroll = 0;
+  var ticking = false;
+  var headerHeight = header.offsetHeight;
+
+  function updateHeader() {
+    var currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      header.style.position = 'sticky';
+      header.style.top = '0';
+      header.style.transform = 'translateY(0)';
+      header.style.transition = 'none';
+    } else if (currentScroll < lastScroll) {
+      header.style.position = 'fixed';
+      header.style.top = '0';
+      header.style.transform = 'translateY(0)';
+      header.style.transition = 'transform 0.25s ease';
+    } else {
+      header.style.position = 'fixed';
+      header.style.transform = 'translateY(-100%)';
+      header.style.transition = 'transform 0.25s ease';
+    }
+
+    lastScroll = currentScroll;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateHeader();
+})();
+</script>
+
+{% schema %}
+{
+  "name": "С Header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Badge button"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Buy The Shasta"
+    },
+    {
+      "type": "url",
+      "id": "badge_url",
+      "label": "Badge URL"
+    },
+    {
+      "type": "header",
+      "content": "Mobile menu card"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_card_image",
+      "label": "Card image"
+    },
+    {
+      "type": "text",
+      "id": "mobile_card_title",
+      "label": "Card title",
+      "default": "The Shasta 23L Cooler"
+    },
+    {
+      "type": "text",
+      "id": "mobile_card_btn",
+      "label": "Card button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "mobile_card_url",
+      "label": "Card URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_item",
+      "name": "Nav item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Coolers"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL (if no submenu)"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Products (activates submenu)",
+          "limit": 4
+        },
+        {
+          "type": "checkbox",
+          "id": "first_product_badge",
+          "label": "First product — Best Seller badge",
+          "default": false
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Links column (menu)"
+        },
+        {
+          "type": "text",
+          "id": "view_all_text",
+          "label": "\"View All\" text",
+          "default": "View All"
+        },
+        {
+          "type": "url",
+          "id": "view_all_url",
+          "label": "\"View All\" URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "С Header",
+      "blocks": [
+        {
+          "type": "nav_item",
+          "settings": { "label": "Coolers" }
+        },
+        {
+          "type": "nav_item",
+          "settings": { "label": "Shop All" }
+        },
+        {
+          "type": "nav_item",
+          "settings": { "label": "Wholesale" }
+        },
+        {
+          "type": "nav_item",
+          "settings": { "label": "Contact Us" }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

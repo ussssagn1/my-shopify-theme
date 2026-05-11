@@ -1,0 +1,444 @@
+{% style %}
+  #{{ section.id }}.c-hero {
+    background-color: #192A3F;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+  #{{ section.id }} .c-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-hero__layout {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 16px 40px;
+  }
+
+  #{{ section.id }} .c-hero__content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #{{ section.id }} .c-hero__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 29px;
+    padding: 5px 10px;
+  }
+
+  #{{ section.id }} .c-hero__stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  #{{ section.id }} .c-hero__rating-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-hero__heading {
+    margin-top: 12px;
+  }
+
+  #{{ section.id }} .c-hero__heading h1,
+  #{{ section.id }} .c-hero__heading h2,
+  #{{ section.id }} .c-hero__heading h3,
+  #{{ section.id }} .c-hero__heading p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 110%;
+    color: #fff;
+    /* text-transform: uppercase; */
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-hero__text {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #fff;
+    letter-spacing: 0.6px;
+  }
+
+  #{{ section.id }} .c-hero__text p {
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-hero__text strong,
+  #{{ section.id }} .c-hero__text b {
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .c-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 17px 63px;
+    background: #C13325;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #fff;
+    transition: opacity 0.2s;
+  }
+
+  #{{ section.id }} .c-hero__btn:hover {
+    opacity: 0.88;
+  }
+
+  #{{ section.id }} .c-hero__visual {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    min-height: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #{{ section.id }} .c-hero__image {
+    width: 75%;
+  }
+
+  #{{ section.id }} .c-hero__image.c-mobile {
+    width: 100%;
+    display: none;
+  }
+
+  #{{ section.id }} .c-hero__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #{{ section.id }} .c-hero__feature-item {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+  }
+
+  #{{ section.id }} .c-hero__feature-item--top-left     { top: 5%; left: -2%; }
+  #{{ section.id }} .c-hero__feature-item--top-right    { top: 2%; right: -3%; }
+  #{{ section.id }} .c-hero__feature-item--bottom-left  { bottom: -1%; left: -3%; }
+  #{{ section.id }} .c-hero__feature-item--bottom-right { bottom: 1%; right: -2%; }
+
+  #{{ section.id }} .c-hero__feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  #{{ section.id }} .c-hero__feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-hero__feature-label {
+    display: block;
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 129%;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: pre-line;
+  }
+
+  #{{ section.id }} .c-hero__arrow {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-hero__feature-item--top-left .c-hero__arrow     { left: 90%; top: 45%; }
+  #{{ section.id }} .c-hero__feature-item--top-right .c-hero__arrow    { left: -40%; top: 50%; transform: scaleX(-1); }
+  #{{ section.id }} .c-hero__feature-item--bottom-left .c-hero__arrow  { left: 101%; top: -10%; transform: scaleY(-1); }
+  #{{ section.id }} .c-hero__feature-item--bottom-right .c-hero__arrow { left: -45%; top: -5%; transform: scale(-1, -1); }
+
+  @media screen and (min-width: 1024px) {
+    #{{ section.id }} .c-hero__layout {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      padding: 62px 70px;
+      min-height: 621px;
+    }
+
+    #{{ section.id }} .c-hero__content {
+      max-width: 40%;
+      margin: 0;
+      text-align: left;
+    }
+
+    #{{ section.id }} .c-hero__heading h1,
+    #{{ section.id }} .c-hero__heading h2,
+    #{{ section.id }} .c-hero__heading h3,
+    #{{ section.id }} .c-hero__heading p {
+      font-size: 56px;
+    }
+
+    #{{ section.id }} .c-hero__text {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-hero__btn {
+      margin-top: 48px;
+    }
+
+    #{{ section.id }} .c-hero__visual {
+      flex: 1;
+      max-width: none;
+      min-height: 492px;
+      margin: 0;
+    }
+
+    #{{ section.id }} .c-hero__image {
+      width: 69%;
+    }
+
+    #{{ section.id }} .c-hero__feature-label {
+      font-size: 15px;
+    }
+
+    #{{ section.id }} .c-hero__feature-item--top-left     { top: 10%; left: 3%; }
+    #{{ section.id }} .c-hero__feature-item--top-right    { top: 22%; right: -12%; }
+    #{{ section.id }} .c-hero__feature-item--bottom-left  { bottom: 2%; left: -10%; }
+    #{{ section.id }} .c-hero__feature-item--bottom-right { bottom: 1%; right: -9%; }
+  }
+
+  @media screen and (min-width: 1280px) {
+    #{{ section.id }} .c-hero__content {
+      max-width: 45%;
+    }
+
+    #{{ section.id }} .c-hero__feature-item--top-left     { top: 10%; left: 7%; }
+    #{{ section.id }} .c-hero__feature-item--top-right    { top: 22%; right: -2%; }
+    #{{ section.id }} .c-hero__feature-item--bottom-left  { bottom: 2%; left: -1%; }
+    #{{ section.id }} .c-hero__feature-item--bottom-right { bottom: 1%; right: 2%; }
+  }
+
+  @media screen and (max-width: 990px) {
+    #{{ section.id }} .c-hero__image,
+    #{{ section.id }} .c-hero__visual .c-hero__feature-item {
+      display: none;
+    }
+
+    #{{ section.id }} .c-hero__visual {
+      max-width: 700px;
+      min-height: unset;
+    }
+
+    #{{ section.id }} .c-hero__image.c-mobile {
+      display: block;
+    }
+  }
+{% endstyle %}
+
+{%- assign rating_block   = section.blocks | where: 'type', 'rating'  | first -%}
+{%- assign heading_block  = section.blocks | where: 'type', 'heading' | first -%}
+{%- assign text_block     = section.blocks | where: 'type', 'text'    | first -%}
+{%- assign button_block   = section.blocks | where: 'type', 'button'  | first -%}
+{%- assign feature_blocks = section.blocks | where: 'type', 'feature' -%}
+
+<section id="{{ section.id }}" class="c-hero">
+
+  {%- if section.settings.background_image != blank -%}
+    <div class="c-hero__bg">
+      {{ section.settings.background_image | image_url: width: 1440 | image_tag: loading: 'eager', fetchpriority: 'high' }}
+    </div>
+  {%- endif -%}
+
+  <div class="c-hero__layout">
+    <div class="c-hero__content">
+
+      {%- if rating_block != blank -%}
+        <div class="c-hero__rating" {{ rating_block.shopify_attributes }}>
+          <div class="c-hero__stars">
+            {%- for i in (1..5) -%}
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                <path d="M6.52659 0.138206C6.58646 -0.0460561 6.84714 -0.0460567 6.90701 0.138205L8.35575 4.59697C8.38252 4.67938 8.45932 4.73517 8.54596 4.73517H13.2342C13.4279 4.73517 13.5085 4.98309 13.3517 5.09697L9.55889 7.85264C9.48879 7.90357 9.45946 7.99384 9.48623 8.07625L10.935 12.535C10.9948 12.7193 10.7839 12.8725 10.6272 12.7586L6.83435 10.003C6.76426 9.95202 6.66934 9.95202 6.59924 10.003L2.80639 12.7586C2.64964 12.8725 2.43875 12.7193 2.49862 12.535L3.94736 8.07625C3.97413 7.99384 3.9448 7.90357 3.87471 7.85264L0.0818528 5.09697C-0.07489 4.98309 0.00566489 4.73517 0.19941 4.73517H4.88763C4.97428 4.73517 5.05107 4.67938 5.07784 4.59697L6.52659 0.138206Z" fill="#F2D32D"/>
+              </svg>
+            {%- endfor -%}
+          </div>
+          <span class="c-hero__rating-text">{{ rating_block.settings.text }}</span>
+        </div>
+      {%- endif -%}
+
+      {%- if heading_block != blank -%}
+        <div class="c-hero__heading" {{ heading_block.shopify_attributes }}>
+          {{ heading_block.settings.heading }}
+        </div>
+      {%- endif -%}
+
+      {%- if text_block != blank -%}
+        <div class="c-hero__text" {{ text_block.shopify_attributes }}>
+          {{ text_block.settings.text }}
+        </div>
+      {%- endif -%}
+
+      {%- if button_block != blank and button_block.settings.label != blank -%}
+        <a class="c-hero__btn" href="{{ button_block.settings.url | default: '#' }}" {{ button_block.shopify_attributes }}>
+          {{ button_block.settings.label }}
+        </a>
+      {%- endif -%}
+
+    </div>
+
+    <div class="c-hero__visual">
+      {%- if section.settings.image != blank -%}
+        <div class="c-hero__image">
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'eager', fetchpriority: 'high' }}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.mobile_image != blank -%}
+        <div class="c-hero__image c-mobile">
+          {{ section.settings.mobile_image | image_url: width: 1000 | image_tag: loading: 'eager', fetchpriority: 'high' }}
+        </div>
+      {%- endif -%}
+
+      {%- assign positions = 'top-left,top-right,bottom-left,bottom-right' | split: ',' -%}
+
+      {%- for block in feature_blocks -%}
+        {%- assign pos = positions[forloop.index0] -%}
+
+        <div class="c-hero__feature-item c-hero__feature-item--{{ pos }}" {{ block.shopify_attributes }}>
+
+          <div class="c-hero__feature-icon">
+            {%- if block.settings.icon != blank -%}
+              {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy' }}
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.label != blank -%}
+            <span class="c-hero__feature-label">{{ block.settings.label }}</span>
+          {%- endif -%}
+
+          {%- if block.settings.show_arrow -%}
+            <div class="c-hero__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="43" height="29" viewBox="0 0 43 29" fill="none">
+                <path d="M0.947853 0.727937C0.24846 0.933641 -0.151754 1.66737 0.05395 2.36676C0.259654 3.06615 0.993379 3.46637 1.69277 3.26066L1.32031 1.9943L0.947853 0.727937ZM35.776 28.2857C36.445 28.5753 37.2221 28.2677 37.5117 27.5986L42.2307 16.6961C42.5203 16.0271 42.2127 15.25 41.5437 14.9604C40.8746 14.6708 40.0975 14.9784 39.8079 15.6474L35.6133 25.3386L25.9221 21.1439C25.2531 20.8543 24.476 21.1619 24.1864 21.831C23.8968 22.5 24.2044 23.2771 24.8734 23.5667L35.776 28.2857ZM1.32031 1.9943L1.69277 3.26066C5.10889 2.25592 10.9959 2.15789 17.2489 5.37877C23.473 8.58481 30.1531 15.1309 35.073 27.5601L36.3003 27.0743L37.5277 26.5885C32.4155 13.6737 25.3457 6.57978 18.4578 3.03183C11.5987 -0.501286 5.01173 -0.467322 0.947853 0.727937L1.32031 1.9943Z" fill="white"/>
+              </svg>
+            </div>
+          {%- endif -%}
+
+        </div>
+      {%- endfor -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Hero",
+  "settings": [
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "image_picker", "id": "image", "label": "Product image (right)" },
+    { "type": "image_picker", "id": "mobile_image", "label": "Mobile image" }
+  ],
+  "blocks": [
+    {
+      "type": "rating",
+      "name": "Rating",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "text", "label": "Rating text", "default": "Rated 4.8/5 by 2400+ Adventures" }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        { "type": "richtext", "id": "heading", "label": "Heading", "default": "<h2>Break Free From Hard Coolers</h2>" }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Description", "default": "<p><b>Stop hauling bulky plastic boxes!</b> <br> The Shasta weighs just 17oz, fits in your backpack and goes where hard coolers can't.Break Free From Hard Coolers</p>" }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Button text", "default": "Buy Now" },
+        { "type": "url", "id": "url", "label": "Button URL" }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature icon",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Keep Cold For Hours" },
+        { "type": "checkbox", "id": "show_arrow", "label": "Show arrow", "default": true }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Hero",
+      "blocks": [
+        { "type": "rating" },
+        { "type": "heading" },
+        { "type": "text" },
+        { "type": "button" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}

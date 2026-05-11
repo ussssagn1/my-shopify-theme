@@ -1,0 +1,458 @@
+{% style %}
+  #{{ section.id }}.c-ss-promo-lite-section {
+    padding: 30px 20px 60px;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 400px;
+    padding: 27px 30px;
+    background: #FFC947;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-ribbon {
+    position: absolute;
+    top: 48.34px;
+    left: -55px;
+    width: 332.78px;
+    height: 53.4px;
+    border: 1px dashed #FFFFFF;
+    background: #FF7043;
+    transform: rotate(-34.47deg);
+    transform-origin: center;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-ribbon-text {
+    position: absolute;
+    left: 97.28px;
+    top: 70.41px;
+    transform: translateX(-50%) rotate(-34.47deg);
+    transform-origin: center;
+    z-index: 6;
+    pointer-events: none;
+    margin: 0;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-media {
+    width: 100%;
+    max-width: 437px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-image {
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-image img,
+  #{{ section.id }} .c-ss-promo-lite-image svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-heading {
+    margin: 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1.68px;
+    color: #000000;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-text {
+    margin: 0;
+    width: 100%;
+    max-width: 80%;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    color: #000000;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 70px;
+    border-radius: 10px;
+    background: #F5F5F5;
+    color: #131313;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.55;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-button:hover {
+    opacity: 0.9;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale {
+    position: absolute;
+    right: 12px;
+    bottom: 18px;
+    width: 84px;
+    height: 84px;
+    z-index: 4;
+    pointer-events: none;
+    transform: rotate(8.99deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale-outer,
+  #{{ section.id }} .c-ss-promo-lite-sale-inner {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale-outer {
+    inset: 0;
+    border: 1.6px solid #FFFFFF;
+    background: transparent;
+    transform: translate(4px, -4px);
+    z-index: 3;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale-inner {
+    inset: 0;
+    background: #FF7043;
+    border: 1.6px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale-main {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-sale-sub {
+    margin: 3px 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  #{{ section.id }} .c-ss-promo-lite-bottom-flowers {
+    position: absolute;
+    left: 0;
+    bottom: -72px;
+    width: 440px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} .c-ss-promo-lite-heading {
+      font-size: 46px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-text {
+      font-size: 18px;
+      max-width: none;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-button {
+      width: auto;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale {
+      right: 0;
+      bottom: 30px;
+      width: 96px;
+      height: 96px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale-main {
+      font-size: 23px;
+      letter-spacing: 2px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale-sub {
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-bottom-flowers {
+      width: 620px;
+      bottom: -88px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }}.c-ss-promo-lite-section {
+      padding: 67px 20px 110px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-wrap {
+      flex-direction: row;
+      gap: 60px;
+      padding: 27px 30px;
+      align-items: center;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-media {
+      flex: 0 0 35%;
+      max-width: 437px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-body {
+      flex: 1;
+      max-width: 48%;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-heading {
+      font-size: 56px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-text {
+      max-width: none;
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-button {
+      width: 225px;
+      height: 60px;
+      padding: 16px 63px;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.29;
+      letter-spacing: 0;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale {
+      right: 56px;
+      bottom: 46px;
+      width: 112px;
+      height: 112px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale-main {
+      font-size: 24px;
+      letter-spacing: 2.4px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-sale-sub {
+      font-size: 12px;
+      letter-spacing: 2.4px;
+    }
+
+    #{{ section.id }} .c-ss-promo-lite-bottom-flowers {
+      width: 736px;
+      bottom: -10px;
+      z-index: 3;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-ss-promo-lite-section">
+  <div class="c-ss-promo-lite-wrap">
+    <div class="c-ss-promo-lite-ribbon" aria-hidden="true"></div>
+    <p class="c-ss-promo-lite-ribbon-text" aria-hidden="true">{{ section.settings.ribbon_text }}</p>
+
+    <div class="c-ss-promo-lite-media">
+      <div class="c-ss-promo-lite-image">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '500, 800, 1200' }}
+        {%- else -%}
+          <img
+            src="https://www.figma.com/api/mcp/asset/e6da41e1-7cad-4f36-9fa7-7ec206484a40"
+            alt=""
+            loading="lazy"
+          >
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="c-ss-promo-lite-body">
+      <div class="c-ss-promo-lite-text-wrap">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="h2 c-ss-promo-lite-heading">{{ section.settings.heading | newline_to_br }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.text != blank -%}
+          <p class="text-body c-ss-promo-lite-text">{{ section.settings.text }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.button_text != blank -%}
+        <a href="{{ section.settings.button_link | default: '#' }}" class="c-ss-promo-lite-button">
+          {{ section.settings.button_text }}
+        </a>
+      {%- endif -%}
+    </div>
+
+    <div class="c-ss-promo-lite-sale" aria-hidden="true">
+      <span class="c-ss-promo-lite-sale-outer"></span>
+      <span class="c-ss-promo-lite-sale-inner">
+        <p class="c-ss-promo-lite-sale-main">{{ section.settings.sale_main_text }}</p>
+        <p class="c-ss-promo-lite-sale-sub">{{ section.settings.sale_sub_text }}</p>
+      </span>
+    </div>
+
+    {%- if section.settings.bottom_left_flowers_image != blank -%}
+      {{ section.settings.bottom_left_flowers_image | image_url: width: 1600 | image_tag: class: 'c-ss-promo-lite-bottom-flowers', loading: 'lazy', widths: '400, 736, 1100, 1600', alt: '' }}
+    {%- else -%}
+      <svg class="c-ss-promo-lite-bottom-flowers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 263" fill="none" aria-hidden="true">
+        <g>
+          <path d="M39 262C59 201 84 190 117 233" stroke="#2E646D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M72 262C79 222 103 196 132 214" stroke="#2E646D" stroke-width="3.8" stroke-linecap="round"/>
+          <ellipse cx="40" cy="36" rx="39.5" ry="38.5" transform="matrix(-1 0 0 1 120 172)" fill="#F7B8C8"/>
+          <ellipse cx="40.5" cy="38" rx="40.5" ry="38" transform="matrix(-1 0 0 1 156 171)" fill="#F8C3D0"/>
+          <ellipse cx="40.5" cy="38" rx="40.5" ry="38" transform="matrix(-1 0 0 1 135 143)" fill="#F4A6BC"/>
+          <ellipse cx="39.5" cy="37" rx="39.5" ry="37" transform="matrix(-1 0 0 1 132 201)" fill="#F7B7C9"/>
+          <ellipse cx="16.5" cy="15.5" rx="16.5" ry="15.5" transform="matrix(-1 0 0 1 110 177)" fill="#FFE6BF"/>
+          <path d="M74 173C86 150 111 150 123 173" stroke="#FCE4EE" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M86 156C98 138 117 138 126 157" stroke="#FCE4EE" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M255 262C264 246 277 238 294 247" stroke="#74A63D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="255" cy="249" r="4.5" fill="#FEB100"/>
+          <circle cx="270" cy="242" r="3.8" fill="#FEB100"/>
+          <circle cx="285" cy="246" r="4" fill="#FEB100"/>
+          <path d="M296 262C314 230 341 224 373 253" stroke="#5E8843" stroke-width="4.8" stroke-linecap="round"/>
+          <ellipse cx="33" cy="31" rx="33" ry="31" transform="matrix(-1 0 0 1 430 167)" fill="#FEB100"/>
+          <ellipse cx="34" cy="31" rx="34" ry="31" transform="matrix(-1 0 0 1 470 170)" fill="#E88F00"/>
+          <ellipse cx="34" cy="32" rx="34" ry="32" transform="matrix(-1 0 0 1 451 137)" fill="#FEE136"/>
+          <ellipse cx="34" cy="31" rx="34" ry="31" transform="matrix(-1 0 0 1 448 199)" fill="#F4A000"/>
+          <ellipse cx="14" cy="13.5" rx="14" ry="13.5" transform="matrix(-1 0 0 1 430 171)" fill="#FCEB86"/>
+          <path d="M401 164C412 149 428 149 437 164" stroke="#F0B241" stroke-width="2" stroke-linecap="round"/>
+          <path d="M412 150C421 139 435 139 442 151" stroke="#F0B241" stroke-width="2" stroke-linecap="round"/>
+          <path d="M603 262V203" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M603 230C618 230 629 239 629 262" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <path d="M603 229C585 229 575 240 575 262" stroke="#71A33D" stroke-width="3.8" stroke-linecap="round"/>
+          <ellipse cx="606.5" cy="194.5" rx="12.5" ry="12.5" fill="#FFFFFF"/>
+          <ellipse cx="591" cy="197" rx="11" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="621" cy="197" rx="11" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="606" cy="208" rx="10.5" ry="10" fill="#FFFFFF"/>
+          <ellipse cx="606" cy="197" rx="4.5" ry="4" fill="#F4C24B"/>
+        </g>
+      </svg>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C SS Promo Banner Lite",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_left_flowers_image",
+      "label": "Bottom left flowers image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop the Spring Sale\\nUp to 20% OFF."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Limited-time savings on our portable, packable coolers, gear up and save 20% before the sun sets on this deal."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "ribbon_text",
+      "label": "Ribbon text",
+      "default": "Limited Time"
+    },
+    {
+      "type": "text",
+      "id": "sale_main_text",
+      "label": "Sale main text",
+      "default": "20%"
+    },
+    {
+      "type": "text",
+      "id": "sale_sub_text",
+      "label": "Sale sub text",
+      "default": "OFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C SS Promo Banner Lite"
+    }
+  ]
+}
+{% endschema %}

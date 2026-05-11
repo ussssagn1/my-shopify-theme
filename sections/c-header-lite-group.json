@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "c_header_lite_dd8zaw": {
+      "type": "c-header-lite",
+      "blocks": {
+        "nav_item_88QqCK": {
+          "type": "nav_item",
+          "settings": {
+            "label": "Coolers",
+            "url": "shopify://collections/coolers",
+            "products": [
+              "the-shasta-23l-travel-cooler",
+              "the-mayfly-14l-cooler"
+            ],
+            "first_product_badge": true,
+            "menu": "header-coolers-nav",
+            "view_all_text": "View All",
+            "view_all_url": "shopify://collections/coolers"
+          }
+        },
+        "nav_item_NMrxbT": {
+          "type": "nav_item",
+          "settings": {
+            "label": "Shop All",
+            "url": "shopify://collections",
+            "products": [
+              "kingfisher-cooler-tote",
+              "lowtide-tote"
+            ],
+            "first_product_badge": false,
+            "menu": "header-shop-all-nav",
+            "view_all_text": "View All",
+            "view_all_url": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "nav_item_88QqCK",
+        "nav_item_NMrxbT"
+      ],
+      "name": "С Header Lite",
+      "settings": {
+        "badge_text": "Buy The Shasta",
+        "badge_url": "shopify://products/the-shasta-23l-travel-cooler",
+        "mobile_card_image": "shopify://shop_images/shasta.png",
+        "mobile_card_title": "The Shasta 23L Cooler",
+        "mobile_card_btn": "Buy Now",
+        "mobile_card_url": "shopify://products/the-shasta-23l-travel-cooler"
+      }
+    }
+  },
+  "order": [
+    "c_header_lite_dd8zaw"
+  ]
+}

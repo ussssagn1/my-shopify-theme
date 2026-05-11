@@ -1,0 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_3aYaxP": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "🇺🇸🇺🇸FREE SHIPPING over $160🇺🇸🇺🇸",
+            "link": ""
+          }
+        },
+        "announcement_CqJbkT": {
+          "type": "announcement",
+          "settings": {
+            "text": "Up to 40% Off! ❤️ Valentines Sale ❤️",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_3aYaxP",
+        "announcement_CqJbkT"
+      ],
+      "disabled": true,
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-3d49e8be-d360-40a7-b94e-9a59a6dfce7a",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "disabled": true,
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "17018109635e1474db": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "17018109635e1474db"
+  ]
+}

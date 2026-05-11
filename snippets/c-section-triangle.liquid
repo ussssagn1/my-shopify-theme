@@ -1,0 +1,13 @@
+{% if position == "above" %}
+    <svg class="c-section-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1440 50" fill="none" preserveAspectRatio="none" style="margin-bottom: -1px;">
+    <path d="M1440 50H0V0L1440 50Z" fill="{{ color }}"/>
+    </svg>
+{% elsif position == "above-small" %}
+    <svg class="c-section-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1440 25" fill="none" preserveAspectRatio="none" style="margin-bottom: -1px;">
+    <path d="M1440 25H0V0L1440 25Z" fill="{{ color }}"/>
+    </svg>
+{% elsif position == "below" %}
+    <svg class="c-section-divider" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1440 50" fill="none" preserveAspectRatio="none" style="margin-top: -1px;">
+    <path d="M0 0H1440V50L0 0Z" fill="{{ color }}"/>
+    </svg>
+{% endif %}

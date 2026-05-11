@@ -1,0 +1,442 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_BptCzF": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Landing_Page_Banner_Large_Text.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_pwicHR": {
+      "type": "rich-text",
+      "blocks": {
+        "button_xhJmi3": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET 10% OFF",
+            "button_link": "shopify://collections/coolers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_xhJmi3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_pMLgeh": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TBG3wL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/duffel.png",
+            "title": "Lugging other coolers sucks. Monti is effortless.",
+            "text": "<p>Packs down to fit in your pack, purse, or carry-on. Moldable to fit any [golf] bag too. 🏌️‍♂️</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fE4UWc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/leakproof.png",
+            "title": "LEAKPROOF.",
+            "text": "<p>Roll top design allows for <em>easy zipper action</em> while still maintaining a leakproof seal. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EkdcMP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ice.png",
+            "title": "BAD*SS ICE RETENTION",
+            "text": "<p>An independent test conducted by Outdoor Life found that it took 55 HOURS for 7lbs of ice to melt, tied with the industry leader's backpack cooler.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EjhNpP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/light.png",
+            "title": "6X LIGHTER THAN THE LEADING BACKPACK COOLER 🤯",
+            "text": "<p>Weighs less than a can of beer. Cheers!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7bGRXA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/smashable.png",
+            "title": "FOLD'S INTO ITSELF",
+            "text": "<p>Easy to transport. Takes up no space in closet. Hell, keep it under the seat of your truck.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bdLKJK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/washable.png",
+            "title": "SICK OF DIRTY COOLERS?",
+            "text": "<p>Monti's are machine washable.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TBG3wL",
+        "column_fE4UWc",
+        "column_EkdcMP",
+        "column_EjhNpP",
+        "column_7bGRXA",
+        "column_bdLKJK"
+      ],
+      "settings": {
+        "title": "I have a cooler.. why do I need this?",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "SHOP COOLERS NOW!",
+        "button_link": "shopify://collections/coolers",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_xFztyM": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Evolution_of_Monti.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured_collection_ayXaeg": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "coolers",
+        "products_to_show": 2,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 2,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_6mzkr3": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/News_Clippings_White_Background.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "1727965649cd26dec7": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17279708794a00b23f": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_banner_DbzpNw": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/MONTI_COOLERS_COMPARISON.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "collapsible_content_VmJDG3": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_hV6eNT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long can the Monti Coolers keep drinks cold?",
+            "icon": "snowflake",
+            "row_content": "<p><span style=\"text-decoration:underline\">An independent test conducted by Outdoor Life found that it took 55 HOURS for 7lbs of ice to melt, tied with the industry leader's backpack cooler (you know who we mean... did we mention their cooler is 6 TIMES heavier? </span>So you can enjoy refreshing beverages throughout your outdoor adventures!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mfKC9B": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Return policy: What is the Monti Coolers Guarantee?",
+            "icon": "truck",
+            "row_content": "<p>The Monti Guarantee: If you would like a refund, simply return your cooler unused and in the same condition it arrived in within 30 days of purchase. <br/><br/>If you've had a change of heart (it's completely understandable), or if you need to return an unwanted gift, please simply initiate a return or exchange in our<a href=\"https://monti.loopreturns.com/#/\" target=\"_blank\">easy return portal</a>.  We're here to help with exchanges or refunds for unused items returned within 30 days of delivery. The cost of return shipping/handling will be deducted from your refund. Refunds will be issued to the original purchaser's payment method. All items must be returned in their original condition, including tags (if applicable).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rPCmMG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Monti Coolers leakproof? ",
+            "icon": "washing",
+            "row_content": "<p>Yes! Monti Coolers are all equipped with a waterproof liner. Additionally, our zippers are water resistant. To ensure a tight seal of the top of the cooler, please be sure to utilize the roll-top functionality, like a dry bag. What about \"sweating\" or \"perspiration\"? Condensation is possible with any vessel containing items that are dramatically colder than the outside environment, particularly in humid places. If you live in a very high humidity area and experience a particularly hot or humid day and are worried about condensation forming on the outside of the bag, we recommend using Ice packs instead of ice. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6DHpja": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I use the stuff sack? ",
+            "icon": "leaf",
+            "row_content": "<p>The stuff sack is built into the cooler itself! The exterior zippered pocket IS the stuff sack. Simply reach into the pocket, grab a big handful of the body of the cooler and start to turn the cooler inside out, pushing the body of the cooler into the inside out pocket you've created. The cooler's convenient stuff sack is seamlessly integrated into its design, making it easy to store and carry.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_hV6eNT",
+        "collapsible_row_mfKC9B",
+        "collapsible_row_rPCmMG",
+        "collapsible_row_6DHpja"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_dHLPk9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ey7mrB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why I Built This",
+            "heading_size": "h1"
+          }
+        },
+        "text_8JneGh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While guiding fly fishing trips in Wyoming and Alaska, I needed a cooler that was lightweight and flexible enough to fit in my pack for a full day of hiking upriver. Fast forward a few years in San Francisco, and I faced a similar challenge—whether biking or Ubering to the beach, traditional coolers were just too bulky. After hundreds of prototypes, I’m now a dad in Charleston, SC, juggling baby gear and two golden retrievers, always needing the best gear I can get. Building this brand has been an incredible journey, and I’d love for you to join us. Feel free to reach out with any questions or feedback!<br/><br/>-Sam, Founder</p>",
+            "text_style": "body"
+          }
+        },
+        "button_XB8WWm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Talk to us!",
+            "button_link": "shopify://pages/sales"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ey7mrB",
+        "text_8JneGh",
+        "button_XB8WWm"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Founder_Photo.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "color_scheme": "inverse",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_bXQzpA": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_fhAgnc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Coolers",
+            "button_link_1": "shopify://collections/coolers",
+            "button_style_secondary_1": false,
+            "button_label_2": "Learn More",
+            "button_link_2": "shopify://collections/coolers",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_fhAgnc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Pitch_Deck_Lifestyle.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "17279797158737aa26": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1727983259ed7a8c9b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_Ykxpam": {
+      "type": "rich-text",
+      "blocks": {
+        "text_PrDQwi": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_EAB9WE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://collections/coolers",
+            "button_style_secondary": false,
+            "button_label_2": "Learn More",
+            "button_link_2": "shopify://collections/coolers",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_PrDQwi",
+        "button_EAB9WE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_BptCzF",
+    "main",
+    "rich_text_pwicHR",
+    "multicolumn_pMLgeh",
+    "image_banner_xFztyM",
+    "featured_collection_ayXaeg",
+    "image_banner_6mzkr3",
+    "1727965649cd26dec7",
+    "image_banner_DbzpNw",
+    "17279708794a00b23f",
+    "collapsible_content_VmJDG3",
+    "image_with_text_dHLPk9",
+    "image_banner_bXQzpA",
+    "17279797158737aa26",
+    "1727983259ed7a8c9b",
+    "rich_text_Ykxpam"
+  ]
+}

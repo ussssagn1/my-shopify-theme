@@ -1,0 +1,106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1701811036479452bf": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "a {color: #0000ff;}"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "We'd love to hear from you!",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5021bf69-987e-4aa0-988f-9587eacc0e73": {
+      "type": "video",
+      "settings": {
+        "heading": "Product Walk-Through & FAQs",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/RiCD9HexkSU",
+        "cover_image": "shopify://shop_images/Monti_FAQ_Video_Thumbnail_2023.jpg",
+        "description": "Best Soft Cooler 2023 2024 Product Walk-Through and FAQ - Monti Coolers",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_PTKg8p": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bA769i": {
+          "type": "heading",
+          "settings": {
+            "heading": "Returns + Exchanges",
+            "heading_size": "h1"
+          }
+        },
+        "text_QjJ9gh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Change your mind? We want every Monti to be in the hands of someone who really wants it! Initiate your return or exchange using our easy portal. See our FAQ section for questions about policies and more.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_AgD9Eg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Return & Exchange Portal",
+            "button_link": "https://monti.loopreturns.com/#/"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bA769i",
+        "text_QjJ9gh",
+        "button_AgD9Eg"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ProductPhotosSized-11.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "scheme-7c0ee3a4-03a3-4580-a03f-05051f93ec79",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1701811036479452bf",
+    "main",
+    "form",
+    "5021bf69-987e-4aa0-988f-9587eacc0e73",
+    "image_with_text_PTKg8p"
+  ]
+}

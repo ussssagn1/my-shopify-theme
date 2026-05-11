@@ -1,0 +1,694 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "de1a31f0-665d-4532-9621-a379edd23563": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE WORLD'S FIRST TRAVEL COOLER",
+            "heading_size": "h1"
+          }
+        },
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Original Puffy Cooler<strong>™</strong>. Fold it into the built-in stuff-sack to fit in your carry-on, purse, or pack. Less Lugging, More Living</p>"
+          }
+        },
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "shopify://collections/coolers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "bc5f223b-b557-4bdc-86e7-075176444e33": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "3a2a5340-c970-42d9-84e7-5c01edd2592e": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Lightest Backpack Cooler---Ever.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-0",
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-1",
+        "template--14460784935011__de1a31f0-665d-4532-9621-a379edd23563-1683751740f172c72c-2",
+        "bc5f223b-b557-4bdc-86e7-075176444e33",
+        "3a2a5340-c970-42d9-84e7-5c01edd2592e"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 20
+      }
+    },
+    "0400bb58-1785-415d-8587-d173c12e0fc3": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14460784935011__0400bb58-1785-415d-8587-d173c12e0fc3-1683751034d749a4a2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--14460784935011__0400bb58-1785-415d-8587-d173c12e0fc3-1683751034d749a4a2-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14460784935011__0400bb58-1785-415d-8587-d173c12e0fc3-1683751034d749a4a2-0",
+        "template--14460784935011__0400bb58-1785-415d-8587-d173c12e0fc3-1683751034d749a4a2-2"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/Evolution_de_Monti_Cooler_New_fd791bba-9ef2-42c3-a2f3-f5870f4b8432.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "fb3cc82d-0910-4744-ac1a-f18239f3cd82": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/News_Clippings_White_Background.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured_collection_TpJLfx": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "coolers",
+        "products_to_show": 3,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-7c0ee3a4-03a3-4580-a03f-05051f93ec79",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1692389236b3daddf0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1655330701d5254ebc": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/4C86A2EC-AAE0-4F9E-9284-76F181386635.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "0152805f-ce6a-424c-970a-444214c3fbe8": {
+      "type": "newsletter",
+      "blocks": {
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new products, discounts, and chances to win gear!</p>"
+          }
+        },
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-0",
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-1",
+        "template--14460784935011__0152805f-ce6a-424c-970a-444214c3fbe8-16837532723cc29e53-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16492625143b4d711a": {
+      "type": "rich-text",
+      "blocks": {
+        "16492625145307780a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "How?",
+            "heading_size": "h1"
+          }
+        },
+        "16492625145307780a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Step 1:</strong> Buy the dang thing</p><p><strong>Step 2:</strong> Pull your Monti Cooler out of it's integrated stuff sack</p><p><strong>Step 3:</strong> Fill with food, wine, an ice pack, your favorite drinks and go! </p><p><strong>Step 4: </strong>If you love it, send us your pictures and feedback to help improve our community. If you don't love it, send it back from a full refund. <br/> </p>"
+          }
+        }
+      },
+      "block_order": [
+        "16492625145307780a-0",
+        "16492625145307780a-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16492701492e84e4d8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "164927014981a874d3-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does it work?",
+            "icon": "chat_bubble",
+            "row_content": "<p>Your cooler has a built in stuff sack for when you're not using it. Not using it? Simply stuff your cooler into it's pocket. When you're ready to go, just pop it out and add ice!</p>",
+            "page": ""
+          }
+        },
+        "164927014981a874d3-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I seal my Monti?",
+            "icon": "chat_bubble",
+            "row_content": "<p>For best results, roll the top of your cooler a minimum of 2 times, then clip shut. 3 rolls is even better.</p>",
+            "page": ""
+          }
+        },
+        "164927014981a874d3-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I already own a \"big brand cooler\", why do I need a Monti?",
+            "icon": "chat_bubble",
+            "row_content": "<p>We love our big roto-molded coolers! It is great as a mothership in the car or house. When it comes time to go out on a hike, fishing, park day, grocery run, or anything away from traditional heavy coolers, that is the perfect time to grab your Monti! #bettertogether</p>",
+            "page": ""
+          }
+        },
+        "164927014981a874d3-3": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Does it leak?",
+            "icon": "chat_bubble",
+            "row_content": "<p>Your</p>",
+            "page": ""
+          }
+        },
+        "98027faa-072e-49fb-b5ce-cf7e7700c576": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is shipping free?",
+            "icon": "chat_bubble",
+            "row_content": "<p>Yes! We off free shipping in the USA.</p>",
+            "page": ""
+          }
+        },
+        "494964fe-7119-4314-873c-e45037d9b93f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the return policy?",
+            "icon": "chat_bubble",
+            "row_content": "<p>If you don't love it, return your cooler for a complete refund. More details in our return page below. </p>",
+            "page": ""
+          }
+        },
+        "ab5342f8-4232-46e8-8c3c-7db84e537b7a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are you made in the USA?",
+            "icon": "chat_bubble",
+            "row_content": "<p>Absolutely! We proudly manufacture in Indiana. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "164927014981a874d3-0",
+        "164927014981a874d3-1",
+        "164927014981a874d3-2",
+        "164927014981a874d3-3",
+        "98027faa-072e-49fb-b5ce-cf7e7700c576",
+        "494964fe-7119-4314-873c-e45037d9b93f",
+        "ab5342f8-4232-46e8-8c3c-7db84e537b7a"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "background-2",
+        "color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_QTNTMd": {
+      "type": "featured-product",
+      "blocks": {
+        "text_AWBWdT": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_MbmtVQ": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_RXPcem": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_nRqpHk": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_9QccRN": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_hqfkcJ": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "text_AWBWdT",
+        "title_MbmtVQ",
+        "price_RXPcem",
+        "variant_picker_nRqpHk",
+        "quantity_selector_9QccRN",
+        "buy_buttons_hqfkcJ"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "lowtide-tote",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "078f7c4e-296d-4b16-91da-372153b89851": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lug Less.",
+            "heading_size": "h1"
+          }
+        },
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-1": {
+          "type": "text",
+          "settings": {
+            "text": "Built for the places, times, and adventures where bulky & heavy coolers don't cut it.",
+            "text_style": "body"
+          }
+        },
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-0",
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-1",
+        "template--14460784935011__078f7c4e-296d-4b16-91da-372153b89851-168617334600411c49-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Pitch_Deck_Lifestyle.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "2db8228b-e11f-4a58-b35e-28df463770d3": {
+      "type": "video",
+      "settings": {
+        "heading": "Product Walk-Through & FAQ's",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/RiCD9HexkSU?si=Uo7HwINnVsP2U0dq",
+        "cover_image": "shopify://shop_images/Monti_FAQ_Video_Thumbnail_2023.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "eec8fe60-9979-4b0e-91a8-4a70ed33f813": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Introducing the cooler you'll actually want to take with you.",
+            "heading_size": "h1"
+          }
+        },
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Coolers can be a pain. They are expensive, heavy, and a chore to lug around. How often have you left your cooler at home because you didn't want to \"deal with it\"? </p><p>Coolers don't have to be a compromise. Getting outdoors and spending time with friends should be carefree, and your gear should make your stress melt away, not add to it. </p><p>Stop lugging 30 lbs of plastic every time you need cold drinks. Be the hero of the picnic, dinner with friends, playground dates, fishing trips, and hikes. Quick walk to the store or out for hours: you can enjoy your drinks cold as hell no matter where you're going, or how long. </p>"
+          }
+        },
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify://collections/coolers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-0",
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-1",
+        "template--14460784935011__eec8fe60-9979-4b0e-91a8-4a70ed33f813-168617389312bc89f2-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-cb4d30e3-0152-4d8a-9457-d9438351be9a",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16492706455b0db62f": {
+      "type": "multicolumn",
+      "blocks": {
+        "164927064597e1b643-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/huckberry_logo.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "164927064597e1b643-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screen_Shot_2019-09-18_at_4.00.28_PM.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "164927064597e1b643-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/imboldn-logo-black-1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "650d4954-9db8-48eb-b8a0-0533c2aa7cec": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/brobible_logo_black.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "82a5d300-07df-41f0-8d92-be790c274517": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Screen_Shot_2019-09-18_at_3.59.12_PM.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9b682406-9ade-4a06-82fe-886d42f50145": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/yeabuddy_logo.webp",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2d246d2f-b80f-490d-b065-5a055b89f185": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164927064597e1b643-0",
+        "164927064597e1b643-1",
+        "164927064597e1b643-2",
+        "650d4954-9db8-48eb-b8a0-0533c2aa7cec",
+        "82a5d300-07df-41f0-8d92-be790c274517",
+        "9b682406-9ade-4a06-82fe-886d42f50145",
+        "2d246d2f-b80f-490d-b065-5a055b89f185"
+      ],
+      "settings": {
+        "title": "They're talking about us....",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1692389135146ce625": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/16-Monti-Claims-1-3-03.png",
+            "title": "",
+            "text": "<p>Folds down to the size of a clutch to fit in your purse, backpack, or fishing pack.</p>",
+            "link_label": "",
+            "link": "shopify://collections/coolers"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/16-Monti-Claims-1-3-02_fbaf4724-bd8a-417e-aba2-72df9c0c604f.png",
+            "title": "",
+            "text": "<p>Easily fits in your carry-on luggage! No more wasteful styrofoam coolers on vacation. Great for traveling sports fans that love a good tailgate cooler.</p>",
+            "link_label": "Learn More",
+            "link": "shopify://collections/coolers"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/16-Monti-Claims-1-3-08.png",
+            "title": "",
+            "text": "<p>Coolers can get gross. Spill Bloody Mix in it and leave it in the car? Oddly specific example you say? We'd know.. just toss your Monti in the wash on cold and air dry!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "de1a31f0-665d-4532-9621-a379edd23563",
+    "0400bb58-1785-415d-8587-d173c12e0fc3",
+    "fb3cc82d-0910-4744-ac1a-f18239f3cd82",
+    "featured_collection_TpJLfx",
+    "1692389236b3daddf0",
+    "1655330701d5254ebc",
+    "0152805f-ce6a-424c-970a-444214c3fbe8",
+    "16492625143b4d711a",
+    "16492701492e84e4d8",
+    "featured_product_QTNTMd",
+    "078f7c4e-296d-4b16-91da-372153b89851",
+    "2db8228b-e11f-4a58-b35e-28df463770d3",
+    "eec8fe60-9979-4b0e-91a8-4a70ed33f813",
+    "16492706455b0db62f",
+    "1692389135146ce625",
+    "multicolumn"
+  ]
+}

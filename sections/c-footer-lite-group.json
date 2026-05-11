@@ -1,0 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "c_footer_lite_cAxfj9": {
+      "type": "c-footer-lite",
+      "blocks": {
+        "logo_RWtWb6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/monti-red-logo.png"
+          }
+        },
+        "copyright_EEW4Yr": {
+          "type": "copyright",
+          "settings": {
+            "text": "© 2026 Monti Coolers"
+          }
+        },
+        "menu_FJncqK": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer-lite-menu"
+          }
+        }
+      },
+      "block_order": [
+        "logo_RWtWb6",
+        "copyright_EEW4Yr",
+        "menu_FJncqK"
+      ],
+      "name": "C Footer Lite",
+      "settings": {}
+    }
+  },
+  "order": [
+    "c_footer_lite_cAxfj9"
+  ]
+}

@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_B8RFbe": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6bUTyb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "coolers"
+          }
+        },
+        "featured_collection_AbVXJK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hats-accessories"
+          }
+        },
+        "featured_collection_tfAU7B": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "totes"
+          }
+        },
+        "featured_collection_aDirnh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shop-all"
+          }
+        },
+        "featured_collection_TCrrAb": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "lifestyle-gear"
+          }
+        },
+        "featured_collection_y6Qi7K": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "in-stock-ships-fast"
+          }
+        },
+        "featured_collection_mQXTfF": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "coming-soon-pre-order-and-save"
+          }
+        },
+        "featured_collection_7EdkjT": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "patch-store"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6bUTyb",
+        "featured_collection_AbVXJK",
+        "featured_collection_tfAU7B",
+        "featured_collection_aDirnh",
+        "featured_collection_TCrrAb",
+        "featured_collection_y6Qi7K",
+        "featured_collection_mQXTfF",
+        "featured_collection_7EdkjT"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "All Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "disabled": true,
+      "settings": {
+        "title": "Gear",
+        "sort": "products_high",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+    }
+  },
+  "order": [
+    "collection_list_B8RFbe",
+    "main"
+  ]
+}

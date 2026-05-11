@@ -1,0 +1,625 @@
+{% style %}
+  #{{ section.id }}.c-sale-section {
+    padding: 0 20px 30px;
+  }
+
+  #{{ section.id }} .c-sale-wrap {
+    background: #192A3F;
+    border-radius: 25px;
+    max-width: 1384px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-sale-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.25;
+  }
+
+  .c-sale-bg-left-top-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .c-sale-bg-right-top-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .c-sale-bg-bottom-left-icon {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    z-index: 1;
+  }
+
+  #{{ section.id }} .c-sale-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-sale-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-sale-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 31px;
+  }
+
+  #{{ section.id }} .c-sale-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #{{ section.id }} .c-sale-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #{{ section.id }} .c-sale-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-sale-stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  #{{ section.id }} .c-sale-star {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  #{{ section.id }} .c-sale-rating-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-sale-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+    letter-spacing: -1.86px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-sale-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    margin: 0 auto;
+    max-width: 90%
+  }
+
+  #{{ section.id }} .c-sale-timer-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  #{{ section.id }} .c-sale-timer-label {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+  }
+
+  #{{ section.id }} .c-sale-timer {
+    display: flex;
+    gap: 10px;
+  }
+
+  #{{ section.id }} .c-sale-timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 50px;
+    border-radius: 9px;
+    background: rgba(193, 51, 37, 0.05);
+    border: 1px solid transparent;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    padding: 4px 8px;
+    gap: 2px;
+    position: relative;
+  }
+
+
+  #{{ section.id }} .c-sale-timer-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9px;
+    padding: 1px;
+    background: linear-gradient(130deg, #C13325, #F09E68, #C13325);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-sale-timer-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+  }
+
+  #{{ section.id }} .c-sale-timer-unit {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.55;
+    color: #FFFFFF;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  #{{ section.id }} .c-sale-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 50px;
+    background: #C13325;
+    color: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.29;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-sale-button:hover {
+    opacity: 0.9;
+  }
+
+  #{{ section.id }} .c-sale-image {
+    width: 100%;
+    position: relative;
+  }
+
+  #{{ section.id }} .c-sale-image img,
+  #{{ section.id }} .c-sale-image svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  #{{ section.id }} .c-sale-image svg {
+    background-color: #AFAFAF;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }} .c-sale-heading {
+      font-size: 48px;
+    }
+
+    #{{ section.id }} .c-sale-text {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .c-sale-timer {
+      gap: 13px;
+    }
+
+    #{{ section.id }} .c-sale-timer-item {
+      width: 65px;
+      height: 57px;
+    }
+
+    #{{ section.id }} .c-sale-timer-value {
+      font-size: 20px;
+    }
+
+    #{{ section.id }} .c-sale-timer-unit {
+      font-size: 12px;
+    }
+
+    #{{ section.id }} .c-sale-button {
+      width: auto;
+      padding: 16px 63px;
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }}.c-sale-section {
+      padding: 0 20px 56px;
+    }
+
+    #{{ section.id }} .c-sale-wrap {
+      flex-direction: row;
+      gap: 60px;
+      padding: 60px 0px;
+      padding-left: 80px;
+      padding-right: 40px;
+      align-items: center;
+      min-height: 640px;
+      padding-bottom: 34px;
+    }
+
+    #{{ section.id }} .c-sale-content {
+      flex-direction: row;
+      gap: 60px;
+    }
+    
+    #{{ section.id }} .c-sale-text {
+      margin: 0;
+      max-width: none;
+    }
+
+    #{{ section.id }} .c-sale-body {
+      max-width: 554px;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    #{{ section.id }} .c-sale-rating {
+      margin: 0;
+    }
+
+    #{{ section.id }} .c-sale-button {
+      margin: 0;
+    }
+
+    #{{ section.id }} .c-sale-image {
+      max-width: 658px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    #{{ section.id }} .c-sale-wrap {
+      padding: 73px 0px;
+      padding-left: 120px;
+      padding-right: 53px;
+    }
+
+    #{{ section.id }} .c-sale-heading {
+      font-size: 62px;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-sale-section">
+  <div class="c-sale-wrap">
+    
+    {%- if section.settings.background_image -%}
+      <div class="c-sale-bg-image">
+        {{ section.settings.background_image | image_url: width: 2800 | image_tag: loading: 'lazy', widths: '1400, 2800' }}
+      </div>
+    {%- endif -%}
+
+    <svg class="c-sale-bg-left-top-icon" xmlns="http://www.w3.org/2000/svg" width="84" height="197" viewBox="0 0 84 197" fill="none">
+    <g filter="url(#filter0_d_4761_1469)">
+        <path d="M-123.343 67.0894C-121.503 52.5321 -114.759 39.036 -104.221 28.8255L-94.2486 19.1624C-84.9486 10.1511 -70.2736 9.8348 -60.594 18.437C-50.3794 27.5147 -34.7399 26.593 -25.6622 16.3784L-6.13187 -5.59815C-2.59743 -9.57527 1.67732 -12.8264 6.45394 -15.1702L19.1184 -21.3845C45.7006 -34.4279 76.9205 -15.856 78.1443 13.7285L79.4652 45.6573C80.2212 63.9319 63.4212 77.9403 45.5801 73.9118C22.4682 68.6931 3.84643 92.9378 14.8492 113.922L23.1822 129.814C26.7065 136.536 26.6378 144.574 22.9991 151.234C15.3441 165.246 -4.00297 167.181 -14.2824 154.964L-22.2332 145.515C-36.8729 128.115 -65.2011 140.064 -62.9572 162.692L-62.6369 165.922C-61.2018 180.393 -74.6321 191.861 -88.7 188.177C-92.9232 187.071 -96.6934 184.669 -99.4803 181.309L-147.572 123.321C-152.902 116.895 -146.648 107.462 -138.654 109.869C-133.661 111.372 -128.515 108.027 -127.861 102.854L-123.343 67.0894Z" fill="url(#paint0_linear_4761_1469)"/>
+    </g>
+    <defs>
+        <filter id="filter0_d_4761_1469" x="-153.553" y="-25.6225" width="237.043" height="222.495" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4761_1469"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4761_1469" result="shape"/>
+        </filter>
+        <linearGradient id="paint0_linear_4761_1469" x1="-27.8617" y1="64.5203" x2="-63.2089" y2="223.018" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#C13325"/>
+        <stop offset="0.770362" stop-color="#C13325"/>
+        </linearGradient>
+    </defs>
+    </svg>
+
+    <svg class="c-sale-bg-right-top-icon" xmlns="http://www.w3.org/2000/svg" width="202" height="277" viewBox="0 0 202 277" fill="none">
+    <g filter="url(#filter0_d_7060_1258)">
+    <path d="M185.025 -18.0578C199.449 -15.3653 212.525 -7.83873 222.098 3.28136L231.158 13.8053C239.606 23.6194 239.059 38.2876 229.902 47.4444C220.239 57.1072 220.239 72.7738 229.902 82.4367L250.691 103.226C254.454 106.988 257.448 111.447 259.506 116.353L264.965 129.361C276.422 156.665 256.045 186.738 226.44 186.219L194.489 185.66C176.201 185.339 163.206 167.744 168.277 150.171C174.846 127.406 151.739 107.39 130.144 117.139L113.789 124.523C106.872 127.646 98.8515 127.104 92.417 123.08C78.88 114.614 78.0858 95.1865 90.8866 85.6437L100.788 78.2626C119.018 64.6719 108.757 35.6897 86.0359 36.5986L82.7929 36.7283C68.2622 37.3095 57.604 23.2278 62.1094 9.40099C63.4619 5.25017 66.0816 1.62779 69.6001 -0.956575L130.317 -45.5537C137.045 -50.496 146.094 -43.6984 143.221 -35.8596C141.427 -30.9638 144.463 -25.6297 149.588 -24.6729L185.025 -18.0578Z" fill="url(#paint0_linear_7060_1258)"/>
+    </g>
+    <g filter="url(#filter1_d_7060_1258)">
+    <path d="M179.285 -14.9413C193.071 -11.7267 205.498 -4.25895 214.807 6.40513L228.349 21.9173C236.706 31.4915 236.219 45.9043 227.232 54.891C217.406 64.7169 217.406 80.6475 227.231 90.4735L253.07 116.312C256.469 119.711 259.236 123.689 261.241 128.058L268.055 142.906C280.853 170.796 259.194 202.234 228.574 200.21L196.533 198.092C177.438 196.83 164.099 178.651 168.624 160.057C174.774 134.783 149.645 113.209 125.594 123.114L110.203 129.453C102.694 132.546 94.1435 131.737 87.3478 127.292C72.9025 117.843 72.4112 96.8484 86.399 86.7343L90.3364 83.8879C111.065 68.8997 100.62 36.146 75.0411 35.9248L70.5761 35.8861C56.0192 35.7602 45.5652 21.8294 49.512 7.81727C50.8782 2.96739 53.8617 -1.26992 57.9676 -4.19042L118.19 -47.0256C125.177 -51.9946 134.46 -45.1861 131.82 -37.0295C130.036 -31.5148 133.348 -25.653 138.993 -24.3367L179.285 -14.9413Z" stroke="white" shape-rendering="crispEdges"/>
+    </g>
+    <defs>
+    <filter id="filter0_d_7060_1258" x="57.0645" y="-47.2319" width="215.139" height="241.458" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="2"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7060_1258"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7060_1258" result="shape"/>
+    </filter>
+    <filter id="filter1_d_7060_1258" x="44.1719" y="-49.2153" width="232.133" height="258.018" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="2"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7060_1258"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7060_1258" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_7060_1258" x1="181.973" y1="77.4088" x2="25.8296" y2="32.7982" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#C13325"/>
+    <stop offset="0.770362" stop-color="#C13325"/>
+    </linearGradient>
+    </defs>
+    </svg>
+
+    <svg class="c-sale-bg-bottom-left-icon" xmlns="http://www.w3.org/2000/svg" width="100" height="91" viewBox="0 0 100 91" fill="none">
+        <mask id="mask0_4761_1435" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-48" y="0" width="148" height="91">
+            <path d="M-47 90.5332H-48V0.933594H-47V90.5332ZM-41.7188 90.5332H-42.7188V0.933594H-41.7188V90.5332ZM-35.5625 90.5332H-36.5625V0.933594H-35.5625V90.5332ZM-29.3984 90.5332H-30.3984V0.933594H-29.3984V90.5332ZM-24.1172 90.5332H-25.1172V0.933594H-24.1172V90.5332ZM-17.9609 90.5332H-18.9609V0.933594H-17.9609V90.5332ZM-13.5547 90.5332H-14.5547V0.933594H-13.5547V90.5332ZM-8.27344 90.5332H-9.27344V0.933594H-8.27344V90.5332ZM-3.875 90.5332H-4.875V0.933594H-3.875V90.5332ZM1.84375 90.5332H0.84375V0.933594H1.84375V90.5332ZM7.5625 90.5332H6.5625V0.933594H7.5625V90.5332ZM23.8438 90.5332H22.8438V0.933594H23.8438V90.5332ZM28.6875 90.5332H27.6875V0.933594H28.6875V90.5332ZM33.9688 90.5332H32.9688V0.933594H33.9688V90.5332ZM40.125 90.5332H39.125V0.933594H40.125V90.5332ZM46.2891 90.5332H45.2891V0.933594H46.2891V90.5332ZM51.5703 90.5332H50.5703V0.933594H51.5703V90.5332ZM57.7266 90.5332H56.7266V0.933594H57.7266V90.5332ZM62.1328 90.5332H61.1328V0.933594H62.1328V90.5332ZM67.4141 90.5332H66.4141V0.933594H67.4141V90.5332ZM71.8125 90.5332H70.8125V0.933594H71.8125V90.5332ZM77.5312 90.5332H76.5312V0.933594H77.5312V90.5332ZM83.25 90.5332H82.25V0.933594H83.25V90.5332ZM99.5312 90.5332H98.5312V0.933594H99.5312V90.5332ZM13.2891 90.0664H12.2891V0.466797H13.2891V90.0664ZM88.9766 90.0664H87.9766V0.466797H88.9766V90.0664ZM17.8438 89.5996H16.8438V0H17.8438V89.5996ZM93.5312 89.5996H92.5312V0H93.5312V89.5996Z" fill="black"/>
+        </mask>
+        <g mask="url(#mask0_4761_1435)">
+            <circle cx="25.2687" cy="44.8" r="44.8" fill="#C13325"/>
+        </g>
+        </svg>
+
+    <div class="c-sale-content">
+      
+      <div class="c-sale-body">
+        
+        <div class="c-sale-text-wrap">
+          <div class="c-sale-top">
+            
+            {%- if section.settings.rating_text != blank -%}
+              <div class="c-sale-rating glass-pill">
+                <div class="c-sale-stars">
+                  <svg class="c-sale-star" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.24778 0.371783C6.49408 -0.123938 7.20123 -0.123938 7.44753 0.371783L9.05252 3.60208C9.15006 3.79839 9.33747 3.93455 9.55431 3.96665L13.1225 4.49487C13.67 4.57593 13.8886 5.24847 13.4932 5.6359L10.917 8.16055C10.7604 8.31398 10.6888 8.5343 10.7253 8.75044L11.3256 12.3072C11.4177 12.853 10.8456 13.2687 10.355 13.0124L7.15778 11.3424C6.96348 11.2409 6.73183 11.2409 6.53754 11.3424L3.34035 13.0124C2.84971 13.2687 2.27761 12.853 2.36973 12.3072L2.96999 8.75044C3.00647 8.5343 2.93488 8.31398 2.77832 8.16055L0.202093 5.6359C-0.193254 5.24847 0.0252689 4.57593 0.572839 4.49487L4.14101 3.96665C4.35784 3.93455 4.54526 3.79839 4.64279 3.60208L6.24778 0.371783Z" fill="#FF9500"/>
+                  </svg>
+                  <svg class="c-sale-star" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.24778 0.371783C6.49408 -0.123938 7.20123 -0.123938 7.44753 0.371783L9.05252 3.60208C9.15006 3.79839 9.33747 3.93455 9.55431 3.96665L13.1225 4.49487C13.67 4.57593 13.8886 5.24847 13.4932 5.6359L10.917 8.16055C10.7604 8.31398 10.6888 8.5343 10.7253 8.75044L11.3256 12.3072C11.4177 12.853 10.8456 13.2687 10.355 13.0124L7.15778 11.3424C6.96348 11.2409 6.73183 11.2409 6.53754 11.3424L3.34035 13.0124C2.84971 13.2687 2.27761 12.853 2.36973 12.3072L2.96999 8.75044C3.00647 8.5343 2.93488 8.31398 2.77832 8.16055L0.202093 5.6359C-0.193254 5.24847 0.0252689 4.57593 0.572839 4.49487L4.14101 3.96665C4.35784 3.93455 4.54526 3.79839 4.64279 3.60208L6.24778 0.371783Z" fill="#FF9500"/>
+                  </svg>
+                  <svg class="c-sale-star" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.24778 0.371783C6.49408 -0.123938 7.20123 -0.123938 7.44753 0.371783L9.05252 3.60208C9.15006 3.79839 9.33747 3.93455 9.55431 3.96665L13.1225 4.49487C13.67 4.57593 13.8886 5.24847 13.4932 5.6359L10.917 8.16055C10.7604 8.31398 10.6888 8.5343 10.7253 8.75044L11.3256 12.3072C11.4177 12.853 10.8456 13.2687 10.355 13.0124L7.15778 11.3424C6.96348 11.2409 6.73183 11.2409 6.53754 11.3424L3.34035 13.0124C2.84971 13.2687 2.27761 12.853 2.36973 12.3072L2.96999 8.75044C3.00647 8.5343 2.93488 8.31398 2.77832 8.16055L0.202093 5.6359C-0.193254 5.24847 0.0252689 4.57593 0.572839 4.49487L4.14101 3.96665C4.35784 3.93455 4.54526 3.79839 4.64279 3.60208L6.24778 0.371783Z" fill="#FF9500"/>
+                  </svg>
+                  <svg class="c-sale-star" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.24778 0.371783C6.49408 -0.123938 7.20123 -0.123938 7.44753 0.371783L9.05252 3.60208C9.15006 3.79839 9.33747 3.93455 9.55431 3.96665L13.1225 4.49487C13.67 4.57593 13.8886 5.24847 13.4932 5.6359L10.917 8.16055C10.7604 8.31398 10.6888 8.5343 10.7253 8.75044L11.3256 12.3072C11.4177 12.853 10.8456 13.2687 10.355 13.0124L7.15778 11.3424C6.96348 11.2409 6.73183 11.2409 6.53754 11.3424L3.34035 13.0124C2.84971 13.2687 2.27761 12.853 2.36973 12.3072L2.96999 8.75044C3.00647 8.5343 2.93488 8.31398 2.77832 8.16055L0.202093 5.6359C-0.193254 5.24847 0.0252689 4.57593 0.572839 4.49487L4.14101 3.96665C4.35784 3.93455 4.54526 3.79839 4.64279 3.60208L6.24778 0.371783Z" fill="#FF9500"/>
+                  </svg>
+                  <svg class="c-sale-star" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M6.24778 0.371783C6.49408 -0.123938 7.20123 -0.123938 7.44753 0.371783L9.05252 3.60208C9.15006 3.79839 9.33747 3.93455 9.55431 3.96665L13.1225 4.49487C13.67 4.57593 13.8886 5.24847 13.4932 5.6359L10.917 8.16055C10.7604 8.31398 10.6888 8.5343 10.7253 8.75044L11.3256 12.3072C11.4177 12.853 10.8456 13.2687 10.355 13.0124L7.15778 11.3424C6.96348 11.2409 6.73183 11.2409 6.53754 11.3424L3.34035 13.0124C2.84971 13.2687 2.27761 12.853 2.36973 12.3072L2.96999 8.75044C3.00647 8.5343 2.93488 8.31398 2.77832 8.16055L0.202093 5.6359C-0.193254 5.24847 0.0252689 4.57593 0.572839 4.49487L4.14101 3.96665C4.35784 3.93455 4.54526 3.79839 4.64279 3.60208L6.24778 0.371783Z" fill="#FF9500"/>
+                  </svg>
+                </div>
+                <span class="c-sale-rating-text">{{ section.settings.rating_text }}</span>
+              </div>
+            {%- endif -%}
+
+            {%- if section.settings.heading != blank -%}
+              <h2 class="c-sale-heading">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+          </div>
+
+          {%- if section.settings.text != blank -%}
+            <p class="c-sale-text">{{ section.settings.text }}</p>
+          {%- endif -%}
+        </div>
+
+        {%- if section.settings.timer_label != blank -%}
+          <div class="c-sale-timer-wrap">
+            <p class="c-sale-timer-label">{{ section.settings.timer_label }}</p>
+            <div class="c-sale-timer" data-end-date="{{ section.settings.end_date }}">
+              <div class="c-sale-timer-item">
+                <span class="c-sale-timer-value" data-days>00</span>
+                <span class="c-sale-timer-unit">Days</span>
+              </div>
+              <div class="c-sale-timer-item">
+                <span class="c-sale-timer-value" data-hours>00</span>
+                <span class="c-sale-timer-unit">Hrs</span>
+              </div>
+              <div class="c-sale-timer-item">
+                <span class="c-sale-timer-value" data-minutes>00</span>
+                <span class="c-sale-timer-unit">Mins</span>
+              </div>
+              <div class="c-sale-timer-item">
+                <span class="c-sale-timer-value" data-seconds>00</span>
+                <span class="c-sale-timer-unit">Sec</span>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.button_text != blank and section.settings.button_link != blank -%}
+          <a href="{{ section.settings.button_link }}" class="c-sale-button">
+            {{ section.settings.button_text }}
+          </a>
+        {%- endif -%}
+
+      </div>
+
+      <div class="c-sale-image">
+        {%- if section.settings.image -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600, 1200' }}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag }}
+        {%- endif -%}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function() {
+  function initSaleTimer() {
+    const timers = document.querySelectorAll('.c-sale-timer[data-end-date]');
+    
+    timers.forEach(timer => {
+      const endDate = timer.getAttribute('data-end-date');
+      if (!endDate) return;
+      
+      const daysEl = timer.querySelector('[data-days]');
+      const hoursEl = timer.querySelector('[data-hours]');
+      const minutesEl = timer.querySelector('[data-minutes]');
+      const secondsEl = timer.querySelector('[data-seconds]');
+      
+      function updateTimer() {
+        const now = new Date().getTime();
+        const end = new Date(endDate).getTime();
+        const distance = end - now;
+        
+        if (distance < 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+      
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSaleTimer);
+  } else {
+    initSaleTimer();
+  }
+  
+  if (Shopify && Shopify.designMode) {
+    document.addEventListener('shopify:section:load', initSaleTimer);
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "C Sale Timer",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image",
+      "info": "Optional decorative background"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "15,000+ 5 Star Reviews"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Spring Sale Up to 20% OFF"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Limited-time discounts on portable coolers made for travel, beach days, and the outdoors."
+    },
+    {
+      "type": "text",
+      "id": "timer_label",
+      "label": "Timer label",
+      "default": "Sale Ends In:"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Sale end date",
+      "default": "2025-12-31T23:59:59",
+      "info": "Format: YYYY-MM-DDTHH:MM:SS (e.g., 2025-12-31T23:59:59)"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Get up to 20% OFF"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Sale Timer"
+    }
+  ]
+}
+{% endschema %}

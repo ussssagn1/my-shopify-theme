@@ -1,0 +1,103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_XUpmXd": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_LqkiWU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Pitch_Deck_Lifestyle.png",
+            "image_overlay_opacity": 0,
+            "heading": "Returns & Exchange Portal",
+            "heading_size": "h1",
+            "subheading": "Change your mind? We want every Monti to be in the hands of someone who really wants it! Initiate your return or exchange using our easy portal. See our FAQ section for questions about policies and more.",
+            "button_label": "Initiate Return / Exchange",
+            "link": "https://monti.loopreturns.com/#/",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_LqkiWU"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_3xkUUz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rUPkxE": {
+          "type": "heading",
+          "settings": {
+            "heading": "The deets",
+            "heading_size": "h1"
+          }
+        },
+        "text_bwTyqT": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Return policy: What is the Monti Coolers Guarantee?</h3><p>The Monti Guarantee: If you would like a refund, simply return your cooler unused and in the same condition it arrived in within 30 days of purchase. <br/><br/>If you've had a change of heart (it's completely understandable), or if you need to return an unwanted gift, please use our Return Portal. We're here to help with exchanges or refunds for unused items returned within 30 days of delivery. The cost of return shipping/handling will be deducted from your refund. Refunds will be issued to the original purchaser's payment method. All items must be returned in their original condition, including tags (if applicable).<br/></p><h3>How do I request an exchange for a defective or damaged item?</h3><p>At Monti, we are committed to meticulous quality control, but occasionally an item may not meet our high standards. If you discover a defect in your product, or if you receive the wrong order, please send it back to us within 30 days of delivery for a complete refund. Initiate request via the exchange portal. <br/><br/>If you have any questions at all, please don't hesitate to reach out! team@monticoolers.com</p>"
+          }
+        },
+        "button_piaQcK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Return + Exchange Portal",
+            "button_link": "https://monti.loopreturns.com/#/",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rUPkxE",
+        "text_bwTyqT",
+        "button_piaQcK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_XUpmXd",
+    "rich_text_3xkUUz"
+  ]
+}

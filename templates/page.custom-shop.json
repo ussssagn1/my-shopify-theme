@@ -1,0 +1,332 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_XUpmXd": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_LqkiWU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Pitch_Deck_Lifestyle.png",
+            "image_overlay_opacity": 0,
+            "heading": "CUSTOM SHOP",
+            "heading_size": "h1",
+            "subheading": "Looking for the perfect gift to make a lasting impression? Our custom shop offers personalized coolers tailored to your needs! Whether it's for corporate gifting, bachelor parties, weddings, or any special occasion, our stylish and functional coolers can be customized with your logo, names, or unique designs. Make a statement with a gift that's both practical and memorable. Minimum orders apply, so contact us today to create your one-of-a-kind cooler and elevate your gift-giving to the next level!",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_LqkiWU"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rich_text_3xkUUz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rUPkxE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customization Options",
+            "heading_size": "h1"
+          }
+        },
+        "text_bwTyqT": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Patches</h3><p>All new coolers come with a standard 2x3\" Velcro Patch for easy/cost effective corporate branding.</p><p>This is typically 2.5x cheaper than the embroidery option and is our go-to for Custom Coolers.<br/></p><h3>Embroidery</h3><p>We have 3 main options for location of your logo:</p><ol><li>On the backpack strap webbing.</li><li>On the backpack strap mesh.</li><li>On the handle on the back of the cooler.</li></ol><p>Embroidery is done through a 3rd party service, typically sourced by the customer, though Monti is also able to utilize a local embroidery shop to make this a one-stop-shop process. <br/><br/>What are you waiting for!? Reach out at <strong>sales@monticoolers.com</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rUPkxE",
+        "text_bwTyqT"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multirow_bW8dR6": {
+      "type": "multirow",
+      "blocks": {
+        "row_zyV9bY": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Patch_your_logo_here.jpg",
+            "caption": "Woven Patches",
+            "heading": "Patches",
+            "text": "<p>All new coolers come with a standard 2x3\" Velcro Patch for easy/cost effective corporate branding.</p><p>This is typically 2.5x cheaper than the embroidery option and is our go-to for Custom Coolers.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_zx4mHa": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Embroidery.jpg",
+            "caption": "",
+            "heading": "Embroidery",
+            "text": "<p>All new coolers come with a standard 2x3\" Velcro Patch for easy/cost effective corporate branding.</p><p>This is typically 2.5x cheaper than the embroidery option and is our go-to for Custom Coolers.<br/></p><h3>Embroidery</h3><p>We have 3 main options for location of</p><p>the logo.</p><p>On backpack straps</p><p>1. On the strap webbing</p><p>2. On the handle on the back of the cooler</p><p>3. Embroidery is done through a 3rd party service, typically sourced by the customer, though Monti is also able to utilize a local embroidery shop to make this a one-stop-shop process. <br/><br/>What are you waiting for!? Reach out at sales@monticoolers.com</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_mTFK7n": {
+          "type": "row",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/American_Flag_Banner.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_zyV9bY",
+        "row_zx4mHa",
+        "row_mTFK7n"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_e6J4Tz": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7xHtze": {
+          "type": "column",
+          "settings": {
+            "title": "Do you offer price breaks for large orders?",
+            "text": "<p>Yes! We offer a tiered pricing plan to make Monti's afforded for any sized business or event.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zXKJk3": {
+          "type": "column",
+          "settings": {
+            "title": "What is the lead time?",
+            "text": "<p>Custom patches can be turned around incredibly quickly. Patches can usually be made within 4 or 5 days of the finalized design (or quicker if expedited). <br/><br/>Embroidery is a bit of a longer process and typically takes between 2-4 weeks if handled by Monti, here in Charleston. Local Embroidery shops may be able to provide a fast turn-around. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ByqNVm": {
+          "type": "column",
+          "settings": {
+            "title": "Can you help with design?",
+            "text": "<p>We are happy to help with simple patch designs and embroidery aesthetics! More complex from-scratch designs can be sourced easily from a graphic designer. We accept nearly all major file formats (.png, .ai, .pdf, etc...). Patches a 2x3\". </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_7xHtze",
+        "column_zXKJk3",
+        "column_ByqNVm"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-cb4d30e3-0152-4d8a-9457-d9438351be9a",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_9f3G4K": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/American_Flag_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "contact_form_aXB9Uf": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_8tGkTQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Cm6GL8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking for a standard Patch?",
+            "heading_size": "h1"
+          }
+        },
+        "text_Nf3mTe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have you covered! Check out our patch store for in-stock ready-to-ship personalization for your favorite cooler!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Cm6GL8",
+        "text_Nf3mTe"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_product_mdaRTq": {
+      "type": "featured-product",
+      "blocks": {
+        "text_t6mjCT": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_beahVi": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_A7LNCT": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_pTRWGz": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_EAkUzR": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "share_PTMHFE": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "buy_buttons_VN7KDf": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        }
+      },
+      "block_order": [
+        "text_t6mjCT",
+        "title_beahVi",
+        "price_A7LNCT",
+        "variant_picker_pTRWGz",
+        "quantity_selector_EAkUzR",
+        "share_PTMHFE",
+        "buy_buttons_VN7KDf"
+      ],
+      "settings": {
+        "product": "usa-patch",
+        "color_scheme": "scheme-7c0ee3a4-03a3-4580-a03f-05051f93ec79",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_XUpmXd",
+    "rich_text_3xkUUz",
+    "multirow_bW8dR6",
+    "multicolumn_e6J4Tz",
+    "image_banner_9f3G4K",
+    "contact_form_aXB9Uf",
+    "rich_text_8tGkTQ",
+    "featured_product_mdaRTq"
+  ]
+}

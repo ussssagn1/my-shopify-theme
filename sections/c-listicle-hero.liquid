@@ -1,0 +1,525 @@
+{% style %}
+  #{{ section.id }}.c-lhr {
+    width: 100%;
+    padding: 40px 19px 48px;
+    box-sizing: border-box;
+    background: #192A3F;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-lhr-inner {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-lhr-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  #{{ section.id }} .c-lhr-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #{{ section.id }} .c-lhr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 40px;
+    padding: 8px 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    align-self: flex-start;
+    margin-bottom: 17px;
+  }
+
+  #{{ section.id }} .c-lhr-badge span {
+    color: var(--white, #FFF);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 129%;
+    text-transform: uppercase;
+  }
+
+  #{{ section.id }} .c-lhr-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  #{{ section.id }} .c-lhr-heading-red {
+    color: #E43C32;
+  }
+
+  #{{ section.id }} .c-lhr-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #{{ section.id }} .c-lhr-btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #fe8585;
+    background: linear-gradient(90deg, #c5200f 38.46%, #e14b3c 100%);
+    box-shadow: 0 0 3px #ff5252, inset 0 0 26px 0 #ff7d7d;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.29;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 24px;
+    transition: all 0.25s ease 0s;
+  }
+
+  #{{ section.id }} .c-lhr-btn-primary:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease 0s;
+  }
+
+  #{{ section.id }} .c-lhr-btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.01) 100%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.29;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 24px;
+    transition: all 0.25s ease 0s;
+  }
+
+  #{{ section.id }} .c-lhr-btn-secondary:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease 0s;
+  }
+
+  #{{ section.id }} .c-lhr-review {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.01) 100%);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #{{ section.id }} .c-lhr-review-desktop { display: none; }
+
+  #{{ section.id }} .c-lhr-review-mobile {
+    position: absolute;
+    bottom: 14px;
+    left: 9px;
+    right: 9px;
+    z-index: 2;
+  }
+
+  #{{ section.id }} .c-lhr-stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  #{{ section.id }} .c-lhr-review-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.32;
+    color: #fff;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-lhr-review-text p { margin: 0; }
+
+  #{{ section.id }} .c-lhr-review-author {
+    margin: 0;
+    color: var(--white, #FFF);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+
+  #{{ section.id }} .c-lhr-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #{{ section.id }} .c-lhr-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 0 0 40px 10px rgba(18, 93, 255, 0.35);
+    min-height: 405px;
+  }
+
+  #{{ section.id }} .c-lhr-img-clip {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #125DFF;
+  }
+
+  #{{ section.id }} .c-lhr-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-lhr-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    min-height: 110px;
+  }
+
+  #{{ section.id }} .c-lhr-card {
+    position: relative;
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 18px 4px rgba(255, 40, 18, 0.35);
+    border: 1px solid #ff2812;
+  }
+
+  #{{ section.id }} .c-lhr-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: bottom;
+  }
+
+  #{{ section.id }} .c-lhr-card-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 6, 24, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 0 0 9px 9px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: -0.44px;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  @media (min-width: 1124px) {
+    #{{ section.id }}.c-lhr {
+      padding: 64px 64px 64px;
+    }
+
+    #{{ section.id }} .c-lhr-layout {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 60px;
+    }
+
+    #{{ section.id }} .c-lhr-left {
+      flex: 0 0 535px;
+      gap: 17px;
+      justify-content: space-between;
+    }
+
+    #{{ section.id }} .c-lhr-heading {
+      font-size: 75px;
+      letter-spacing: -3.75px;
+      text-transform: uppercase;
+    }
+
+    #{{ section.id }} .c-lhr-btns {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    #{{ section.id }} .c-lhr-btn-primary,
+    #{{ section.id }} .c-lhr-btn-secondary {
+      flex: 1;
+    }
+
+    #{{ section.id }} .c-lhr-review-desktop { display: flex; }
+    #{{ section.id }} .c-lhr-review-mobile  { display: none; }
+
+    #{{ section.id }} .c-lhr-right {
+      flex: 1;
+      flex-direction: row;
+      gap: 20px;
+      min-width: 0;
+    }
+
+    #{{ section.id }} .c-lhr-img-wrap {
+      flex: 0 0 65%;
+    }
+
+    #{{ section.id }} .c-lhr-cards {
+      flex: 1;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #{{ section.id }} .c-lhr-card {
+      aspect-ratio: 240 / 215;
+      border-radius: 20px;
+      flex: 1;
+    }
+
+    #{{ section.id }} .c-lhr-card-caption {
+      height: 50px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      border-radius: 0 0 19px 19px;
+    }
+  }
+{% endstyle %}
+
+<section id="{{ section.id }}" class="c-lhr">
+  <div class="c-lhr-inner">
+
+    <div class="c-lhr-layout">
+
+      <div class="c-lhr-left">
+        <div>
+          {% if section.settings.badge_text != blank %}
+            <div class="c-lhr-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                <path d="M5.33727 0.506513C5.72045 -0.168862 6.69361 -0.168862 7.07679 0.506513L8.37221 2.78974C8.51465 3.04081 8.75863 3.21807 9.04143 3.27596L11.6132 3.80241C12.3739 3.95814 12.6747 4.88367 12.1508 5.4568L10.3796 7.39437C10.1848 7.60742 10.0916 7.89424 10.124 8.18108L10.418 10.7897C10.505 11.5613 9.71767 12.1333 9.01069 11.8121L6.62063 10.7264C6.35782 10.607 6.05624 10.607 5.79343 10.7264L3.40337 11.8121C2.6964 12.1333 1.90909 11.5613 1.99606 10.7897L2.2901 8.18108C2.32244 7.89424 2.22924 7.60742 2.03448 7.39437L0.263307 5.4568C-0.260604 4.88367 0.040122 3.95814 0.800851 3.80241L3.37264 3.27596C3.65543 3.21807 3.89941 3.04081 4.04186 2.78974L5.33727 0.506513Z" fill="#F5B400"/>
+              </svg>
+              <span>{{ section.settings.badge_text }}</span>
+            </div>
+          {% endif %}
+
+          <h1 class="c-lhr-heading">
+            {{ section.settings.heading_white }}<br>
+            <span class="c-lhr-heading-red">{{ section.settings.heading_red }}</span>
+          </h1>
+
+          <div class="c-lhr-btns">
+            {% if section.settings.primary_btn_text != blank %}
+              <a href="{{ section.settings.primary_btn_url }}" class="c-lhr-btn-primary">
+                {{ section.settings.primary_btn_text }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            {% endif %}
+            {% if section.settings.secondary_btn_text != blank %}
+              <a href="{{ section.settings.secondary_btn_url }}" class="c-lhr-btn-secondary">
+                {{ section.settings.secondary_btn_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if section.settings.review_text != blank %}
+          <div class="c-lhr-review c-lhr-review-desktop">
+            <div class="c-lhr-stars">
+              {% for i in (1..5) %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path d="M5.33727 0.506513C5.72045 -0.168862 6.69361 -0.168862 7.07679 0.506513L8.37221 2.78974C8.51465 3.04081 8.75863 3.21807 9.04143 3.27596L11.6132 3.80241C12.3739 3.95814 12.6747 4.88367 12.1508 5.4568L10.3796 7.39437C10.1848 7.60742 10.0916 7.89424 10.124 8.18108L10.418 10.7897C10.505 11.5613 9.71767 12.1333 9.01069 11.8121L6.62063 10.7264C6.35782 10.607 6.05624 10.607 5.79343 10.7264L3.40337 11.8121C2.6964 12.1333 1.90909 11.5613 1.99606 10.7897L2.2901 8.18108C2.32244 7.89424 2.22924 7.60742 2.03448 7.39437L0.263307 5.4568C-0.260604 4.88367 0.040122 3.95814 0.800851 3.80241L3.37264 3.27596C3.65543 3.21807 3.89941 3.04081 4.04186 2.78974L5.33727 0.506513Z" fill="#F5B400"/>
+                </svg>
+              {% endfor %}
+            </div>
+            <div class="c-lhr-review-text">{{ section.settings.review_text }}</div>
+            {% if section.settings.review_author != blank %}
+              <p class="c-lhr-review-author">{{ section.settings.review_author }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+
+      <div class="c-lhr-right">
+
+        <div class="c-lhr-img-wrap">
+          <div class="c-lhr-img-clip">
+            {% if section.settings.main_image != blank %}
+              {{
+                section.settings.main_image
+                | image_url: width: 1000
+                | image_tag:
+                  class: 'c-lhr-img',
+                  loading: 'eager',
+                  alt: section.settings.heading_white
+              }}
+            {% endif %}
+          </div>
+
+          {% if section.settings.review_text != blank %}
+            <div class="c-lhr-review c-lhr-review-mobile">
+              <div class="c-lhr-stars">
+                {% for i in (1..5) %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                    <path d="M5.33727 0.506513C5.72045 -0.168862 6.69361 -0.168862 7.07679 0.506513L8.37221 2.78974C8.51465 3.04081 8.75863 3.21807 9.04143 3.27596L11.6132 3.80241C12.3739 3.95814 12.6747 4.88367 12.1508 5.4568L10.3796 7.39437C10.1848 7.60742 10.0916 7.89424 10.124 8.18108L10.418 10.7897C10.505 11.5613 9.71767 12.1333 9.01069 11.8121L6.62063 10.7264C6.35782 10.607 6.05624 10.607 5.79343 10.7264L3.40337 11.8121C2.6964 12.1333 1.90909 11.5613 1.99606 10.7897L2.2901 8.18108C2.32244 7.89424 2.22924 7.60742 2.03448 7.39437L0.263307 5.4568C-0.260604 4.88367 0.040122 3.95814 0.800851 3.80241L3.37264 3.27596C3.65543 3.21807 3.89941 3.04081 4.04186 2.78974L5.33727 0.506513Z" fill="#F5B400"/>
+                  </svg>
+                {% endfor %}
+              </div>
+              <div class="c-lhr-review-text">{{ section.settings.review_text }}</div>
+              {% if section.settings.review_author != blank %}
+                <p class="c-lhr-review-author">{{ section.settings.review_author }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="c-lhr-cards">
+          {% for block in section.blocks %}
+            <div class="c-lhr-card" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 500
+                  | image_tag:
+                    class: 'c-lhr-card-img',
+                    loading: 'lazy',
+                    alt: block.settings.title
+                }}
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <div class="c-lhr-card-caption">{{ block.settings.title }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "C Listicle Main",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Feature Card",
+      "type": "card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Caption",
+          "default": "Ice For Days"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Rated 4.8/5 by 2400+ Adventures"
+    },
+    {
+      "type": "text",
+      "id": "heading_white",
+      "label": "Heading (white part)",
+      "default": "4 Reasons to Ditch the"
+    },
+    {
+      "type": "text",
+      "id": "heading_red",
+      "label": "Heading (red part)",
+      "default": "Hard Cooler"
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Primary button text",
+      "default": "Buy the Shasta"
+    },
+    {
+      "type": "url",
+      "id": "primary_btn_url",
+      "label": "Primary button URL"
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_text",
+      "label": "Secondary button text",
+      "default": "See all 4 Reasons"
+    },
+    {
+      "type": "url",
+      "id": "secondary_btn_url",
+      "label": "Secondary button URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main image"
+    },
+    {
+      "type": "richtext",
+      "id": "review_text",
+      "label": "Review quote",
+      "default": "<p>\"Best. Cooler. Ever. Bought it for my husband for Father's Day. The Monti will travel with us everywhere we go!\"</p>"
+    },
+    {
+      "type": "text",
+      "id": "review_author",
+      "label": "Review author",
+      "default": "— Christy U."
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Listicle Main",
+      "blocks": [
+        { "type": "card", "settings": { "title": "Ice For Days" } },
+        { "type": "card", "settings": { "title": "Built For Anywhere" } },
+        { "type": "card", "settings": { "title": "Ultra Portable" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

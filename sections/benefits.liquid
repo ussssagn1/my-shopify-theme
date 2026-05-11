@@ -1,0 +1,212 @@
+{% style %}
+  .section--{{ section.id }} {
+    padding: 65px 0;
+    background: #F3F3F3;
+    font-family: 'Inter';
+  }
+
+  .section--{{ section.id }} .benefits-container {
+    width: 100%;
+    max-width: 1232px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .section--{{ section.id }} .benefits-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .section--{{ section.id }} .benefits-image {
+    width: 100%;
+    max-width: 523px;
+  }
+
+  .section--{{ section.id }} .benefits-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .section--{{ section.id }} .benefits-content {
+    width: 100%;
+    max-width: 596px;
+  }
+
+  .section--{{ section.id }} .benefits-heading {
+    font-size: 44px;
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+
+  .section--{{ section.id }} .benefits-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 46px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section--{{ section.id }} .benefits-item {
+    display: flex;
+    gap: 38px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  .section--{{ section.id }} .benefits-item:last-child {
+    border: none;
+  }
+
+  .section--{{ section.id }} .benefits-index {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #E43C32;
+    min-width: 41px;
+  }
+
+  .section--{{ section.id }} .benefits-text h4 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #18181B;
+    font-weight: 600;
+  }
+
+  .section--{{ section.id }} .benefits-text p {
+    margin: 0;
+    color: #555;
+    line-height: 1.55;
+    font-size: 18px;
+  }
+
+  @media (max-width: 1200px) {
+    .section--{{ section.id }} .benefits-wrapper {
+      gap: 70px;
+    }
+    .section--{{ section.id }} .benefits-heading {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    .section--{{ section.id }} .benefits-list {
+      padding: 0;
+      gap: 25px;
+    }
+    .section--{{ section.id }} .benefits-item {
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    .section--{{ section.id }} .benefits-index {
+      font-size: 24px;
+    }
+    .section--{{ section.id }} .benefits-text h4 {
+      font-size: 20px;
+    }
+    .section--{{ section.id }} .benefits-text p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section--{{ section.id }} .benefits-wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+{% endstyle %}
+
+<section class="benefits section--{{ section.id }}">
+  <div class="benefits-container">
+    <div class="benefits-wrapper">
+
+      {% if section.settings.image != blank %}
+        <div class="benefits-image">
+          <img
+            src="{{ section.settings.image | image_url: width: 524 }}"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="auto"
+            height="auto">
+        </div>
+      {% endif %}
+
+      <div class="benefits-content">
+        {% if section.settings.heading != blank %}
+          <h2 class="benefits-heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <ul class="benefits-list">
+            {% for block in section.blocks %}
+              <li class="benefits-item" {{ block.shopify_attributes }}>
+                <span class="benefits-index">
+                  {{ forloop.index | prepend: '0' }}.
+                </span>
+
+                <div class="benefits-text">
+                  {% if block.settings.title != blank %}
+                    <h4>{{ block.settings.title }}</h4>
+                  {% endif %}
+
+                  {% if block.settings.text != blank %}
+                    <p>{{ block.settings.text }}</p>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Benefits",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Why Ditch the Hard Cooler?"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "benefit",
+        "name": "Benefit item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          }, {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "Text"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 6,
+    "presets": [
+      {
+        "name": "Benefits"
+      }
+    ]
+  }
+{% endschema %}

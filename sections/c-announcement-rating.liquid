@@ -1,0 +1,183 @@
+{% style %}
+  #{{ section.id }}.c-announcement {
+    background: {{ section.settings.background_color | default: '#192A3F' }};
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  #{{ section.id }} .c-announcement-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  #{{ section.id }} .c-announcement-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  #{{ section.id }} .c-announcement-star {
+    width: 16px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  #{{ section.id }} .c-announcement-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #FFFFFF;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  #{{ section.id }} .c-announcement-close {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  #{{ section.id }} .c-announcement-close:hover {
+    opacity: 1;
+  }
+
+  #{{ section.id }} .c-announcement-close svg {
+    width: 100%;
+    height: 100%;
+    stroke: #FFFFFF;
+  }
+
+  #{{ section.id }}.hidden {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    #{{ section.id }}.c-announcement {
+      padding: 16px 20px;
+    }
+
+    #{{ section.id }} .c-announcement-content {
+      gap: 10px;
+    }
+
+    #{{ section.id }} .c-announcement-text {
+      font-size: 12px;
+    }
+
+    #{{ section.id }} .c-announcement-stars {
+      gap: 2px;
+    }
+
+    #{{ section.id }} .c-announcement-star {
+      width: 14px;
+      height: 13px;
+    }
+
+    #{{ section.id }} .c-announcement-close {
+      right: 12px;
+    }
+  }
+{% endstyle %}
+
+<div id="{{ section.id }}" class="c-announcement">
+  <div class="c-announcement-content">
+    <div class="c-announcement-stars">
+      {% for i in (1..5) %}
+        <div class="c-announcement-star">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none" style="transform: translateY(-5px)">
+            <path d="M7.51823 0L9.293 5.46218L15.0363 5.46218L10.3899 8.838L12.1646 14.3002L7.51823 10.9244L2.87182 14.3002L4.64659 8.838L0.000176907 5.46218L5.74346 5.46218L7.51823 0Z" fill="{{ section.settings.star_color | default: '#FF9500' }}"/>
+          </svg>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.text != blank %}
+      <p class="c-announcement-text">{{ section.settings.text }}</p>
+    {% endif %}
+  </div>
+
+  {% if section.settings.show_close %}
+    <button class="c-announcement-close" aria-label="Close announcement" data-close-announcement>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M4.5 4.5L13.5 13.5M13.5 4.5L4.5 13.5" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+  {% endif %}
+</div>
+
+{% if section.settings.show_close %}
+  <script>
+  (function() {
+    const announcement = document.getElementById('{{ section.id }}');
+    if (!announcement) return;
+
+    const closeBtn = announcement.querySelector('[data-close-announcement]');
+    if (!closeBtn) return;
+
+    const storageKey = 'announcement_closed_{{ section.id }}';
+    if (sessionStorage.getItem(storageKey) === 'true') {
+      announcement.classList.add('hidden');
+      return;
+    }
+
+    closeBtn.addEventListener('click', function() {
+      announcement.classList.add('hidden');
+      sessionStorage.setItem(storageKey, 'true');
+    });
+  })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "C Announcement Rating",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement text",
+      "default": "Rated 5.0 from 150+ reviews"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#192A3F"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#FF9500"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_close",
+      "label": "Show close button",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Announcement Rating"
+    }
+  ]
+}
+{% endschema %}

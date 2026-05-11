@@ -1,0 +1,700 @@
+{% style %}
+  #{{ section.id }}.kf-product-cards {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background: #192A3F;
+    padding-bottom: 40px;
+  }
+
+  #{{ section.id }} .kf-pc-inner {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .kf-pc-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+  }
+
+  #{{ section.id }} .kf-product-card {
+    width: 100%;
+    background: #0E1120;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 24px;
+  }
+
+  #{{ section.id }} .kf-pc-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    order: -1;
+    border-radius: 10px;
+  }
+
+  #{{ section.id }} .kf-pc-card-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .kf-pc-card-image-mobile {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    #{{ section.id }}.kf-product-cards {
+      padding: 0px;
+      padding-bottom: 40px;
+    }
+
+    #{{ section.id }} .kf-pc-cards {
+      gap: 35px;
+    }
+
+    #{{ section.id }} .kf-product-card {
+      border: 0px;
+      border-radius: 0px;
+      padding: 50px 20px;
+    }
+
+    #{{ section.id }} .kf-product-card.has-mobile-img .kf-pc-card-image-mobile {
+      display: block;
+    }
+    #{{ section.id }} .kf-product-card.has-mobile-img .kf-pc-card-image-desktop {
+      display: none;
+    }
+
+    #{{ section.id }} .kf-pc-cards--slider-active {
+      display: none;
+    }
+
+    #{{ section.id }} .kf-pc-swiper {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #{{ section.id }}.has-mobile-slider .kf-pc-card-heading {
+      font-size: 30px;
+    }
+
+    #{{ section.id }}.has-mobile-slider .kf-pc-card-body {
+      font-size: 17px;
+    }
+
+    #{{ section.id }} .kf-pc-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    #{{ section.id }} .kf-pc-nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 0;
+    }
+
+    #{{ section.id }} .kf-pc-nav-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    #{{ section.id }} .kf-pc-nav-btn.swiper-button-disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }} .kf-pc-slider-wrap {
+      display: none;
+    }
+  }
+
+  #{{ section.id }} .kf-pc-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  #{{ section.id }} .kf-pc-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #{{ section.id }} .kf-pc-card-caption {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    background: #6090D8;
+    box-shadow: 0 0 15px 0 #78C4F5 inset;
+    border-radius: 100px;
+    padding: 4px 12px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #{{ section.id }} .kf-pc-card-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255);
+    margin: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-body strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  #{{ section.id }} .kf-pc-card-body em,
+  #{{ section.id }} .kf-pc-card-body em * {
+    color: #63B3ED !important;
+    font-style: normal;
+  }
+
+  #{{ section.id }} .kf-pc-card-body p {
+    margin: 0 0 24px;
+  }
+
+  #{{ section.id }} .kf-pc-card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-stat {
+    border-radius: 12px;
+    border: 1px solid var(--Primary1, #78C4F5);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 16px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #{{ section.id }} .kf-pc-card-stat-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    color: #63B3ED;
+    margin: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #63B3ED;
+    letter-spacing: 0.3px;
+    margin: 0;
+  }
+
+  #{{ section.id }} .kf-pc-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #fe8585;
+    background: linear-gradient(90deg, #c5200f 38.46%, #e14b3c 100%);
+    box-shadow: 0 0 3px #ff5252, inset 0 0 26px 0 #ff7d7d;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.29;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 24px;
+    transition: all 0.25s ease 0s;
+    align-self: flex-start;
+  }
+
+  #{{ section.id }} .kf-pc-card-btn:hover {
+    opacity: 0.8;
+    transition: all 0.25s ease 0s;
+  }
+
+  @media (min-width: 768px) {
+    #{{ section.id }}.kf-product-cards {
+      padding: 64px;
+      padding-top: 0;
+    }
+
+    #{{ section.id }} .kf-pc-cards {
+      gap: 80px;
+    }
+
+    #{{ section.id }} .kf-product-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 570px;
+      padding: 0;
+      gap: 0;
+      border-radius: 20px;
+    }
+
+    #{{ section.id }} .kf-pc-card-image {
+      flex: 1;
+      width: auto;
+      aspect-ratio: auto;
+      order: unset;
+      border-radius: 0;
+    }
+
+    #{{ section.id }} .kf-product-card--img-left .kf-pc-card-image {
+      order: 1;
+    }
+    #{{ section.id }} .kf-product-card--img-left .kf-pc-card-content {
+      order: 2;
+    }
+
+    #{{ section.id }} .kf-product-card--img-right .kf-pc-card-image {
+      order: 2;
+    }
+    #{{ section.id }} .kf-product-card--img-right .kf-pc-card-content {
+      order: 1;
+    }
+
+    #{{ section.id }} .kf-pc-card-content {
+      flex: 1;
+      padding: 20px;
+      gap: 28px;
+    }
+
+    #{{ section.id }} .kf-pc-card-text-group {
+      gap: 24px;
+    }
+
+    #{{ section.id }} .kf-pc-card-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .kf-pc-card-body {
+      font-size: 18px;
+    }
+
+    #{{ section.id }} .kf-pc-card-stat-value {
+      font-size: 36px;
+    }
+
+    #{{ section.id }} .kf-pc-card-stat-label {
+      font-size: 13px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #{{ section.id }} .kf-pc-card-content {
+      padding: 48px;
+    }
+  }
+{% endstyle %}
+
+{% if section.settings.mobile_slider %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+{% endif %}
+
+<section id="{{ section.id }}" class="kf-product-cards{% if section.settings.mobile_slider %} has-mobile-slider{% endif %}">
+  <div class="kf-pc-inner">
+
+    {% if section.settings.mobile_slider %}
+      <div class="kf-pc-slider-wrap">
+        <div class="swiper kf-pc-swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {%- assign img_pos = block.settings.image_position | default: 'right' -%}
+              <div class="swiper-slide">
+                <div
+                  class="kf-product-card kf-product-card--img-{{ img_pos }}{% if block.settings.mobile_image != blank %} has-mobile-img{% endif %}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="kf-pc-card-image">
+                    {% if block.settings.mobile_image != blank %}
+                      {{
+                        block.settings.mobile_image
+                        | image_url: width: 900
+                        | image_tag:
+                          class: 'kf-pc-card-image-mobile',
+                          loading: 'lazy',
+                          alt: block.settings.heading
+                      }}
+                    {% endif %}
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 900
+                        | image_tag:
+                          class: 'kf-pc-card-image-desktop',
+                          loading: 'lazy',
+                          alt: block.settings.heading
+                      }}
+                    {% endif %}
+                  </div>
+                  <div class="kf-pc-card-content">
+                    <div class="kf-pc-card-top">
+                      {% if block.settings.caption != blank %}
+                        <p class="kf-pc-card-caption">{{ block.settings.caption }}</p>
+                      {% endif %}
+                      <div class="kf-pc-card-text-group">
+                        {% if block.settings.heading != blank %}
+                          <h2 class="kf-pc-card-heading">{{ block.settings.heading }}</h2>
+                        {% endif %}
+                        {% if block.settings.text != blank %}
+                          <div class="kf-pc-card-body">{{ block.settings.text }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                    {% if block.settings.stat_value != blank %}
+                      <div class="kf-pc-card-stat">
+                        <p class="kf-pc-card-stat-value">{{ block.settings.stat_value }}</p>
+                        {% if block.settings.stat_label != blank %}
+                          <p class="kf-pc-card-stat-label">{{ block.settings.stat_label }}</p>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.button_text != blank %}
+                      <a href="{{ block.settings.button_url }}" class="kf-pc-card-btn">
+                        {{ block.settings.button_text }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                          <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="kf-pc-nav">
+          <button class="kf-pc-nav-btn kf-pc-prev" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_kf_prev)">
+                <path d="M19 12H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 18L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11 6L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_kf_prev">
+                  <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <button class="kf-pc-nav-btn kf-pc-next" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <g clip-path="url(#clip0_kf_next)">
+                <path d="M5 12H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 6L19 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 18L19 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_kf_next">
+                  <rect width="24" height="24" fill="white" transform="matrix(1 0 0 -1 0 24)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="kf-pc-cards{% if section.settings.mobile_slider %} kf-pc-cards--slider-active{% endif %}">
+      {% for block in section.blocks %}
+        {%- assign img_pos = block.settings.image_position | default: 'right' -%}
+        <div
+          class="kf-product-card kf-product-card--img-{{ img_pos }}{% if block.settings.mobile_image != blank %} has-mobile-img{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+
+          <div class="kf-pc-card-image">
+            {% if block.settings.mobile_image != blank %}
+              {{
+                block.settings.mobile_image
+                | image_url: width: 900
+                | image_tag:
+                  class: 'kf-pc-card-image-mobile',
+                  loading: 'lazy',
+                  alt: block.settings.heading
+              }}
+            {% endif %}
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 1300
+                | image_tag:
+                  class: 'kf-pc-card-image-desktop',
+                  loading: 'lazy',
+                  alt: block.settings.heading
+              }}
+            {% endif %}
+          </div>
+
+          <div class="kf-pc-card-content">
+            <div class="kf-pc-card-top">
+              {% if block.settings.caption != blank %}
+                <p class="kf-pc-card-caption">{{ block.settings.caption }}</p>
+              {% endif %}
+              <div class="kf-pc-card-text-group">
+                {% if block.settings.heading != blank %}
+                  <h2 class="kf-pc-card-heading">{{ block.settings.heading }}</h2>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <div class="kf-pc-card-body">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if block.settings.stat_value != blank %}
+              <div class="kf-pc-card-stat">
+                <p class="kf-pc-card-stat-value">{{ block.settings.stat_value }}</p>
+                {% if block.settings.stat_label != blank %}
+                  <p class="kf-pc-card-stat-label">{{ block.settings.stat_label }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_url }}" class="kf-pc-card-btn">
+                {{ block.settings.button_text }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            {% endif %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% if section.settings.mobile_slider %}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (function () {
+      function initKfpcSlider_{{ section.id | replace: '-', '_' }}() {
+        const sectionEl = document.getElementById('{{ section.id }}');
+        if (!sectionEl) return;
+
+        const swiperEl = sectionEl.querySelector('.kf-pc-swiper');
+        if (!swiperEl) return;
+
+        if (window.innerWidth >= 768) return;
+
+        new Swiper(swiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: sectionEl.querySelector('.kf-pc-next'),
+            prevEl: sectionEl.querySelector('.kf-pc-prev'),
+          },
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', initKfpcSlider_{{ section.id | replace: '-', '_' }});
+
+      if (Shopify.designMode) {
+        document.addEventListener('shopify:section:load', initKfpcSlider_{{ section.id | replace: '-', '_' }});
+      }
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Listicle Product Cards",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position (desktop)",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Image (mobile)",
+          "info": "If not set, desktop image is used on mobile"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption (badge)",
+          "default": "Weight"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Your Back Will Thank You"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>The Shasta weighs 17oz less than a can of soup. Hard coolers weigh 15–25 lbs empty before you even add ice.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Stat block (optional)"
+        },
+        {
+          "type": "text",
+          "id": "stat_value",
+          "label": "Stat value",
+          "info": "e.g. 6× or 55 hrs or 9\" × 9\" × 3.5\""
+        },
+        {
+          "type": "text",
+          "id": "stat_label",
+          "label": "Stat label",
+          "info": "e.g. Lighter Than The Competition"
+        },
+        {
+          "type": "header",
+          "content": "Button (optional)"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "mobile_slider",
+      "label": "Mobile slider",
+      "info": "Show cards as a swipeable slider on mobile",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "C - Listicle Product Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "caption": "Weight",
+            "heading": "1. Your Back Will Thank You",
+            "text": "<p>The Shasta <strong>weighs 17oz less</strong> than a can of soup. <em>Hard coolers weigh 15–25 lbs</em> empty before you even add ice.</p><p>Monti is <strong><em>6× lighter</em></strong> than the leading hard-shell backpack cooler, and you don't sacrifice a single hour of cold.</p>",
+            "stat_value": "6×",
+            "stat_label": "Lighter Than The Competition"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "left",
+            "caption": "Packability",
+            "heading": "2. It Disappears When You're Done",
+            "text": "<p>Hard coolers take up the same space full or empty. Monti folds into its <em>built-in stuff sack</em> smaller than a hoodie.</p><p>It <strong>fits in your carry-on</strong>, under a car seat, or clipped to a daypack.</p>",
+            "stat_value": "9\" × 9\" × 3.5\"",
+            "stat_label": "Shasta Stuff Sack, Smaller Than A Football"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "right",
+            "caption": "Performance",
+            "heading": "3. 55 Hours of Ice Retention.",
+            "text": "<p>Independent testing by Outdoor Life found Monti <strong>held ice for <em>55 hours</em></strong> tied with the industry-leading hard cooler.</p><p>But unlike them, it doesn't weigh you down.</p><p><strong>Engineered for performance. Designed for freedom.</strong></p>",
+            "stat_value": "55 hrs",
+            "stat_label": "Verified By Outdoor Life"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "image_position": "left",
+            "caption": "Versatility",
+            "heading": "4. One Cooler. Every Plan.",
+            "text": "<p>Hard coolers do one thing. Monti goes from <strong>carry-on to beach blanket</strong> to <strong>grocery bag to game-day cooler</strong>.</p><p><strong>Backpack straps</strong> for hikes, tote handles for markets, stuff sack for flights. <strong>Machine washable</strong> when it gets messy.</p>",
+            "button_text": "Buy the Shasta"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

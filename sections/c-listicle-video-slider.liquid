@@ -1,0 +1,508 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+{% style %}
+  #{{ section.id }}.c-lvs {
+    background: #192A3F;
+    padding: 40px 20px 48px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #{{ section.id }} .c-lvs-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  #{{ section.id }} .c-lvs-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  #{{ section.id }} .c-lvs-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-lvs-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0;
+  }
+
+  #{{ section.id }} .c-lvs-slider-area {
+    position: relative;
+  }
+
+  #{{ section.id }} .c-lvs-swiper {
+    overflow: visible !important;
+    width: 100%;
+  }
+
+  #{{ section.id }} .c-lvs-swiper .swiper-wrapper {
+    overflow: visible !important;
+  }
+
+  #{{ section.id }} .c-lvs-card {
+    position: relative;
+    border-radius: 14px;
+    border: 3.5px solid #1e2937;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    background: #000;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  #{{ section.id }} .c-lvs-card-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{{ section.id }} .c-lvs-card video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: 1;
+    touch-action: auto;
+  }
+
+  #{{ section.id }} .c-lvs-card.is-playing video {
+    display: block;
+  }
+
+  #{{ section.id }} .c-lvs-card.is-playing .c-lvs-card-poster {
+    display: none;
+  }
+
+  #{{ section.id }} .c-lvs-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 58px;
+    height: 58px;
+    border-radius: 73px;
+    background: rgba(255, 255, 255, 0.53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    transition: background 0.2s, opacity 0.2s;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-lvs-card:hover .c-lvs-play {
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  #{{ section.id }} .c-lvs-card.is-playing:not(.is-paused) .c-lvs-play {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #{{ section.id }} .c-lvs-card.is-playing.is-paused .c-lvs-play {
+    opacity: 1;
+  }
+
+  #{{ section.id }} .c-lvs-nav-btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: opacity 0.2s;
+  }
+
+  #{{ section.id }} .c-lvs-nav-btn:hover { opacity: 0.8; }
+
+  #{{ section.id }} .c-lvs-nav-btn.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  /* Desktop arrows — hidden on mobile */
+  #{{ section.id }} .c-lvs-prev-dt,
+  #{{ section.id }} .c-lvs-next-dt {
+    display: none;
+  }
+
+  /* Bottom bar (mobile) */
+  #{{ section.id }} .c-lvs-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  #{{ section.id }} .c-lvs-pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 11px;
+  }
+
+  #{{ section.id }} .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    opacity: 1 !important;
+    cursor: pointer;
+    margin: 0 !important;
+  }
+
+  #{{ section.id }} .swiper-pagination-bullet-active {
+    background: #E43C33 !important;
+  }
+
+  @media(max-width: 1024px) {
+    #{{ section.id }} .c-lvs-nav-btn svg g rect {
+      fill: transparent;
+    }
+
+    #{{ section.id }} .c-lvs-nav-btn svg g path {
+      fill: white;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ section.id }} .c-lvs-nav-btn {
+      background: #fff;
+      border: 1px solid #FFFFFF;
+    }
+
+    #{{ section.id }}.c-lvs {
+      padding: 64px 50px;
+    }
+
+    #{{ section.id }} .c-lvs-header {
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    #{{ section.id }} .c-lvs-heading {
+      font-size: 44px;
+    }
+
+    #{{ section.id }} .c-lvs-swiper {
+        overflow: hidden !important;
+    }
+
+    #{{ section.id }} .c-lvs-swiper .swiper-wrapper {
+        overflow: hidden !important;
+    }
+
+    #{{ section.id }} .c-lvs-card {
+      border-radius: 20px;
+      border: 1px solid #125DFF;
+    }
+
+    /* Show desktop arrows, positioned outside the swiper */
+    #{{ section.id }} .c-lvs-prev-dt,
+    #{{ section.id }} .c-lvs-next-dt {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 54px;
+      height: 54px;
+    }
+
+    #{{ section.id }} .c-lvs-prev-dt svg,
+    #{{ section.id }} .c-lvs-next-dt svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    #{{ section.id }} .c-lvs-prev-dt { left: -27px; }
+    #{{ section.id }} .c-lvs-next-dt { right: -27px; }
+
+    /* Hide mobile arrows */
+    #{{ section.id }} .c-lvs-prev-mb,
+    #{{ section.id }} .c-lvs-next-mb {
+      display: none;
+    }
+
+    #{{ section.id }} .c-lvs-bottom {
+      justify-content: center;
+      margin-top: 28px;
+    }
+  }
+{% endstyle %}
+
+{% assign s_id = section.id | replace: '-', '_' %}
+
+<section id="{{ section.id }}" class="c-lvs">
+  <div class="c-lvs-inner">
+
+    {% if section.settings.label != blank or section.settings.heading != blank %}
+      <div class="c-lvs-header">
+        {% if section.settings.label != blank %}
+          <p class="c-lvs-label">{{ section.settings.label }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="c-lvs-heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="c-lvs-slider-area">
+
+      <button class="c-lvs-nav-btn c-lvs-prev c-lvs-prev-dt" aria-label="Previous slide">
+        <svg style="transform: translateX(-2px);" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+          <g clip-path="url(#clip_pdt_{{ s_id }})">
+            <rect width="22.6047" height="22.6047" transform="matrix(-1 0 0 1 22.6055 0)" fill="white"/>
+            <path d="M5.02194 10.4203L15.0813 0.36112C15.314 0.128276 15.6245 0 15.9557 0C16.2869 0 16.5975 0.128276 16.8301 0.36112L17.5709 1.10174C18.053 1.58433 18.053 2.36869 17.5709 2.85055L9.12383 11.2976L17.5803 19.7541C17.8129 19.9869 17.9414 20.2973 17.9414 20.6283C17.9414 20.9597 17.8129 21.2701 17.5803 21.5031L16.8395 22.2435C16.6066 22.4764 16.2962 22.6047 15.9651 22.6047C15.6339 22.6047 15.3233 22.4764 15.0907 22.2435L5.02194 12.1752C4.78873 11.9416 4.66064 11.6297 4.66137 11.2982C4.66064 10.9654 4.78873 10.6537 5.02194 10.4203Z" fill="#192A3F"/>
+          </g>
+          <defs>
+            <clipPath id="clip_pdt_{{ s_id }}">
+              <rect width="22.6047" height="22.6047" fill="white" transform="matrix(-1 0 0 1 22.6055 0)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+
+      <div class="swiper c-lvs-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% if block.settings.video != blank %}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                <div class="c-lvs-card">
+                  {% assign poster = block.settings.video.preview_image | image_url: width: 800 %}
+                  <img src="{{ poster }}" class="c-lvs-card-poster" loading="lazy" alt="Video preview">
+                  {{ block.settings.video | video_tag:
+                    autoplay: false,
+                    loop: false,
+                    muted: false,
+                    controls: true
+                  }}
+                  <button class="c-lvs-play" aria-label="Play video">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                      <path d="M7.20312 3.79297L28.7429 16.6266L7.20312 29.4602V3.79297Z" stroke="#0E1120" stroke-width="1.3126" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <button class="c-lvs-nav-btn c-lvs-next c-lvs-next-dt" aria-label="Next slide">
+        <svg style="transform: translateX(2px);" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+          <g clip-path="url(#clip_ndt_{{ s_id }})">
+            <rect width="22.6047" height="22.6047" transform="matrix(1 0 0 -1 0 22.6047)" fill="white"/>
+            <path d="M17.5835 12.1844L7.52417 22.2435C7.29151 22.4764 6.98093 22.6047 6.64976 22.6047C6.3186 22.6047 6.00802 22.4764 5.77536 22.2435L5.03456 21.5029C4.55251 21.0203 4.55251 20.236 5.03456 19.7541L13.4816 11.307L5.02518 2.85055C4.79252 2.61771 4.66406 2.30731 4.66406 1.97633C4.66406 1.64498 4.79252 1.33458 5.02518 1.10155L5.76598 0.361118C5.99883 0.128275 6.30923 0 6.64039 0C6.97156 0 7.28214 0.128275 7.5148 0.361118L17.5835 10.4295C17.8167 10.6631 17.9448 10.9749 17.9441 11.3065C17.9448 11.6393 17.8167 11.951 17.5835 12.1844Z" fill="#192A3F"/>
+          </g>
+          <defs>
+            <clipPath id="clip_ndt_{{ s_id }}">
+              <rect width="22.6047" height="22.6047" fill="white" transform="matrix(1 0 0 -1 0 22.6047)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+
+    </div>
+
+    <div class="c-lvs-bottom">
+      <button class="c-lvs-nav-btn c-lvs-prev c-lvs-prev-mb" aria-label="Previous slide">
+        <svg style="transform: translateX(-2px);" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 23 23" fill="none">
+          <g clip-path="url(#clip_pmb_{{ s_id }})">
+            <rect width="22.6047" height="22.6047" transform="matrix(-1 0 0 1 22.6055 0)" fill="white"/>
+            <path d="M5.02194 10.4203L15.0813 0.36112C15.314 0.128276 15.6245 0 15.9557 0C16.2869 0 16.5975 0.128276 16.8301 0.36112L17.5709 1.10174C18.053 1.58433 18.053 2.36869 17.5709 2.85055L9.12383 11.2976L17.5803 19.7541C17.8129 19.9869 17.9414 20.2973 17.9414 20.6283C17.9414 20.9597 17.8129 21.2701 17.5803 21.5031L16.8395 22.2435C16.6066 22.4764 16.2962 22.6047 15.9651 22.6047C15.6339 22.6047 15.3233 22.4764 15.0907 22.2435L5.02194 12.1752C4.78873 11.9416 4.66064 11.6297 4.66137 11.2982C4.66064 10.9654 4.78873 10.6537 5.02194 10.4203Z" fill="#192A3F"/>
+          </g>
+          <defs>
+            <clipPath id="clip_pmb_{{ s_id }}">
+              <rect width="22.6047" height="22.6047" fill="white" transform="matrix(-1 0 0 1 22.6055 0)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+
+      <div class="c-lvs-pagination swiper-pagination"></div>
+
+      <button class="c-lvs-nav-btn c-lvs-next c-lvs-next-mb" aria-label="Next slide">
+        <svg style="transform: translateX(2px);" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 23 23" fill="none">
+          <g clip-path="url(#clip_nmb_{{ s_id }})">
+            <rect width="22.6047" height="22.6047" transform="matrix(1 0 0 -1 0 22.6047)" fill="white"/>
+            <path d="M17.5835 12.1844L7.52417 22.2435C7.29151 22.4764 6.98093 22.6047 6.64976 22.6047C6.3186 22.6047 6.00802 22.4764 5.77536 22.2435L5.03456 21.5029C4.55251 21.0203 4.55251 20.236 5.03456 19.7541L13.4816 11.307L5.02518 2.85055C4.79252 2.61771 4.66406 2.30731 4.66406 1.97633C4.66406 1.64498 4.79252 1.33458 5.02518 1.10155L5.76598 0.361118C5.99883 0.128275 6.30923 0 6.64039 0C6.97156 0 7.28214 0.128275 7.5148 0.361118L17.5835 10.4295C17.8167 10.6631 17.9448 10.9749 17.9441 11.3065C17.9448 11.6393 17.8167 11.951 17.5835 12.1844Z" fill="#192A3F"/>
+          </g>
+          <defs>
+            <clipPath id="clip_nmb_{{ s_id }}">
+              <rect width="22.6047" height="22.6047" fill="white" transform="matrix(1 0 0 -1 0 22.6047)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  function init_{{ s_id }}() {
+    var el = document.getElementById('{{ section.id }}');
+    if (!el || !window.Swiper) return;
+
+    new Swiper(el.querySelector('.c-lvs-swiper'), {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      navigation: {
+        prevEl: Array.from(el.querySelectorAll('.c-lvs-prev')),
+        nextEl: Array.from(el.querySelectorAll('.c-lvs-next')),
+      },
+      pagination: {
+        el: el.querySelector('.c-lvs-pagination'),
+        clickable: true,
+      },
+      breakpoints: {
+        624: {
+          slidesPerView: 2,
+          spaceBetween: 21,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 21,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 21,
+        }
+      }
+    });
+
+    var cards = el.querySelectorAll('.c-lvs-card');
+    cards.forEach(function (card) {
+      var video = card.querySelector('video');
+      if (!video) return;
+
+      video.addEventListener('pause', function() {
+        card.classList.add('is-paused');
+      });
+
+      video.addEventListener('play', function() {
+        card.classList.remove('is-paused');
+      });
+
+      video.addEventListener('ended', function() {
+        card.classList.remove('is-playing', 'is-paused');
+        video.currentTime = 0;
+      });
+
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('video') && card.classList.contains('is-playing')) return;
+
+        if (!card.classList.contains('is-playing')) {
+          cards.forEach(function(otherCard) {
+            if (otherCard === card) return;
+            var otherVideo = otherCard.querySelector('video');
+            if (otherVideo && !otherVideo.paused) {
+              otherVideo.pause();
+              otherVideo.currentTime = 0;
+            }
+            otherCard.classList.remove('is-playing', 'is-paused');
+          });
+
+          card.classList.add('is-playing');
+          video.currentTime = 0;
+          video.play();
+        } else if (card.classList.contains('is-paused')) {
+          video.play();
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init_{{ s_id }});
+  } else {
+    init_{{ s_id }}();
+  }
+
+  if (window.Shopify && Shopify.designMode) {
+    document.addEventListener('shopify:section:load', function (e) {
+      if (e.detail.sectionId === '{{ section.id }}') init_{{ s_id }}();
+    });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "C Listicle Video Slider",
+  "tag": "section",
+  "blocks": [
+    {
+      "name": "Video",
+      "type": "video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Real Customers. Real Experiences."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Loved by People Who Live On the Go"
+    }
+  ],
+  "presets": [
+    {
+      "name": "C Listicle Video Slider",
+      "blocks": [
+        { "type": "video" },
+        { "type": "video" },
+        { "type": "video" },
+        { "type": "video" }
+      ]
+    }
+  ]
+}
+{% endschema %}
